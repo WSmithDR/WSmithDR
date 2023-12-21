@@ -1,22 +1,23 @@
-# Bienvenido/a a mi perfil de GitHub 👋
+# ¡Bienvenido/a a mi perfil de GitHub! 👋
 
-¡Hola! Mi nombre es Wagner Dueñas, también conocido/a como WSmithDR en GitHub.
+¡Saludos! Soy Wagner Dueñas, también conocido en GitHub como WSmithDR.
 
-## ¿Quién soy?
+## ¿Quién soy? 🤔
 
-Soy un apasionado/a Programador/a Fullstack con enfoque en el diseño Front-end y la creación de material visual. Desde que tenía 12 años, he estado inmerso/a en el fascinante mundo de la programación, comenzando con Python. Este acercamiento al código ha sido una de las experiencias más motivadoras de mi vida.
+Soy un apasionado Programador Fullstack con especialización en el diseño Front-end y la creación de material visual. Mi fascinación por el desarrollo de aplicaciones web comenzó a los 12 años. Aunque lo dejé durante mi etapa escolar, retomé esa pasión años después.
 
-## ¿Qué hago?
+## ¿Qué hago? 💻
 
-En la actualidad, me dedidico a la realización de proyectos enfocado en el desarrollo de aplicaciones web usando principalmente React.js aunque también le estoy dedicando tiempo para aprender a usar otros stacks de tecnologías para proyectos futuros.
+Actualmente, me dedico a la realización de proyectos centrados en el desarrollo de aplicaciones web, principalmente utilizando React.js. También estoy dedicando tiempo a aprender otros stacks de tecnologías para futuros proyectos.
 
-## ¿A dónde me dirijo?
+## ¿A dónde me dirijo? 🚀
 
-A ser una capaz de proponer e implementar ideas que resuelvan problemas de diversas índoles por medio del desarrollo de software.
+Mi meta es ser capaz de proponer e implementar ideas que resuelvan problemas diversos a través del desarrollo de software.
 
-## ¿Qué tecnologías uso?
+## ¿Qué tecnologías uso? 🔧
 
-Gracias al Bootcamp de SoyHenry, he adquirido conocimientos y experiencia necesarias para desenvolverme en el vasto mundo de la programación. Las principales tecnologías que manejo actualmente son:
+Gracias al Bootcamp de SoyHenry ![image](https://github.com/WSmithDR/WSmithDR/assets/132107813/98356d43-605d-4a2b-87f1-1ca833dcfc85)
+, he adquirido conocimientos y experiencia para desenvolverme en el vasto mundo de la programación. Las principales tecnologías que manejo actualmente son:
 - HTML
 - CSS
 - Javascript
@@ -28,25 +29,11 @@ Gracias al Bootcamp de SoyHenry, he adquirido conocimientos y experiencia necesa
 - Sequelize
 - GIT
 
-## No dudes en contactarme!
+## ¡No dudes en contactarme! 🤝
 
-¡Estoy abierto/a a colaboraciones y nuevos proyectos! Juntos/as podemos realizar un gran proyecto que cambie la vida de miles de personas.
+Estoy abierto a colaboraciones y nuevos proyectos. Juntos podemos realizar un gran proyecto que cambie la vida de miles de personas.
 
-- LinkedIn: https://www.linkedin.com/in/wsmith123/
+- LinkedIn: [wsmith123](https://www.linkedin.com/in/wsmith123/)
 - Correo: wagnersmith123@hotmail.com
 
 ¡Gracias por visitar mi perfil! 👩‍💻🚀
-<!--
-**WSmithDR/WSmithDR** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
