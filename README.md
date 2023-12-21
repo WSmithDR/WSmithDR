@@ -27,7 +27,7 @@ Gracias al Bootcamp de [SoyHenry](https://www.soyhenry.com/)
 - Redux.js
 - PostgreSQL
 - Sequelize
-- GIT
+- Git
 
 ## ¡No dudes en contactarme! 🤝
 
