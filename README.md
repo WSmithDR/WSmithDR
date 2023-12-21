@@ -33,7 +33,7 @@ Gracias al Bootcamp de SoyHenry, he adquirido conocimientos y experiencia necesa
 ¡Estoy abierto/a a colaboraciones y nuevos proyectos! Juntos/as podemos realizar un gran proyecto que cambie la vida de miles de personas.
 
 - LinkedIn: https://www.linkedin.com/in/wsmith123/
-- Correo: wagnersmith123@hotmai.com
+- Correo: wagnersmith123@hotmail.com
 
 ¡Gracias por visitar mi perfil! 👩‍💻🚀
 <!--
