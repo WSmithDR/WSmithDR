@@ -16,7 +16,7 @@ Mi meta es ser capaz de proponer e implementar ideas que resuelvan problemas div
 
 ## ¿Qué tecnologías uso? 🔧
 
-Gracias al Bootcamp de SoyHenry ![image](https://github.com/WSmithDR/WSmithDR/assets/132107813/98356d43-605d-4a2b-87f1-1ca833dcfc85)
+Gracias al Bootcamp de [SoyHenry](https://www.soyhenry.com/)
 , he adquirido conocimientos y experiencia para desenvolverme en el vasto mundo de la programación. Las principales tecnologías que manejo actualmente son:
 - HTML
 - CSS
