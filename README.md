@@ -1,13 +1,13 @@
 <!-- HEADER -->
 <h1 align="center">🐉 Welcome to WSmithDR's World!</h1>
 <p align="center">
-  <img src="https://media.giphy.com/media/qPtP1Y2Rmg0g0/giphy.gif" width="150"/>
+  <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" width="150"/>
 </p>
 
 ---
 
 ## 🔍 About Me
-> "_It's not the face that makes someone a monster; it's the choices they make with their lives. - Naruto_"
+> "_To know sorrow is not terrifying. What is terrifying is to know you can't go back to happiness you could have. - Matsumoto Rangiku_"
 
 - 🌍 Full Stack Developer | Building **scalable apps** and **data-driven solutions**  
 - 💡 Experience in **React, Node.js, Python, Flask, Laravel, PostgreSQL, MySQL, MongoDB**  
@@ -32,8 +32,10 @@
 
 ## 📊 GitHub Stats
 <p align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=WSmithDR&show_icons=true&theme=algolia&title_color=00bfa5&icon_color=00bfa5&text_color=ffffff&bg_color=0d1117" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=WSmithDR&layout=compact&theme=algolia&title_color=00bfa5&text_color=ffffff&bg_color=0d1117" />
+  <img src="https://github-readme-stats.vercel.app/api?username=WSmithDR&show_icons=true&theme=algolia&title_color=00bfa5&icon_color=00bfa5&text_color=ffffff&bg_color=0d1117" />
+</p>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=WSmithDR&layout=compact&theme=algolia&title_color=00bfa5&text_color=ffffff&bg_color=0d1117" />
 </p>
 
 ---
@@ -49,7 +51,6 @@
 ![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=WSmithDR&theme=github-compact&color=00bfa5&line=00bfa5&point=00bfa5)
 
 ---
-
 
 ## 📌 Pinned Projects
 <p align="center">
