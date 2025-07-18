@@ -1,7 +1,7 @@
 const fs = require("fs");
 const fetch = require("node-fetch");
 
-const GITHUB_USER = "WSmithDR";
+const GITHUB_USER = process.env.GITHUB_USER || "WSmithDR";
 const README_PATH = "README.md";
 const TEMPLATE_PATH = "README_TEMPLATE.md";
 const GITHUB_TOKEN = process.env.GH_TOKEN;
