@@ -21,7 +21,7 @@ jobs:
           node-version: 18
 
       - name: Install Dependencies
-        run: npm install node-fetch@2
+        run: npm install
 
       - name: Generate README
         run: node scripts/generate-readme.js
