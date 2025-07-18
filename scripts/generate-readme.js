@@ -80,7 +80,10 @@ function getRandomAnimeQuote() {
 }
 
 function getPinnedProjects(repos) {
-  const sorted = repos.filter(r => !r.fork).sort((a, b) => b.stargazers_count - a.stargazers_count);
+  // Solo repos públicos y del usuario principal
+  const sorted = repos.filter(
+    r => !r.fork && !r.private && r.owner.login.toLowerCase() === GITHUB_USER.toLowerCase()
+  ).sort((a, b) => b.stargazers_count - a.stargazers_count);
   const top2 = sorted.slice(0, 2);
   if (top2.length === 0) return "No pinned projects yet.";
   return top2.map(repo =>
