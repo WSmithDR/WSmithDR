@@ -105,10 +105,11 @@ async function generateReadme() {
     const totalStars = getTotalStars(repos);
 
     const output = template
-      .replace("{{TECH_STACK_ICONS}}", techIcons)
-      .replace("{{ANIME_QUOTE}}", quote)
-      .replace("{{PINNED_PROJECTS}}", pinned)
-      .replace("{{TOTAL_STARS}}", totalStars);
+      .replace(/{{TECH_STACK_ICONS}}/g, techIcons)
+      .replace(/{{ANIME_QUOTE}}/g, quote)
+      .replace(/{{PINNED_PROJECTS}}/g, pinned)
+      .replace(/{{TOTAL_STARS}}/g, totalStars)
+      .replace(/{{GITHUB_USER}}/g, GITHUB_USER);
 
     fs.writeFileSync(README_PATH, output);
     console.log("README.md updated successfully!");
