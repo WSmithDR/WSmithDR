@@ -59,14 +59,63 @@
 
 ---
 
-## 📬 Connect with Me
+## 🏅 Badges
 <p align="center">
-<a href="https://www.linkedin.com/in/wsmith123/"><img src="https://img.shields.io/badge/LinkedIn-00bfa5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-<a href="mailto:wsmithdrdev@gmail.com"><img src="https://img.shields.io/badge/Email-00bfa5?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <img src="https://img.shields.io/github/followers/WSmithDR?label=Follow&style=social" />
+  <img src="https://img.shields.io/github/stars/WSmithDR?affiliations=OWNER%2CCOLLABORATOR%2CORGANIZATION_MEMBER&style=social" />
 </p>
 
 ---
 
-<p align="center">Visitor Count:  
-<img src="https://visitor-badge.laobi.icu/badge?page_id=WSmithDR.WSmithDR" />
+## 🆕 Latest Projects
+<ul>
+<li><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a> - No description</li>
+<li><a href="https://github.com/WSmithDR/POO4_1P_DUENAS_ROMERO_ORTEGA">POO4_1P_DUENAS_ROMERO_ORTEGA</a> - No description</li>
+<li><a href="https://github.com/WSmithDR/Uncovering-the-Cost-of-Living-in-the-Galactic-Empire">Uncovering-the-Cost-of-Living-in-the-Galactic-Empire</a> - No description</li>
+<li><a href="https://github.com/WSmithDR/nave_deriva">nave_deriva</a> - No description</li>
+<li><a href="https://github.com/WSmithDR/sbd_proj_1_p_1">sbd_proj_1_p_1</a> - En este repositorio van a ir los avances del proyecto del primer parcial de la materia de Sistema de bases de datos.</li>
+</ul>
+
+---
+
+## 📜 Certifications
+<p align="center">
+  <!-- Puedes agregar aquí tus certificados de LinkedIn manualmente o automatizarlo si tienes una API -->
+  <a href="https://www.linkedin.com/in/wsmith123/details/certifications/">
+    <img src="https://img.shields.io/badge/LinkedIn%20Certifications-00bfa5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+</p>
+
+---
+
+## 📬 Connect with Me
+<p align="center">
+  <a href="https://www.linkedin.com/in/wsmith123/"><img src="https://img.shields.io/badge/LinkedIn-00bfa5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="mailto:wsmithdrdev@gmail.com"><img src="https://img.shields.io/badge/Email-00bfa5?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="https://wa.me/593989785480"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
+</p>
+
+---
+
+## 🛡️ Skills
+<b>JavaScript</b> <progress value="38.1" max="100"></progress> 38.1%<br>
+<b>TypeScript</b> <progress value="19.0" max="100"></progress> 19.0%<br>
+<b>Python</b> <progress value="14.3" max="100"></progress> 14.3%<br>
+<b>Jupyter Notebook</b> <progress value="9.5" max="100"></progress> 9.5%<br>
+<b>CSS</b> <progress value="9.5" max="100"></progress> 9.5%<br>
+<b>Java</b> <progress value="4.8" max="100"></progress> 4.8%<br>
+<b>HTML</b> <progress value="4.8" max="100"></progress> 4.8%
+
+---
+
+## 🏆 GitHub Trophies
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=WSmithDR&theme=algolia&no-frame=true&no-bg=true&margin-w=15" />
+</p>
+
+---
+
+## 🌍 Visitors by Country
+<p align="center">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=WSmithDR.WSmithDR&left_color=blue&right_color=green&left_text=Visitors" />
 </p> 
