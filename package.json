@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "animequotes": "^2.0.0",
+    "node-fetch": "^2.7.0"
+  },
+  "name": "wsmithdr",
+  "version": "1.0.0",
+  "description": "<!-- HEADER --> <h1 align=\"center\">🐉 Welcome to WSmithDR's World!</h1> <p align=\"center\">   <img src=\"https://media.giphy.com/media/qPtP1Y2Rmg0g0/giphy.gif\" width=\"150\"/> </p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
