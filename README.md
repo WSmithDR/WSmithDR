@@ -7,10 +7,9 @@
 ---
 
 ## 🔍 About Me
-> "_When you give up, your dreams and everything else they're gone. - Naruto_"
+> "_It's not the face that makes someone a monster; it's the choices they make with their lives. - Naruto_"
 
-- 🌍 Full Stack Developer | Building **scalable apps**
- and **data-driven solutions**  
+- 🌍 Full Stack Developer | Building **scalable apps** and **data-driven solutions**  
 - 💡 Experience in **React, Node.js, Python, Flask, Laravel, PostgreSQL, MySQL, MongoDB**  
 - 🎨 Focus on clean UI/UX and automation  
 - ⚡ Always learning new stacks to level up my skills  
@@ -19,7 +18,7 @@
 
 ## 🛠 Dynamic Tech Stack
 <p align="center">
-<img src="https://skillicons.dev/icons?i=java" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=javascript" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=python" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=typescript" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=shell" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=php" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=jupyter notebook" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=css" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=html" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=kotlin" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=c#" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=vue" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=swift" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=dart" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=c++" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=astro" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=rich text format" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=makefile" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=ruby" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=scss" height="40" style="margin: 0 5px;"/>
+<img src="https://skillicons.dev/icons?i=javascript" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=java" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=python" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=typescript" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=shell" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=php" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=jupyter notebook" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=css" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=html" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=kotlin" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=c#" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=vue" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=swift" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=dart" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=c++" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=astro" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=rich text format" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=makefile" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=ruby" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=scss" height="40" style="margin: 0 5px;"/>
 </p>
 
 ---
@@ -53,7 +52,7 @@
 
 ## 📌 Pinned Projects
 <p align="center">
-<a href="https://github.com/soyHenry/FT-M1"><img src="https://github-readme-stats.vercel.app/api/pin/?username=soyHenry&repo=FT-M1&theme=algolia&title_color=00bfa5" /></a> <a href="https://github.com/soyHenry/FT-M2"><img src="https://github-readme-stats.vercel.app/api/pin/?username=soyHenry&repo=FT-M2&theme=algolia&title_color=00bfa5" /></a>
+<a href="https://github.com/WSmithDR/WSmithDR"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=WSmithDR&theme=algolia&title_color=00bfa5" /></a> <a href="https://github.com/WSmithDR/POO4_1P_DUENAS_ROMERO_ORTEGA"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=POO4_1P_DUENAS_ROMERO_ORTEGA&theme=algolia&title_color=00bfa5" /></a>
 </p>
 
 ---
