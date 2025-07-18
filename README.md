@@ -7,7 +7,7 @@
 ---
 
 ## 🔍 About Me
-> "_Power comes in response to a need, not a desire. - Goku_"
+> "_A lesson without pain is meaningless. - Fullmetal Alchemist_"
 
 - 🌍 Full Stack Developer | Building **scalable apps** and **data-driven solutions**  
 - 💡 Experience in **React, Node.js, Python, Flask, Laravel, PostgreSQL, MySQL, MongoDB**  
@@ -18,14 +18,14 @@
 
 ## 🛠 Dynamic Tech Stack
 <p align="center">
-<img src="https://skillicons.dev/icons?i=python" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=css" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=jupyter notebook" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=javascript" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=html" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=typescript" height="40" style="margin: 0 5px;"/>
+<img src="https://skillicons.dev/icons?i=javascript" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=python" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=html" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=typescript" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=java" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=shell" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=php" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=jupyter notebook" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=css" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=kotlin" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=c#" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=vue" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=swift" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=dart" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=c++" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=astro" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=rich text format" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=makefile" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=ruby" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=scss" height="40" style="margin: 0 5px;"/>
 </p>
 
 ---
 
 ## ⭐ Total Stars
 <p align="center">
-<b>0</b> ⭐ across all public repositories
+<b>1852</b> ⭐ across all public repositories
 </p>
 
 ---
@@ -52,7 +52,7 @@
 
 ## 📌 Pinned Projects
 <p align="center">
-<a href="https://github.com/WSmithDR/A-B-testing-project"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=A-B-testing-project&theme=algolia&title_color=00bfa5" /></a> <a href="https://github.com/WSmithDR/angularconsergiecode"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=angularconsergiecode&theme=algolia&title_color=00bfa5" /></a>
+<a href="https://github.com/soyHenry/FT-M1"><img src="https://github-readme-stats.vercel.app/api/pin/?username=soyHenry&repo=FT-M1&theme=algolia&title_color=00bfa5" /></a> <a href="https://github.com/soyHenry/FT-M2"><img src="https://github-readme-stats.vercel.app/api/pin/?username=soyHenry&repo=FT-M2&theme=algolia&title_color=00bfa5" /></a>
 </p>
 
 ---
