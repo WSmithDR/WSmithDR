@@ -66,5 +66,5 @@
 ---
 
 <p align="center">Visitor Count:  
-<img src="https://profile-counter.glitch.me/WSmithDR/count.svg" />
+<img src="https://visitor-badge.laobi.icu/badge?page_id={{GITHUB_USER}}.{{GITHUB_USER}}" />
 </p> 
