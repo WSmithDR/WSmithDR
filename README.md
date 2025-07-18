@@ -9,7 +9,8 @@
 ## 🔍 About Me
 > "_When you give up, your dreams and everything else they're gone. - Naruto_"
 
-- 🌍 Full Stack Developer | Building **scalable apps** and **data-driven solutions**  
+- 🌍 Full Stack Developer | Building **scalable apps**
+ and **data-driven solutions**  
 - 💡 Experience in **React, Node.js, Python, Flask, Laravel, PostgreSQL, MySQL, MongoDB**  
 - 🎨 Focus on clean UI/UX and automation  
 - ⚡ Always learning new stacks to level up my skills  
