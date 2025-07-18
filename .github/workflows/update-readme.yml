@@ -27,6 +27,7 @@ jobs:
         run: node scripts/generate-readme.js
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_USER: ${{ github.repository_owner }}
 
       - name: Commit and Push
         run: |
