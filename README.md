@@ -50,6 +50,7 @@
 
 ---
 
+
 ## 📌 Pinned Projects
 <p align="center">
 <a href="https://github.com/WSmithDR/WSmithDR"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=WSmithDR&theme=algolia&title_color=00bfa5" /></a> <a href="https://github.com/WSmithDR/POO4_1P_DUENAS_ROMERO_ORTEGA"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=POO4_1P_DUENAS_ROMERO_ORTEGA&theme=algolia&title_color=00bfa5" /></a>
