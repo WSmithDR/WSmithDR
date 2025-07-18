@@ -59,14 +59,53 @@
 
 ---
 
-## 📬 Connect with Me
+## 🏅 Badges
 <p align="center">
-<a href="https://www.linkedin.com/in/wsmith123/"><img src="https://img.shields.io/badge/LinkedIn-00bfa5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-<a href="mailto:wsmithdrdev@gmail.com"><img src="https://img.shields.io/badge/Email-00bfa5?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <img src="https://img.shields.io/github/followers/{{GITHUB_USER}}?label=Follow&style=social" />
+  <img src="https://img.shields.io/github/stars/{{GITHUB_USER}}?affiliations=OWNER%2CCOLLABORATOR%2CORGANIZATION_MEMBER&style=social" />
 </p>
 
 ---
 
-<p align="center">Visitor Count:  
-<img src="https://visitor-badge.laobi.icu/badge?page_id={{GITHUB_USER}}.{{GITHUB_USER}}" />
+## 🆕 Latest Projects
+<ul>
+{{LATEST_PROJECTS}}
+</ul>
+
+---
+
+## 📜 Certifications
+<p align="center">
+  <!-- Puedes agregar aquí tus certificados de LinkedIn manualmente o automatizarlo si tienes una API -->
+  <a href="https://www.linkedin.com/in/wsmith123/details/certifications/">
+    <img src="https://img.shields.io/badge/LinkedIn%20Certifications-00bfa5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+</p>
+
+---
+
+## 📬 Connect with Me
+<p align="center">
+  <a href="https://www.linkedin.com/in/wsmith123/"><img src="https://img.shields.io/badge/LinkedIn-00bfa5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="mailto:wsmithdrdev@gmail.com"><img src="https://img.shields.io/badge/Email-00bfa5?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="https://wa.me/593989785480"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
+</p>
+
+---
+
+## 🛡️ Skills
+{{SKILLS_PROGRESS}}
+
+---
+
+## 🏆 GitHub Trophies
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username={{GITHUB_USER}}&theme=algolia&no-frame=true&no-bg=true&margin-w=15" />
+</p>
+
+---
+
+## 🌍 Visitors by Country
+<p align="center">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id={{GITHUB_USER}}.{{GITHUB_USER}}&left_color=blue&right_color=green&left_text=Visitors" />
 </p> 
