@@ -32,8 +32,10 @@
 
 ## 📊 GitHub Stats
 <p align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=WSmithDR&show_icons=true&theme=algolia&title_color=00bfa5&icon_color=00bfa5&text_color=ffffff&bg_color=0d1117" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=WSmithDR&layout=compact&theme=algolia&title_color=00bfa5&text_color=ffffff&bg_color=0d1117" />
+  <img src="https://github-readme-stats.vercel.app/api?username={{GITHUB_USER}}&show_icons=true&theme=algolia&title_color=00bfa5&icon_color=00bfa5&text_color=ffffff&bg_color=0d1117" />
+</p>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username={{GITHUB_USER}}&layout=compact&theme=algolia&title_color=00bfa5&text_color=ffffff&bg_color=0d1117" />
 </p>
 
 ---
