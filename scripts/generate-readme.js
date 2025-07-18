@@ -4,6 +4,57 @@ const fetch = require("node-fetch");
 const GITHUB_USER = "WSmithDR";
 const README_PATH = "README.md";
 const TEMPLATE_PATH = "README_TEMPLATE.md";
+const GITHUB_TOKEN = process.env.GH_TOKEN;
+
+const fetchOptions = GITHUB_TOKEN
+  ? { headers: { Authorization: `token ${GITHUB_TOKEN}` } }
+  : {};
+
+async function fetchAllPages(url) {
+  let results = [];
+  let page = 1;
+  while (true) {
+    const res = await fetch(`${url}${url.includes('?') ? '&' : '?'}per_page=100&page=${page}` , fetchOptions);
+    if (!res.ok) throw new Error(`GitHub API error: ${res.status} (${url})`);
+    const data = await res.json();
+    if (data.length === 0) break;
+    results = results.concat(data);
+    page++;
+  }
+  return results;
+}
+
+async function getUserRepos() {
+  return await fetchAllPages(`https://api.github.com/user/repos?type=all&sort=updated`);
+}
+
+async function getOrgs() {
+  const orgs = await fetchAllPages(`https://api.github.com/user/orgs`);
+  return orgs.map(org => org.login);
+}
+
+async function getOrgRepos(org) {
+  return await fetchAllPages(`https://api.github.com/orgs/${org}/repos?type=all&sort=updated`);
+}
+
+async function getAllRepos() {
+  // Get user repos
+  let repos = await getUserRepos();
+  // Get org repos
+  const orgs = await getOrgs();
+  for (const org of orgs) {
+    const orgRepos = await getOrgRepos(org);
+    repos = repos.concat(orgRepos);
+  }
+  // Remove duplicates by full_name
+  const seen = new Set();
+  const uniqueRepos = repos.filter(repo => {
+    if (seen.has(repo.full_name)) return false;
+    seen.add(repo.full_name);
+    return true;
+  });
+  return uniqueRepos;
+}
 
 async function getTopLanguages(repos) {
   const languageSet = new Set();
@@ -28,26 +79,12 @@ function getRandomAnimeQuote() {
   return quotes[Math.floor(Math.random() * quotes.length)];
 }
 
-async function getRepos() {
-  let repos = [];
-  let page = 1;
-  while (true) {
-    const res = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?per_page=100&page=${page}`);
-    if (!res.ok) throw new Error(`GitHub API error: ${res.status}`);
-    const data = await res.json();
-    if (data.length === 0) break;
-    repos = repos.concat(data);
-    page++;
-  }
-  return repos;
-}
-
 function getPinnedProjects(repos) {
   const sorted = repos.filter(r => !r.fork).sort((a, b) => b.stargazers_count - a.stargazers_count);
   const top2 = sorted.slice(0, 2);
   if (top2.length === 0) return "No pinned projects yet.";
   return top2.map(repo =>
-    `<a href=\"https://github.com/${GITHUB_USER}/${repo.name}\"><img src=\"https://github-readme-stats.vercel.app/api/pin/?username=${GITHUB_USER}&repo=${repo.name}&theme=algolia&title_color=00bfa5\" /></a>`
+    `<a href=\"https://github.com/${repo.full_name}\"><img src=\"https://github-readme-stats.vercel.app/api/pin/?username=${repo.owner.login}&repo=${repo.name}&theme=algolia&title_color=00bfa5\" /></a>`
   ).join(" ");
 }
 
@@ -58,7 +95,7 @@ function getTotalStars(repos) {
 async function generateReadme() {
   try {
     const template = fs.readFileSync(TEMPLATE_PATH, "utf8");
-    const repos = await getRepos();
+    const repos = await getAllRepos();
     const techIcons = await getTopLanguages(repos);
     const quote = getRandomAnimeQuote();
     const pinned = getPinnedProjects(repos);
