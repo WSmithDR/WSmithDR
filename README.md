@@ -1,39 +1,66 @@
-# ¡Bienvenido/a a mi perfil de GitHub! 👋
+<!-- WELCOME HEADER -->
+<h1 align="center">🐉 Welcome to WSmithDR's World!</h1>
+<p align="center">
+  <img src="https://media.giphy.com/media/qPtP1Y2Rmg0g0/giphy.gif" width="150"/>
+</p>
 
-¡Saludos! Soy Wagner Dueñas, también conocido en GitHub como WSmithDR.
+---
 
-## ¿Quién soy? 🤔
+## 🔍 About Me
+> _"A developer is like an anime hero: always leveling up to face the next challenge."_  
 
-Soy un apasionado Programador Fullstack con especialización en el diseño Front-end y la creación de material visual. Mi fascinación por el desarrollo de aplicaciones web comenzó a los 12 años. Aunque lo dejé durante mi etapa escolar, retomé esa pasión años después.
+- 🌍 Full Stack Developer | Passionate about **scalable apps** and **data-driven solutions**  
+- 💡 Experience in **React, Node.js, Python, Flask, Laravel, PostgreSQL, MySQL, MongoDB**  
+- 🤖 Machine Learning & Automation enthusiast  
+- 🎨 Focus on clean UI/UX and performance  
 
-## ¿Qué hago? 💻
+---
 
-Actualmente, me dedico a la realización de proyectos centrados en el desarrollo de aplicaciones web, principalmente utilizando React.js. También estoy dedicando tiempo a aprender otros stacks de tecnologías para futuros proyectos.
+## 🛠 Dynamic Tech Stack
+<p align="center">
+<!-- Dynamic icons based on your repos -->
+<!-- This section is updated automatically -->
+<a href="#"><img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,nodejs,express,redux,python,flask,php,laravel,mysql,postgres,mongodb,docker,git" /></a>
+</p>
 
-## ¿A dónde me dirijo? 🚀
+---
 
-Mi meta es ser capaz de proponer e implementar ideas que resuelvan problemas diversos a través del desarrollo de software.
+## 📊 GitHub Stats
+<p align="center">
+<img src="https://github-readme-stats.vercel.app/api?username=WSmithDR&show_icons=true&theme=algolia&title_color=00bfa5&icon_color=00bfa5&text_color=ffffff&bg_color=0d1117" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=WSmithDR&layout=compact&theme=algolia&title_color=00bfa5&text_color=ffffff&bg_color=0d1117" />
+</p>
 
-## ¿Qué tecnologías uso? 🔧
+---
 
-Gracias al Bootcamp de [SoyHenry](https://www.soyhenry.com/)
-, he adquirido conocimientos y experiencia para desenvolverme en el vasto mundo de la programación. Las principales tecnologías que manejo actualmente son:
-- HTML
-- CSS
-- Javascript
-- React.js
-- Node.js
-- Express.js
-- Redux.js
-- PostgreSQL
-- Sequelize
-- Git
+## 🔥 GitHub Streak
+<p align="center">
+<img src="https://github-readme-streak-stats.herokuapp.com?user=WSmithDR&theme=dark&ring=00bfa5&fire=00bfa5&currStreakLabel=00bfa5" />
+</p>
 
-## ¡No dudes en contactarme! 🤝
+---
 
-Estoy abierto a colaboraciones y nuevos proyectos. Juntos podemos realizar un gran proyecto que cambie la vida de miles de personas.
+## 🌐 Contribution Graph
+![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=WSmithDR&theme=github-compact&color=00bfa5&line=00bfa5&point=00bfa5)
 
-- LinkedIn: [wsmith123](https://www.linkedin.com/in/wsmith123/)
-- Correo: wagnersmith123@hotmail.com
+---
 
-¡Gracias por visitar mi perfil! 👩‍💻🚀
+## 📌 Pinned Projects
+<p align="center">
+<a href="https://github.com/WSmithDR/your-project-1"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=your-project-1&theme=algolia&title_color=00bfa5" /></a>
+<a href="https://github.com/WSmithDR/your-project-2"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=your-project-2&theme=algolia&title_color=00bfa5" /></a>
+</p>
+
+---
+
+## 📬 Connect with Me
+<p align="center">
+<a href="https://www.linkedin.com/in/wsmith123/"><img src="https://img.shields.io/badge/LinkedIn-00bfa5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+<a href="mailto:wsmithdrdev@gmail.com"><img src="https://img.shields.io/badge/Email-00bfa5?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+</p>
+
+---
+
+<p align="center">Visitor Count:  
+<img src="https://profile-counter.glitch.me/WSmithDR/count.svg" />
+</p>
