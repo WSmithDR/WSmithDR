@@ -105,7 +105,7 @@
 
 ---
 
-## 🌍 Visitors by Country
+## 👁️ Visitor Count
 <p align="center">
   <img src="https://visitor-badge.laobi.icu/badge?page_id={{GITHUB_USER}}.{{GITHUB_USER}}&left_color=blue&right_color=green&left_text=Visitors" />
 </p> 
