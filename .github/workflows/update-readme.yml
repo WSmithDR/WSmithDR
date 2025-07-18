@@ -25,6 +25,8 @@ jobs:
 
       - name: Generate README
         run: node scripts/generate-readme.js
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Commit and Push
         run: |
