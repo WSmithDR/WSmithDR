@@ -7,7 +7,7 @@
 ---
 
 ## 🔍 About Me
-> "_{{ANIME_QUOTE}}_"
+> "_Power comes in response to a need, not a desire. - Goku_"
 
 - 🌍 Full Stack Developer | Building **scalable apps** and **data-driven solutions**  
 - 💡 Experience in **React, Node.js, Python, Flask, Laravel, PostgreSQL, MySQL, MongoDB**  
@@ -18,7 +18,14 @@
 
 ## 🛠 Dynamic Tech Stack
 <p align="center">
-{{TECH_STACK_ICONS}}
+<img src="https://skillicons.dev/icons?i=python" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=css" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=jupyter notebook" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=javascript" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=html" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=typescript" height="40" style="margin: 0 5px;"/>
+</p>
+
+---
+
+## ⭐ Total Stars
+<p align="center">
+<b>0</b> ⭐ across all public repositories
 </p>
 
 ---
@@ -45,8 +52,7 @@
 
 ## 📌 Pinned Projects
 <p align="center">
-<a href="https://github.com/WSmithDR"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=your-project-1&theme=algolia&title_color=00bfa5" /></a>
-<a href="https://github.com/WSmithDR"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=your-project-2&theme=algolia&title_color=00bfa5" /></a>
+<a href="https://github.com/WSmithDR/A-B-testing-project"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=A-B-testing-project&theme=algolia&title_color=00bfa5" /></a> <a href="https://github.com/WSmithDR/angularconsergiecode"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=angularconsergiecode&theme=algolia&title_color=00bfa5" /></a>
 </p>
 
 ---
@@ -61,4 +67,4 @@
 
 <p align="center">Visitor Count:  
 <img src="https://profile-counter.glitch.me/WSmithDR/count.svg" />
-</p>
+</p> 
