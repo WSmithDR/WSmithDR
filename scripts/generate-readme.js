@@ -95,6 +95,33 @@ function getTotalStars(repos) {
   return repos.reduce((sum, repo) => sum + (repo.stargazers_count || 0), 0);
 }
 
+async function getLatestProjects(repos, n = 5) {
+  // Ordena por última actualización y filtra solo públicos del usuario
+  const sorted = repos.filter(r => !r.fork && !r.private && r.owner.login.toLowerCase() === GITHUB_USER.toLowerCase())
+    .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+  return sorted.slice(0, n).map(repo =>
+    `<li><a href=\"https://github.com/${repo.full_name}\">${repo.name}</a> - ${repo.description || "No description"}</li>`
+  ).join("\n");
+}
+
+function getSkillsProgress(repos) {
+  // Calcula el porcentaje de cada lenguaje principal
+  const langCount = {};
+  let total = 0;
+  repos.forEach(repo => {
+    if (repo.language && !repo.fork && !repo.private && repo.owner.login.toLowerCase() === GITHUB_USER.toLowerCase()) {
+      const lang = repo.language;
+      langCount[lang] = (langCount[lang] || 0) + 1;
+      total++;
+    }
+  });
+  const sorted = Object.entries(langCount).sort((a, b) => b[1] - a[1]);
+  return sorted.slice(0, 8).map(([lang, count]) => {
+    const percent = ((count / total) * 100).toFixed(1);
+    return `<b>${lang}</b> <progress value=\"${percent}\" max=\"100\"></progress> ${percent}%`;
+  }).join("<br>\n");
+}
+
 async function generateReadme() {
   try {
     const template = fs.readFileSync(TEMPLATE_PATH, "utf8");
@@ -103,13 +130,17 @@ async function generateReadme() {
     const quote = getRandomAnimeQuote();
     const pinned = getPinnedProjects(repos);
     const totalStars = getTotalStars(repos);
+    const latestProjects = await getLatestProjects(repos);
+    const skillsProgress = getSkillsProgress(repos);
 
     const output = template
       .replace(/{{TECH_STACK_ICONS}}/g, techIcons)
       .replace(/{{ANIME_QUOTE}}/g, quote)
       .replace(/{{PINNED_PROJECTS}}/g, pinned)
       .replace(/{{TOTAL_STARS}}/g, totalStars)
-      .replace(/{{GITHUB_USER}}/g, GITHUB_USER);
+      .replace(/{{GITHUB_USER}}/g, GITHUB_USER)
+      .replace(/{{LATEST_PROJECTS}}/g, latestProjects)
+      .replace(/{{SKILLS_PROGRESS}}/g, skillsProgress);
 
     fs.writeFileSync(README_PATH, output);
     console.log("README.md updated successfully!");
