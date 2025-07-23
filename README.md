@@ -7,7 +7,7 @@
 ---
 
 ## 🔍 About Me
-> "_Whatever you lose, you'll find it again. But what you throw away you'll never get back. - Kenshin_"
+> "_Power comes in response to a need, not a desire. - Goku_"
 
 - 🌍 Full Stack Developer | Building **scalable apps** and **data-driven solutions**  
 - 💡 Experience in **React, Node.js, Python, Flask, Laravel, PostgreSQL, MySQL, MongoDB**  
