@@ -7,7 +7,7 @@
 ---
 
 ## 🔍 About Me
-> "_Power comes in response to a need, not a desire. - Goku_"
+> "_When you give up, your dreams and everything else they're gone. - Naruto_"
 
 - 🌍 Full Stack Developer | Building **scalable apps** and **data-driven solutions**  
 - 💡 Experience in **React, Node.js, Python, Flask, Laravel, PostgreSQL, MySQL, MongoDB**  
@@ -54,7 +54,7 @@
 
 ## 📌 Pinned Projects
 <p align="center">
-<a href="https://github.com/WSmithDR/WSmithDR"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=WSmithDR&theme=algolia&title_color=00bfa5" /></a> <a href="https://github.com/WSmithDR/java_android_practice"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=java_android_practice&theme=algolia&title_color=00bfa5" /></a>
+<a href="https://github.com/WSmithDR/sql-practice"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=sql-practice&theme=algolia&title_color=00bfa5" /></a> <a href="https://github.com/WSmithDR/WSmithDR"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=WSmithDR&theme=algolia&title_color=00bfa5" /></a>
 </p>
 
 ---
@@ -69,11 +69,11 @@
 
 ## 🆕 Latest Projects
 <ul>
+<li><a href="https://github.com/WSmithDR/sql-practice">sql-practice</a> - No description</li>
 <li><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a> - No description</li>
 <li><a href="https://github.com/WSmithDR/java_android_practice">java_android_practice</a> - No description</li>
 <li><a href="https://github.com/WSmithDR/POO4_1P_DUENAS_ROMERO_ORTEGA">POO4_1P_DUENAS_ROMERO_ORTEGA</a> - No description</li>
 <li><a href="https://github.com/WSmithDR/Uncovering-the-Cost-of-Living-in-the-Galactic-Empire">Uncovering-the-Cost-of-Living-in-the-Galactic-Empire</a> - No description</li>
-<li><a href="https://github.com/WSmithDR/nave_deriva">nave_deriva</a> - No description</li>
 </ul>
 
 ---
