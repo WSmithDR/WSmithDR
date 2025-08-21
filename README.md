@@ -7,7 +7,7 @@
 ---
 
 ## 🔍 About Me
-> "_Whatever you lose, you'll find it again. But what you throw away you'll never get back. - Kenshin_"
+> "_To know sorrow is not terrifying. What is terrifying is to know you can't go back to happiness you could have. - Matsumoto Rangiku_"
 
 - 🌍 Full Stack Developer | Building **scalable apps** and **data-driven solutions**  
 - 💡 Experience in **React, Node.js, Python, Flask, Laravel, PostgreSQL, MySQL, MongoDB**  
@@ -18,7 +18,7 @@
 
 ## 🛠 Dynamic Tech Stack
 <p align="center">
-<img src="https://skillicons.dev/icons?i=javascript" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=python" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=java" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=jupyter notebook" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=typescript" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=shell" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=php" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=css" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=html" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=kotlin" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=c#" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=vue" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=swift" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=dart" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=c++" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=astro" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=rich text format" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=makefile" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=ruby" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=scss" height="40" style="margin: 0 5px;"/>
+<img src="https://skillicons.dev/icons?i=python" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=typescript" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=javascript" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=java" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=jupyter notebook" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=shell" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=php" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=css" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=html" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=kotlin" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=c#" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=vue" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=swift" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=dart" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=c++" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=astro" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=rich text format" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=makefile" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=ruby" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=scss" height="40" style="margin: 0 5px;"/>
 </p>
 
 ---
@@ -54,7 +54,7 @@
 
 ## 📌 Pinned Projects
 <p align="center">
-<a href="https://github.com/WSmithDR/machine-learning-project"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=machine-learning-project&theme=algolia&title_color=00bfa5" /></a> <a href="https://github.com/WSmithDR/WSmithDR"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=WSmithDR&theme=algolia&title_color=00bfa5" /></a>
+<a href="https://github.com/WSmithDR/machine-learning-project"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=machine-learning-project&theme=algolia&title_color=00bfa5" /></a> <a href="https://github.com/WSmithDR/dynecron_prueba_backend"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=dynecron_prueba_backend&theme=algolia&title_color=00bfa5" /></a>
 </p>
 
 ---
@@ -69,11 +69,11 @@
 
 ## 🆕 Latest Projects
 <ul>
+<li><a href="https://github.com/WSmithDR/dynecron_prueba_backend">dynecron_prueba_backend</a> - No description</li>
+<li><a href="https://github.com/WSmithDR/dynecron_prueba_frontend">dynecron_prueba_frontend</a> - No description</li>
 <li><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a> - No description</li>
 <li><a href="https://github.com/WSmithDR/sbd_proj_2p">sbd_proj_2p</a> - No description</li>
 <li><a href="https://github.com/WSmithDR/PAR5_PROY2P_Duenas_Romero_Ortega">PAR5_PROY2P_Duenas_Romero_Ortega</a> - No description</li>
-<li><a href="https://github.com/WSmithDR/machine-learning-project">machine-learning-project</a> - No description</li>
-<li><a href="https://github.com/WSmithDR/Unidad6Tarea1Duenas">Unidad6Tarea1Duenas</a> - No description</li>
 </ul>
 
 ---
@@ -98,13 +98,13 @@
 ---
 
 ## 🛡️ Skills
-<b>JavaScript</b> <progress value="33.3" max="100"></progress> 33.3%<br>
-<b>Java</b> <progress value="16.7" max="100"></progress> 16.7%<br>
-<b>TypeScript</b> <progress value="16.7" max="100"></progress> 16.7%<br>
-<b>Python</b> <progress value="12.5" max="100"></progress> 12.5%<br>
-<b>Jupyter Notebook</b> <progress value="8.3" max="100"></progress> 8.3%<br>
-<b>CSS</b> <progress value="8.3" max="100"></progress> 8.3%<br>
-<b>HTML</b> <progress value="4.2" max="100"></progress> 4.2%
+<b>JavaScript</b> <progress value="30.8" max="100"></progress> 30.8%<br>
+<b>TypeScript</b> <progress value="19.2" max="100"></progress> 19.2%<br>
+<b>Python</b> <progress value="15.4" max="100"></progress> 15.4%<br>
+<b>Java</b> <progress value="15.4" max="100"></progress> 15.4%<br>
+<b>Jupyter Notebook</b> <progress value="7.7" max="100"></progress> 7.7%<br>
+<b>CSS</b> <progress value="7.7" max="100"></progress> 7.7%<br>
+<b>HTML</b> <progress value="3.8" max="100"></progress> 3.8%
 
 ---
 
