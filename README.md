@@ -7,7 +7,7 @@
 ---
 
 ## 🔍 About Me
-> "_When you give up, your dreams and everything else they're gone. - Naruto_"
+> "_Power comes in response to a need, not a desire. - Goku_"
 
 - 🌍 Full Stack Developer | Building **scalable apps** and **data-driven solutions**  
 - 💡 Experience in **React, Node.js, Python, Flask, Laravel, PostgreSQL, MySQL, MongoDB**  
