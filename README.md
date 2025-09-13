@@ -7,7 +7,7 @@
 ---
 
 ## 🔍 About Me
-> "_To know sorrow is not terrifying. What is terrifying is to know you can't go back to happiness you could have. - Matsumoto Rangiku_"
+> "_When you give up, your dreams and everything else they're gone. - Naruto_"
 
 - 🌍 Full Stack Developer | Building **scalable apps** and **data-driven solutions**  
 - 💡 Experience in **React, Node.js, Python, Flask, Laravel, PostgreSQL, MySQL, MongoDB**  
@@ -54,7 +54,7 @@
 
 ## 📌 Pinned Projects
 <p align="center">
-<a href="https://github.com/WSmithDR/machine-learning-project"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=machine-learning-project&theme=algolia&title_color=00bfa5" /></a> <a href="https://github.com/WSmithDR/WSmithDR"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=WSmithDR&theme=algolia&title_color=00bfa5" /></a>
+<a href="https://github.com/WSmithDR/machine-learning-project"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=machine-learning-project&theme=algolia&title_color=00bfa5" /></a> <a href="https://github.com/WSmithDR/espol-bootcamp-data_science"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=espol-bootcamp-data_science&theme=algolia&title_color=00bfa5" /></a>
 </p>
 
 ---
@@ -69,11 +69,11 @@
 
 ## 🆕 Latest Projects
 <ul>
+<li><a href="https://github.com/WSmithDR/espol-bootcamp-data_science">espol-bootcamp-data_science</a> - No description</li>
 <li><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a> - No description</li>
 <li><a href="https://github.com/WSmithDR/dynecron_prueba_backend">dynecron_prueba_backend</a> - No description</li>
 <li><a href="https://github.com/WSmithDR/dynecron_prueba_frontend">dynecron_prueba_frontend</a> - No description</li>
 <li><a href="https://github.com/WSmithDR/PAR5_PROY2P_Duenas_Romero_Ortega">PAR5_PROY2P_Duenas_Romero_Ortega</a> - No description</li>
-<li><a href="https://github.com/WSmithDR/sbd_proj_2p">sbd_proj_2p</a> - No description</li>
 </ul>
 
 ---
