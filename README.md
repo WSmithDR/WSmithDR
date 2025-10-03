@@ -25,7 +25,7 @@
 
 ## ⭐ Total Stars
 <p align="center">
-<b>1852</b> ⭐ across all public repositories
+<b>1851</b> ⭐ across all public repositories
 </p>
 
 ---
