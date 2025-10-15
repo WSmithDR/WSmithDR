@@ -7,7 +7,7 @@
 ---
 
 ## 🔍 About Me
-> "_When you give up, your dreams and everything else they're gone. - Naruto_"
+> "_Whatever you lose, you'll find it again. But what you throw away you'll never get back. - Kenshin_"
 
 - 🌍 Full Stack Developer | Building **scalable apps** and **data-driven solutions**  
 - 💡 Experience in **React, Node.js, Python, Flask, Laravel, PostgreSQL, MySQL, MongoDB**  
@@ -25,7 +25,7 @@
 
 ## ⭐ Total Stars
 <p align="center">
-<b>1851</b> ⭐ across all public repositories
+<b>1850</b> ⭐ across all public repositories
 </p>
 
 ---
