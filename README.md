@@ -7,7 +7,7 @@
 ---
 
 ## 🔍 About Me
-> "_When you give up, your dreams and everything else they're gone. - Naruto_"
+> "_A lesson without pain is meaningless. - Fullmetal Alchemist_"
 
 - 🌍 Full Stack Developer | Building **scalable apps** and **data-driven solutions**  
 - 💡 Experience in **React, Node.js, Python, Flask, Laravel, PostgreSQL, MySQL, MongoDB**  
@@ -25,7 +25,7 @@
 
 ## ⭐ Total Stars
 <p align="center">
-<b>1849</b> ⭐ across all public repositories
+<b>1851</b> ⭐ across all public repositories
 </p>
 
 ---
