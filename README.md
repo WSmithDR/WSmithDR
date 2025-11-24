@@ -7,7 +7,7 @@
 ---
 
 ## 🔍 About Me
-> "_A lesson without pain is meaningless. - Fullmetal Alchemist_"
+> "_It's not the face that makes someone a monster; it's the choices they make with their lives. - Naruto_"
 
 - 🌍 Full Stack Developer | Building **scalable apps** and **data-driven solutions**  
 - 💡 Experience in **React, Node.js, Python, Flask, Laravel, PostgreSQL, MySQL, MongoDB**  
@@ -98,13 +98,13 @@
 ---
 
 ## 🛡️ Skills
-<b>JavaScript</b> <progress value="29.6" max="100"></progress> 29.6%<br>
-<b>Python</b> <progress value="18.5" max="100"></progress> 18.5%<br>
-<b>TypeScript</b> <progress value="18.5" max="100"></progress> 18.5%<br>
-<b>Java</b> <progress value="14.8" max="100"></progress> 14.8%<br>
-<b>Jupyter Notebook</b> <progress value="7.4" max="100"></progress> 7.4%<br>
-<b>CSS</b> <progress value="7.4" max="100"></progress> 7.4%<br>
-<b>HTML</b> <progress value="3.7" max="100"></progress> 3.7%
+<b>JavaScript</b> <progress value="32.1" max="100"></progress> 32.1%<br>
+<b>Python</b> <progress value="17.9" max="100"></progress> 17.9%<br>
+<b>TypeScript</b> <progress value="17.9" max="100"></progress> 17.9%<br>
+<b>Java</b> <progress value="14.3" max="100"></progress> 14.3%<br>
+<b>Jupyter Notebook</b> <progress value="7.1" max="100"></progress> 7.1%<br>
+<b>CSS</b> <progress value="7.1" max="100"></progress> 7.1%<br>
+<b>HTML</b> <progress value="3.6" max="100"></progress> 3.6%
 
 ---
 
