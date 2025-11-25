@@ -7,7 +7,7 @@
 ---
 
 ## 🔍 About Me
-> "_It's not the face that makes someone a monster; it's the choices they make with their lives. - Naruto_"
+> "_To know sorrow is not terrifying. What is terrifying is to know you can't go back to happiness you could have. - Matsumoto Rangiku_"
 
 - 🌍 Full Stack Developer | Building **scalable apps** and **data-driven solutions**  
 - 💡 Experience in **React, Node.js, Python, Flask, Laravel, PostgreSQL, MySQL, MongoDB**  
