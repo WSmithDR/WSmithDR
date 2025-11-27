@@ -7,7 +7,7 @@
 ---
 
 ## 🔍 About Me
-> "_To know sorrow is not terrifying. What is terrifying is to know you can't go back to happiness you could have. - Matsumoto Rangiku_"
+> "_Whatever you lose, you'll find it again. But what you throw away you'll never get back. - Kenshin_"
 
 - 🌍 Full Stack Developer | Building **scalable apps** and **data-driven solutions**  
 - 💡 Experience in **React, Node.js, Python, Flask, Laravel, PostgreSQL, MySQL, MongoDB**  
