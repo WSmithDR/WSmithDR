@@ -7,7 +7,7 @@
 ---
 
 ## 🔍 About Me
-> "_To know sorrow is not terrifying. What is terrifying is to know you can't go back to happiness you could have. - Matsumoto Rangiku_"
+> "_Whatever you lose, you'll find it again. But what you throw away you'll never get back. - Kenshin_"
 
 - 🌍 Full Stack Developer | Building **scalable apps** and **data-driven solutions**  
 - 💡 Experience in **React, Node.js, Python, Flask, Laravel, PostgreSQL, MySQL, MongoDB**  
@@ -18,7 +18,7 @@
 
 ## 🛠 Dynamic Tech Stack
 <p align="center">
-<img src="https://skillicons.dev/icons?i=jupyter notebook" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=javascript" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=python" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=typescript" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=java" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=shell" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=php" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=css" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=html" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=kotlin" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=c#" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=vue" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=swift" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=dart" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=c++" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=astro" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=rich text format" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=makefile" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=ruby" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=scss" height="40" style="margin: 0 5px;"/>
+<img src="https://skillicons.dev/icons?i=javascript" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=jupyter notebook" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=python" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=typescript" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=java" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=shell" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=php" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=css" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=html" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=kotlin" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=c#" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=vue" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=swift" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=dart" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=c++" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=astro" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=rich text format" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=makefile" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=ruby" height="40" style="margin: 0 5px;"/> <img src="https://skillicons.dev/icons?i=scss" height="40" style="margin: 0 5px;"/>
 </p>
 
 ---
@@ -54,7 +54,7 @@
 
 ## 📌 Pinned Projects
 <p align="center">
-<a href="https://github.com/WSmithDR/machine-learning-project"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=machine-learning-project&theme=algolia&title_color=00bfa5" /></a> <a href="https://github.com/WSmithDR/Market-Scraper"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=Market-Scraper&theme=algolia&title_color=00bfa5" /></a>
+<a href="https://github.com/WSmithDR/machine-learning-project"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=machine-learning-project&theme=algolia&title_color=00bfa5" /></a> <a href="https://github.com/WSmithDR/WSmithDR"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=WSmithDR&theme=algolia&title_color=00bfa5" /></a>
 </p>
 
 ---
@@ -69,8 +69,8 @@
 
 ## 🆕 Latest Projects
 <ul>
-<li><a href="https://github.com/WSmithDR/Market-Scraper">Market-Scraper</a> - No description</li>
 <li><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a> - No description</li>
+<li><a href="https://github.com/WSmithDR/Market-Scraper">Market-Scraper</a> - No description</li>
 <li><a href="https://github.com/WSmithDR/jelou-prueba_tecnica">jelou-prueba_tecnica</a> - Proyecto de prueba técnica para Jelou.</li>
 <li><a href="https://github.com/WSmithDR/ESPOL-Fundamentos_de_Programacion">ESPOL-Fundamentos_de_Programacion</a> - Es para practicar los ejercicios de la materia de Fundamentos de Programación en ESPOL.</li>
 <li><a href="https://github.com/WSmithDR/MultiCriteria-Filtered-Deck-Organizer">MultiCriteria-Filtered-Deck-Organizer</a> - No description</li>
