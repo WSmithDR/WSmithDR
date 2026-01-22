@@ -7,7 +7,7 @@
 ---
 
 ## 🔍 About Me
-> "_To know sorrow is not terrifying. What is terrifying is to know you can't go back to happiness you could have. - Matsumoto Rangiku_"
+> "_When you give up, your dreams and everything else they're gone. - Naruto_"
 
 - 🌍 Full Stack Developer | Building **scalable apps** and **data-driven solutions**  
 - 💡 Experience in **React, Node.js, Python, Flask, Laravel, PostgreSQL, MySQL, MongoDB**  
