@@ -7,7 +7,7 @@
 ---
 
 ## 🔍 About Me
-> "_It's not the face that makes someone a monster; it's the choices they make with their lives. - Naruto_"
+> "_Power comes in response to a need, not a desire. - Goku_"
 
 - 🌍 Full Stack Developer | Building **scalable apps** and **data-driven solutions**  
 - 💡 Experience in **React, Node.js, Python, Flask, Laravel, PostgreSQL, MySQL, MongoDB**  
