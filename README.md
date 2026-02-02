@@ -7,7 +7,7 @@
 ---
 
 ## 🔍 About Me
-> "_When you give up, your dreams and everything else they're gone. - Naruto_"
+> "_Whatever you lose, you'll find it again. But what you throw away you'll never get back. - Kenshin_"
 
 - 🌍 Full Stack Developer | Building **scalable apps** and **data-driven solutions**  
 - 💡 Experience in **React, Node.js, Python, Flask, Laravel, PostgreSQL, MySQL, MongoDB**  
@@ -54,7 +54,7 @@
 
 ## 📌 Pinned Projects
 <p align="center">
-<a href="https://github.com/WSmithDR/machine-learning-project"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=machine-learning-project&theme=algolia&title_color=00bfa5" /></a> <a href="https://github.com/WSmithDR/WSmithDR"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=WSmithDR&theme=algolia&title_color=00bfa5" /></a>
+<a href="https://github.com/WSmithDR/machine-learning-project"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=machine-learning-project&theme=algolia&title_color=00bfa5" /></a> <a href="https://github.com/WSmithDR/CSHARP_fundamentals"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=CSHARP_fundamentals&theme=algolia&title_color=00bfa5" /></a>
 </p>
 
 ---
@@ -69,11 +69,11 @@
 
 ## 🆕 Latest Projects
 <ul>
+<li><a href="https://github.com/WSmithDR/CSHARP_fundamentals">CSHARP_fundamentals</a> - Aprender a usar C#</li>
 <li><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a> - No description</li>
 <li><a href="https://github.com/WSmithDR/anki_notebooks">anki_notebooks</a> - No description</li>
 <li><a href="https://github.com/WSmithDR/Market-Scraper">Market-Scraper</a> - No description</li>
 <li><a href="https://github.com/WSmithDR/jelou-prueba_tecnica">jelou-prueba_tecnica</a> - Proyecto de prueba técnica para Jelou.</li>
-<li><a href="https://github.com/WSmithDR/ESPOL-Fundamentos_de_Programacion">ESPOL-Fundamentos_de_Programacion</a> - Es para practicar los ejercicios de la materia de Fundamentos de Programación en ESPOL.</li>
 </ul>
 
 ---
