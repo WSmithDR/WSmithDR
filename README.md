@@ -7,7 +7,7 @@
 ---
 
 ## 🔍 About Me
-> "_It's not the face that makes someone a monster; it's the choices they make with their lives. - Naruto_"
+> "_A lesson without pain is meaningless. - Fullmetal Alchemist_"
 
 - 🌍 Full Stack Developer | Building **scalable apps** and **data-driven solutions**  
 - 💡 Experience in **React, Node.js, Python, Flask, Laravel, PostgreSQL, MySQL, MongoDB**  
@@ -54,7 +54,7 @@
 
 ## 📌 Pinned Projects
 <p align="center">
-<a href="https://github.com/WSmithDR/machine-learning-project"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=machine-learning-project&theme=algolia&title_color=00bfa5" /></a> <a href="https://github.com/WSmithDR/docker_course"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=docker_course&theme=algolia&title_color=00bfa5" /></a>
+<a href="https://github.com/WSmithDR/machine-learning-project"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=machine-learning-project&theme=algolia&title_color=00bfa5" /></a> <a href="https://github.com/WSmithDR/WSmithDR"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=WSmithDR&theme=algolia&title_color=00bfa5" /></a>
 </p>
 
 ---
@@ -69,8 +69,8 @@
 
 ## 🆕 Latest Projects
 <ul>
-<li><a href="https://github.com/WSmithDR/docker_course">docker_course</a> - Repository dedicated to active learning of Docker. I use each branch as an isolated test environment to solve practical exercises integrated with my spaced repetition system in Anki.</li>
 <li><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a> - No description</li>
+<li><a href="https://github.com/WSmithDR/docker_course">docker_course</a> - Repository dedicated to active learning of Docker. I use each branch as an isolated test environment to solve practical exercises integrated with my spaced repetition system in Anki.</li>
 <li><a href="https://github.com/WSmithDR/prueba_tecnica">prueba_tecnica</a> - No description</li>
 <li><a href="https://github.com/WSmithDR/CSHARP_fundamentals">CSHARP_fundamentals</a> - Aprender a usar C#</li>
 <li><a href="https://github.com/WSmithDR/anki_notebooks">anki_notebooks</a> - No description</li>
