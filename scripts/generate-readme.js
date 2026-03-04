@@ -1,20 +1,82 @@
 const fs = require("fs");
 const fetch = require("node-fetch");
 
+// Configuración de variables de entorno y rutas
 const GITHUB_USER = process.env.GITHUB_USER || "WSmithDR";
+const GITHUB_TOKEN = process.env.GH_TOKEN;
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY; // Debe estar en Secrets de GitHub
 const README_PATH = "README.md";
 const TEMPLATE_PATH = "README_TEMPLATE.md";
-const GITHUB_TOKEN = process.env.GH_TOKEN;
+const CACHE_PATH = "icon_cache.json";
 
 const fetchOptions = GITHUB_TOKEN
   ? { headers: { Authorization: `token ${GITHUB_TOKEN}` } }
   : {};
 
+// Cargar o inicializar el caché de iconos para persistencia
+let iconCache = {};
+if (fs.existsSync(CACHE_PATH)) {
+  try {
+    iconCache = JSON.parse(fs.readFileSync(CACHE_PATH, "utf8"));
+  } catch (e) {
+    iconCache = {};
+  }
+}
+
+/**
+ * Normaliza nombres de tecnologías usando IA (OpenAI) con Prompt en Inglés
+ */
+async function fetchSlugFromAI(name) {
+  if (!OPENAI_API_KEY) return name.toLowerCase().replace(/\s+/g, '');
+
+  try {
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${OPENAI_API_KEY}`
+      },
+      body: JSON.stringify({
+        model: "gpt-3.5-turbo",
+        messages: [{
+          role: "system",
+          content: "You are a Devicon expert. Your ONLY task is to return the exact 'slug' (folder name) for the provided technology to be used in a CDN URL. Examples: 'C++' -> 'cplusplus', 'Jupyter Notebook' -> 'jupyter', 'React' -> 'react', 'Node.js' -> 'nodejs'. If a direct match does not exist, return the name in lowercase without spaces or special characters. Do NOT respond with sentences, explanations, or quotes. Return ONLY the word."
+        }, {
+          role: "user",
+          content: name
+        }],
+        temperature: 0
+      })
+    });
+
+    const data = await response.json();
+    return data.choices[0].message.content.trim().toLowerCase();
+  } catch (err) {
+    console.error(`Error fetching slug for ${name}:`, err);
+    return name.toLowerCase().replace(/\s+/g, '');
+  }
+}
+
+/**
+ * Obtiene el slug validado buscando primero en el caché para ahorrar tokens
+ */
+async function getValidatedSlug(name) {
+  const cleanName = name.trim();
+  if (iconCache[cleanName]) return iconCache[cleanName];
+
+  const slug = await fetchSlugFromAI(cleanName);
+  iconCache[cleanName] = slug;
+  
+  // Guardar caché actualizado localmente para que el Action haga el commit
+  fs.writeFileSync(CACHE_PATH, JSON.stringify(iconCache, null, 2));
+  return slug;
+}
+
 async function fetchAllPages(url) {
   let results = [];
   let page = 1;
   while (true) {
-    const res = await fetch(`${url}${url.includes('?') ? '&' : '?'}per_page=100&page=${page}` , fetchOptions);
+    const res = await fetch(`${url}${url.includes('?') ? '&' : '?'}per_page=100&page=${page}`, fetchOptions);
     if (!res.ok) throw new Error(`GitHub API error: ${res.status} (${url})`);
     const data = await res.json();
     if (data.length === 0) break;
@@ -24,107 +86,68 @@ async function fetchAllPages(url) {
   return results;
 }
 
-async function getUserRepos() {
-  return await fetchAllPages(`https://api.github.com/user/repos?type=all&sort=updated`);
-}
-
-async function getOrgs() {
-  const orgs = await fetchAllPages(`https://api.github.com/user/orgs`);
-  return orgs.map(org => org.login);
-}
-
-async function getOrgRepos(org) {
-  return await fetchAllPages(`https://api.github.com/orgs/${org}/repos?type=all&sort=updated`);
-}
-
 async function getAllRepos() {
-  let repos = await getUserRepos();
-  const orgs = await getOrgs();
+  const repos = await fetchAllPages(`https://api.github.com/user/repos?type=all&sort=updated`);
+  const orgs = await fetchAllPages(`https://api.github.com/user/orgs`);
+  
+  let allRepos = [...repos];
   for (const org of orgs) {
-    const orgRepos = await getOrgRepos(org);
-    repos = repos.concat(orgRepos);
+    const orgRepos = await fetchAllPages(`https://api.github.com/orgs/${org.login}/repos?type=all&sort=updated`);
+    allRepos = allRepos.concat(orgRepos);
   }
+
   const seen = new Set();
-  const uniqueRepos = repos.filter(repo => {
+  return allRepos.filter(repo => {
     if (seen.has(repo.full_name)) return false;
     seen.add(repo.full_name);
     return true;
   });
-  return uniqueRepos;
 }
 
 async function getTopLanguages(repos) {
   const langMap = {};
-  
   repos.forEach(repo => {
     if (repo.language && !repo.fork && repo.owner.login.toLowerCase() === GITHUB_USER.toLowerCase()) {
-      const lang = repo.language;
-      if (!langMap[lang]) langMap[lang] = [];
-      langMap[lang].push(repo);
+      if (!langMap[repo.language]) langMap[repo.language] = [];
+      langMap[repo.language].push(repo);
     }
   });
 
   const sorted = Object.entries(langMap).sort((a, b) => b[1].length - a[1].length);
-  const totalLanguages = sorted.length;
-  
-  const getIconUrl = (lang) => {
-    const map = {
-      "javascript": "javascript/javascript-original.svg",
-      "typescript": "typescript/typescript-original.svg",
-      "python": "python/python-original.svg",
-      "java": "java/java-original.svg",
-      "jupyter notebook": "jupyter/jupyter-original.svg",
-      "css": "css3/css3-original.svg",
-      "html": "html5/html5-original.svg",
-      "shell": "bash/bash-original.svg",
-      "c++": "cplusplus/cplusplus-original.svg",
-      "c#": "csharp/csharp-original.svg",
-      "go": "go/go-original.svg",
-      "ruby": "ruby/ruby-original.svg",
-      "r": "r/r-original.svg"
-    };
-    const path = map[lang.toLowerCase()];
-    return path ? `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${path}` : null;
-  };
-
   let html = "";
-  sorted.forEach(([lang, repoList]) => {
-    const label = repoList.length === 1 ? 'Project' : 'Projects';
-    const iconUrl = getIconUrl(lang);
+
+  for (const [lang, repoList] of sorted) {
+    const slug = await getValidatedSlug(lang);
+    const iconUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${slug}/${slug}-original.svg`;
     
-    html += `<details>\n`;
-    html += `  <summary style="cursor: pointer; margin-bottom: 5px;">\n`;
-    if (iconUrl) {
-      html += `    <img src="${iconUrl}" width="24" title="${lang}" alt="${lang}" style="vertical-align: middle;"/> &nbsp; <b>${repoList.length} ${label}</b>\n`;
-    } else {
-      html += `    <b>${lang}</b> &nbsp; ${repoList.length} ${label}\n`;
-    }
+    html += `<details style="margin-bottom: 8px;">\n`;
+    html += `  <summary style="cursor: pointer;">\n`;
+    html += `    <img src="${iconUrl}" width="24" title="${lang}" onerror="this.style.display='none'" style="vertical-align: middle;"/> &nbsp; <b>${repoList.length} Proyectos (${lang})</b>\n`;
     html += `  </summary>\n`;
-    
     html += `  <blockquote>\n`;
+    
     repoList.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
     repoList.forEach(repo => {
-      const desc = repo.description ? repo.description : "No description";
-      html += `    <details>\n`;
-      html += `      <summary style="cursor: pointer; margin-bottom: 5px;"><a href="https://github.com/${repo.full_name}">${repo.name}</a></summary>\n`;
+      const desc = repo.description || "No description";
+      html += `    <details style="margin-bottom: 5px;">\n`;
+      html += `      <summary style="cursor: pointer;"><a href="${repo.html_url}">${repo.name}</a></summary>\n`;
       html += `      <blockquote><i>${desc}</i></blockquote>\n`;
       html += `    </details>\n`;
     });
     html += `  </blockquote>\n`;
     html += `</details>\n`;
-  });
-  
-  return { count: totalLanguages, html: html || "No languages detected yet" };
+  }
+  return { count: sorted.length, html };
 }
 
 async function getTopFrameworks(repos) {
   const topicMap = {};
-  
+  const ignored = ['javascript', 'typescript', 'python', 'java', 'html', 'css', 'jupyter-notebook'];
+
   repos.forEach(repo => {
-    if (!repo.fork && repo.owner.login.toLowerCase() === GITHUB_USER.toLowerCase() && repo.topics && repo.topics.length > 0) {
+    if (!repo.fork && repo.owner.login.toLowerCase() === GITHUB_USER.toLowerCase() && repo.topics) {
       repo.topics.forEach(topic => {
-        const ignoredTopics = ['javascript', 'typescript', 'python', 'java', 'html', 'css'];
-        if (!ignoredTopics.includes(topic.toLowerCase())) {
+        if (!ignored.includes(topic.toLowerCase())) {
           if (!topicMap[topic]) topicMap[topic] = [];
           topicMap[topic].push(repo);
         }
@@ -133,103 +156,57 @@ async function getTopFrameworks(repos) {
   });
 
   const sorted = Object.entries(topicMap).sort((a, b) => b[1].length - a[1].length);
-  const totalFrameworks = sorted.length;
-  
-  const getFrameworkIconUrl = (topic) => {
-    const map = {
-      "react": "react/react-original.svg",
-      "nextjs": "nextjs/nextjs-original.svg",
-      "nodejs": "nodejs/nodejs-original.svg",
-      "express": "express/express-original.svg",
-      "flask": "flask/flask-original.svg",
-      "postgresql": "postgresql/postgresql-original.svg",
-      "mongodb": "mongodb/mongodb-original.svg",
-      "mysql": "mysql/mysql-original.svg",
-      "sqlite": "sqlite/sqlite-original.svg",
-      "ubuntu": "ubuntu/ubuntu-plain.svg",
-      "linux": "linux/linux-original.svg",
-      "tailwindcss": "tailwindcss/tailwindcss-original.svg",
-      "sass": "sass/sass-original.svg",
-      "qt": "qt/qt-original.svg",
-      "pyqt": "qt/qt-original.svg"
-    };
-    const path = map[topic.toLowerCase()];
-    return path ? `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${path}` : null;
-  };
-
   let html = "";
-  sorted.forEach(([topic, repoList]) => {
-    const label = repoList.length === 1 ? 'Project' : 'Projects';
-    const iconUrl = getFrameworkIconUrl(topic);
-    const formattedTopic = topic.charAt(0).toUpperCase() + topic.slice(1);
 
-    html += `<details>\n`;
-    html += `  <summary style="cursor: pointer; margin-bottom: 5px;">\n`;
-    if (iconUrl) {
-      html += `    <img src="${iconUrl}" width="24" title="${formattedTopic}" alt="${formattedTopic}" style="vertical-align: middle;"/> &nbsp; <b>${repoList.length} ${label}</b>\n`;
-    } else {
-      html += `    <b>${formattedTopic}</b> &nbsp; ${repoList.length} ${label}\n`;
-    }
+  for (const [topic, repoList] of sorted) {
+    const slug = await getValidatedSlug(topic);
+    const iconUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${slug}/${slug}-original.svg`;
+    const name = topic.charAt(0).toUpperCase() + topic.slice(1);
+
+    html += `<details style="margin-bottom: 8px;">\n`;
+    html += `  <summary style="cursor: pointer;">\n`;
+    html += `    <img src="${iconUrl}" width="24" title="${name}" onerror="this.style.display='none'" style="vertical-align: middle;"/> &nbsp; <b>${repoList.length} Proyectos (${name})</b>\n`;
     html += `  </summary>\n`;
-    
     html += `  <blockquote>\n`;
-    repoList.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+    
     repoList.forEach(repo => {
-      const desc = repo.description ? repo.description : "No description";
-      html += `    <details>\n`;
-      html += `      <summary style="cursor: pointer; margin-bottom: 5px;"><a href="https://github.com/${repo.full_name}">${repo.name}</a></summary>\n`;
+      const desc = repo.description || "No description";
+      html += `    <details style="margin-bottom: 5px;">\n`;
+      html += `      <summary style="cursor: pointer;"><a href="${repo.html_url}">${repo.name}</a></summary>\n`;
       html += `      <blockquote><i>${desc}</i></blockquote>\n`;
       html += `    </details>\n`;
     });
     html += `  </blockquote>\n`;
     html += `</details>\n`;
-  });
-  
-  return { count: totalFrameworks, html: html || "Add topics to your repos to see them here!" };
+  }
+  return { count: sorted.length, html };
 }
 
 function getStarData(repos) {
-  let total = 0;
-  const starredRepos = [];
+  const starred = repos.filter(r => !r.fork && r.owner.login.toLowerCase() === GITHUB_USER.toLowerCase() && r.stargazers_count > 0)
+    .sort((a, b) => b.stargazers_count - a.stargazers_count);
+  
+  let total = starred.reduce((s, r) => s + r.stargazers_count, 0);
+  let html = starred.map(r => `
+    <details style="margin-bottom: 5px;">
+      <summary style="cursor: pointer;">⭐ <a href="${r.html_url}">${r.name}</a> - ${r.stargazers_count} stars</summary>
+      <blockquote><i>${r.description || "No description"}</i></blockquote>
+    </details>`).join("\n");
 
-  // Filtrar solo repositorios propios con estrellas
-  repos.forEach(repo => {
-    if (!repo.fork && repo.owner.login.toLowerCase() === GITHUB_USER.toLowerCase() && repo.stargazers_count > 0) {
-      total += repo.stargazers_count;
-      starredRepos.push(repo);
-    }
-  });
-
-  // Ordenar por popularidad
-  starredRepos.sort((a, b) => b.stargazers_count - a.stargazers_count);
-
-  let listHTML = "";
-  if (starredRepos.length > 0) {
-    starredRepos.forEach(repo => {
-      const desc = repo.description ? repo.description : "No description";
-      // Aplicar consistencia con menús desplegables y blockquote para indentación
-      listHTML += `    <details style="margin-bottom: 5px;">\n`;
-      listHTML += `      <summary style="cursor: pointer;">⭐ <a href="https://github.com/${repo.full_name}">${repo.name}</a> - ${repo.stargazers_count} stars</summary>\n`;
-      listHTML += `      <blockquote><i>${desc}</i></blockquote>\n`;
-      listHTML += `    </details>\n`;
-    });
-  } else {
-    listHTML = "<p>No starred repositories yet.</p>";
-  }
-
-  return { total, listHTML };
+  return { total, html };
 }
 
 async function getAllUserProjects(repos) {
   const sorted = repos.filter(r => !r.fork && !r.private && r.owner.login.toLowerCase() === GITHUB_USER.toLowerCase())
     .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
     
-  const listHTML = sorted.map(repo => {
-    const desc = repo.description ? repo.description : "No description";
-    return `  <details>\n    <summary style="cursor: pointer; margin-bottom: 5px;"><a href="https://github.com/${repo.full_name}">${repo.name}</a></summary>\n    <blockquote><i>${desc}</i></blockquote>\n  </details>`;
-  }).join("\n");
+  const html = sorted.map(repo => `
+    <details style="margin-bottom: 5px;">
+      <summary style="cursor: pointer;"><a href="${repo.html_url}">${repo.name}</a></summary>
+      <blockquote><i>${repo.description || "No description"}</i></blockquote>
+    </details>`).join("\n");
 
-  return { count: sorted.length, listHTML };
+  return { count: sorted.length, html };
 }
 
 async function generateReadme() {
@@ -248,15 +225,15 @@ async function generateReadme() {
       .replace(/{{TOTAL_FRAMEWORKS}}/g, frameworkData.count)
       .replace(/{{FRAMEWORKS_AND_TOOLS}}/g, frameworkData.html)
       .replace(/{{TOTAL_STARS}}/g, starData.total)
-      .replace(/{{STARRED_REPOS}}/g, starData.listHTML)
+      .replace(/{{STARRED_REPOS}}/g, starData.html)
       .replace(/{{GITHUB_USER}}/g, GITHUB_USER)
       .replace(/{{TOTAL_PROJECTS}}/g, projectsData.count)
-      .replace(/{{ALL_PROJECTS}}/g, projectsData.listHTML);
+      .replace(/{{ALL_PROJECTS}}/g, projectsData.html);
 
     fs.writeFileSync(README_PATH, output);
-    console.log("README.md updated successfully!");
+    console.log("README updated successfully!");
   } catch (err) {
-    console.error("Error generating README:", err);
+    console.error("Critical error generating README:", err);
     process.exit(1);
   }
 }
