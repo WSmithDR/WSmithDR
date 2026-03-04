@@ -6,7 +6,7 @@
   <blockquote>
 <details>
 <summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="20" onerror="this.style.display='none'" style="vertical-align: middle;"/> &nbsp; <b>14 Projects (Python)</b>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>14 Projects (Python)</b>
 </summary>
 <blockquote>
 <details>
@@ -69,7 +69,7 @@
 </details>
 <details>
 <summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="20" onerror="this.style.display='none'" style="vertical-align: middle;"/> &nbsp; <b>11 Projects (JavaScript)</b>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>11 Projects (JavaScript)</b>
 </summary>
 <blockquote>
 <details>
@@ -120,7 +120,7 @@
 </details>
 <details>
 <summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" width="20" onerror="this.style.display='none'" style="vertical-align: middle;"/> &nbsp; <b>8 Projects (TypeScript)</b>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>8 Projects (TypeScript)</b>
 </summary>
 <blockquote>
 <details>
@@ -159,7 +159,7 @@
 </details>
 <details>
 <summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" width="20" onerror="this.style.display='none'" style="vertical-align: middle;"/> &nbsp; <b>5 Projects (Java)</b>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>5 Projects (Java)</b>
 </summary>
 <blockquote>
 <details>
@@ -186,7 +186,7 @@
 </details>
 <details>
 <summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyternotebook/jupyternotebook-original.svg" width="20" onerror="this.style.display='none'" style="vertical-align: middle;"/> &nbsp; <b>3 Projects (Jupyter Notebook)</b>
+📁 &nbsp; <b>3 Projects (Jupyter Notebook)</b>
 </summary>
 <blockquote>
 <details>
@@ -205,7 +205,7 @@
 </details>
 <details>
 <summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css/css-original.svg" width="20" onerror="this.style.display='none'" style="vertical-align: middle;"/> &nbsp; <b>3 Projects (CSS)</b>
+📁 &nbsp; <b>3 Projects (CSS)</b>
 </summary>
 <blockquote>
 <details>
@@ -224,7 +224,7 @@
 </details>
 <details>
 <summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html/html-original.svg" width="20" onerror="this.style.display='none'" style="vertical-align: middle;"/> &nbsp; <b>2 Projects (HTML)</b>
+📁 &nbsp; <b>2 Projects (HTML)</b>
 </summary>
 <blockquote>
 <details>
@@ -239,7 +239,7 @@
 </details>
 <details>
 <summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/shell/shell-original.svg" width="20" onerror="this.style.display='none'" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (Shell)</b>
+📁 &nbsp; <b>1 Projects (Shell)</b>
 </summary>
 <blockquote>
 <details>
@@ -258,7 +258,7 @@
   <blockquote>
 <details>
 <summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" width="20" onerror="this.style.display='none'" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (React)</b>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (React)</b>
 </summary>
 <blockquote>
 <details>

@@ -3,5 +3,9 @@
   "JavaScript": "javascript",
   "TypeScript": "typescript",
   "Java": "java",
-  "react": "react"
+  "react": "react",
+  "Jupyter Notebook": null,
+  "CSS": null,
+  "HTML": null,
+  "Shell": null
 }
