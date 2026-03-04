@@ -2,12 +2,11 @@
 
 ---
 
-<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border: none; border-collapse: collapse;">
-  <tr style="border: none;">
-    <td width="50%" valign="top" style="border: none;">
-      <h2 style="margin: 0;">Programming Languages (8)</h2>
-      <br>
-<details>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start;">
+  <div>
+    <h2 style="margin: 0;">Programming Languages (8)</h2>
+    <br>
+    <details>
   <summary style="cursor: pointer;">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="24" title="Python" alt="Python" /> &nbsp; <b>14 Projects</b>
   </summary>
@@ -260,21 +259,20 @@
 </details>
 <br>
 
-    </td>
-    <td width="50%" valign="top" style="border: none;">
-      <h2 style="margin: 0;">Frameworks & Tools (0)</h2>
-      <br>
-Add topics to your repos to see them here!
-    </td>
-  </tr>
-</table>
+  </div>
+  <div>
+    <h2 style="margin: 0;">Frameworks & Tools (0)</h2>
+    <br>
+    Add topics to your repos to see them here!
+  </div>
+</div>
 
 ---
 
 <details>
   <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects (40)</h2></summary>
   <div style="margin-left: 15px;">
-    <details>
+        <details>
       <summary><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></summary>
       <p><i>No description</i></p>
     </details>
@@ -439,14 +437,14 @@ Add topics to your repos to see them here!
 
 ---
 
-## Total Stars (1)
+<h2>Total Stars (1)</h2>
 <ul>
   <li><a href="https://github.com/WSmithDR/machine-learning-project">machine-learning-project</a> - 1 ⭐</li>
 </ul>
 
 ---
 
-## Connect with Me
+<h2>Connect with Me</h2>
 <p align="center">
   <a href="https://www.linkedin.com/in/wsmith123/" target="_blank">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" width="40" title="LinkedIn" alt="LinkedIn" />
@@ -461,7 +459,7 @@ Add topics to your repos to see them here!
 
 ---
 
-## Visitor Count
+<h2>Visitor Count</h2>
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=WSmithDR&color=00bfa5&style=flat-square&label=Total+Profile+Views" alt="Profile views" />
 </p>
