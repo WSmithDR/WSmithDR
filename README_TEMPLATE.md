@@ -1,5 +1,7 @@
 <h1 align="center">Welcome to WSmithDR's World!</h1>
 
+---
+
 ## Programming Languages
 {{PROGRAMMING_LANGUAGES}}
 
@@ -13,9 +15,8 @@
 
 ---
 
-## Projects
 <details>
-  <summary><b>Click to view all my projects</b></summary>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects</h2></summary>
   <ul>
 {{ALL_PROJECTS}}
   </ul>
@@ -25,8 +26,8 @@
 
 ## Certifications
 <p align="center">
-  <a href="https://www.linkedin.com/in/wsmith123/details/certifications/">
-    <img src="https://img.shields.io/badge/LinkedIn%20Certifications-00bfa5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  <a href="https://www.linkedin.com/in/wsmith123/details/certifications/" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" width="40" title="LinkedIn Certifications" alt="LinkedIn Certifications" />
   </a>
 </p>
 
@@ -34,9 +35,15 @@
 
 ## Connect with Me
 <p align="center">
-  <a href="https://www.linkedin.com/in/wsmith123/"><img src="https://img.shields.io/badge/LinkedIn-00bfa5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="mailto:wsmithdrdev@gmail.com"><img src="https://img.shields.io/badge/Email-00bfa5?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-  <a href="https://wa.me/593989785480"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
+  <a href="https://www.linkedin.com/in/wsmith123/" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" width="40" title="LinkedIn" alt="LinkedIn" />
+  </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="mailto:wsmithdrdev@gmail.com" target="_blank">
+    <img src="https://cdn.simpleicons.org/gmail/EA4335" width="40" title="Email" alt="Email" />
+  </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://wa.me/593989785480" target="_blank">
+    <img src="https://cdn.simpleicons.org/whatsapp/25D366" width="40" title="WhatsApp" alt="WhatsApp" />
+  </a>
 </p>
 
 ---
