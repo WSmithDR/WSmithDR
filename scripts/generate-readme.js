@@ -192,6 +192,7 @@ function getStarData(repos) {
   let total = 0;
   const starredRepos = [];
 
+  // Filtrar solo repositorios propios con estrellas
   repos.forEach(repo => {
     if (!repo.fork && repo.owner.login.toLowerCase() === GITHUB_USER.toLowerCase() && repo.stargazers_count > 0) {
       total += repo.stargazers_count;
@@ -199,12 +200,18 @@ function getStarData(repos) {
     }
   });
 
+  // Ordenar por popularidad
   starredRepos.sort((a, b) => b.stargazers_count - a.stargazers_count);
 
   let listHTML = "";
   if (starredRepos.length > 0) {
     starredRepos.forEach(repo => {
-      listHTML += `<div>⭐ <a href="https://github.com/${repo.full_name}">${repo.name}</a> - ${repo.stargazers_count} stars</div>\n`;
+      const desc = repo.description ? repo.description : "No description";
+      // Aplicar consistencia con menús desplegables y blockquote para indentación
+      listHTML += `    <details style="margin-bottom: 5px;">\n`;
+      listHTML += `      <summary style="cursor: pointer;">⭐ <a href="https://github.com/${repo.full_name}">${repo.name}</a> - ${repo.stargazers_count} stars</summary>\n`;
+      listHTML += `      <blockquote><i>${desc}</i></blockquote>\n`;
+      listHTML += `    </details>\n`;
     });
   } else {
     listHTML = "<p>No starred repositories yet.</p>";
