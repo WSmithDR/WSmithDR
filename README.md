@@ -438,7 +438,10 @@
 <details>
   <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Total Stars (1)</h2></summary>
   <blockquote>
-<div>⭐ <a href="https://github.com/WSmithDR/machine-learning-project">machine-learning-project</a> - 1 stars</div>
+    <details style="margin-bottom: 5px;">
+      <summary style="cursor: pointer;">⭐ <a href="https://github.com/WSmithDR/machine-learning-project">machine-learning-project</a> - 1 stars</summary>
+      <blockquote><i>No description</i></blockquote>
+    </details>
 
   </blockquote>
 </details>
