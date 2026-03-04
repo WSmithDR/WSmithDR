@@ -14,9 +14,9 @@
 
 <details>
   <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects ({{TOTAL_PROJECTS}})</h2></summary>
-  <ul>
+  <div style="margin-left: 15px;">
 {{ALL_PROJECTS}}
-  </ul>
+  </div>
 </details>
 
 ---
