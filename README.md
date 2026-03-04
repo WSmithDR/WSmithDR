@@ -274,7 +274,7 @@
 <details>
   <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects (40)</h2></summary>
 
-<blockquote>
+  <blockquote>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></summary>
 <blockquote><i>No description</i></blockquote>
@@ -435,7 +435,7 @@
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/PF-Back">PF-Back</a></summary>
 <blockquote><i>No description</i></blockquote>
 </details>
-</blockquote>
+  </blockquote>
 </details>
 
 <details>
