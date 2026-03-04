@@ -123,19 +123,60 @@
 
 ## Total Stars
 <p align="center">
-<b>1</b> across all public repositories
+<b>1</b> ⭐ across all public repositories
 </p>
+<ul>
+  <li><a href="https://github.com/WSmithDR/machine-learning-project">machine-learning-project</a> - 1 ⭐</li>
+</ul>
 
 ---
 
-## Latest Projects
-<ul>
-<li><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a> - No description</li>
-<li><a href="https://github.com/WSmithDR/docker_course">docker_course</a> - Repository dedicated to active learning of Docker. I use each branch as an isolated test environment to solve practical exercises integrated with my spaced repetition system in Anki.</li>
-<li><a href="https://github.com/WSmithDR/prueba_tecnica">prueba_tecnica</a> - No description</li>
-<li><a href="https://github.com/WSmithDR/CSHARP_fundamentals">CSHARP_fundamentals</a> - Aprender a usar C#</li>
-<li><a href="https://github.com/WSmithDR/anki_notebooks">anki_notebooks</a> - No description</li>
-</ul>
+## Projects
+<details>
+  <summary><b>Click to view all my projects</b></summary>
+  <ul>
+    <li><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/docker_course">docker_course</a> - Repository dedicated to active learning of Docker. I use each branch as an isolated test environment to solve practical exercises integrated with my spaced repetition system in Anki.</li>
+    <li><a href="https://github.com/WSmithDR/prueba_tecnica">prueba_tecnica</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/CSHARP_fundamentals">CSHARP_fundamentals</a> - Aprender a usar C#</li>
+    <li><a href="https://github.com/WSmithDR/anki_notebooks">anki_notebooks</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/Market-Scraper">Market-Scraper</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/jelou-prueba_tecnica">jelou-prueba_tecnica</a> - Proyecto de prueba técnica para Jelou.</li>
+    <li><a href="https://github.com/WSmithDR/ESPOL-Fundamentos_de_Programacion">ESPOL-Fundamentos_de_Programacion</a> - Es para practicar los ejercicios de la materia de Fundamentos de Programación en ESPOL.</li>
+    <li><a href="https://github.com/WSmithDR/MultiCriteria-Filtered-Deck-Organizer">MultiCriteria-Filtered-Deck-Organizer</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/espol-bootcamp-data_science">espol-bootcamp-data_science</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/dynecron_prueba_backend">dynecron_prueba_backend</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/dynecron_prueba_frontend">dynecron_prueba_frontend</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/PAR5_PROY2P_Duenas_Romero_Ortega">PAR5_PROY2P_Duenas_Romero_Ortega</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/sbd_proj_2p">sbd_proj_2p</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/machine-learning-project">machine-learning-project</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/Unidad6Tarea1Duenas">Unidad6Tarea1Duenas</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/sql-practice">sql-practice</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/java_android_practice">java_android_practice</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/POO4_1P_DUENAS_ROMERO_ORTEGA">POO4_1P_DUENAS_ROMERO_ORTEGA</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/Uncovering-the-Cost-of-Living-in-the-Galactic-Empire">Uncovering-the-Cost-of-Living-in-the-Galactic-Empire</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/nave_deriva">nave_deriva</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/sbd_proj_1_p_1">sbd_proj_1_p_1</a> - En este repositorio van a ir los avances del proyecto del primer parcial de la materia de Sistema de bases de datos.</li>
+    <li><a href="https://github.com/WSmithDR/A-B-testing-project">A-B-testing-project</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/big-data-project-espol-bootcamp">big-data-project-espol-bootcamp</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/redux-toolkit">redux-toolkit</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/bootcamp_espol-python">bootcamp_espol-python</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/PI-Videogames">PI-Videogames</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/restAPI-ts-node-express-mongoose-mongo-practice1">restAPI-ts-node-express-mongoose-mongo-practice1</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/SmarttwigsApplicationExercise">SmarttwigsApplicationExercise</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/ngstore">ngstore</a> - Aprendiendo a manejarme en Angular.</li>
+    <li><a href="https://github.com/WSmithDR/htmlconsergiecode">htmlconsergiecode</a> - Curso de HTML puro con SergieCode.</li>
+    <li><a href="https://github.com/WSmithDR/angularconsergiecode">angularconsergiecode</a> - Desarrollo de una web app con Angular siguiendo el tutorial de Sergie Code.</li>
+    <li><a href="https://github.com/WSmithDR/todoApp">todoApp</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/userslist">userslist</a> - Mini web app que consume datos de un API para presentar usuarios en un panel.</li>
+    <li><a href="https://github.com/WSmithDR/HardwareMarketApp-Front">HardwareMarketApp-Front</a> - Desarrollo de la página estática de la app HardwareMarketApp.</li>
+    <li><a href="https://github.com/WSmithDR/Videogames-Front">Videogames-Front</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/Videogames-Back">Videogames-Back</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/PF-Front">PF-Front</a> - No description</li>
+    <li><a href="https://github.com/WSmithDR/PF-Back">PF-Back</a> - No description</li>
+  </ul>
+</details>
 
 ---
 
@@ -168,14 +209,7 @@
 
 ---
 
-## GitHub Trophies
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=WSmithDR&theme=algolia&no-frame=true&no-bg=true&margin-w=15" />
-</p>
-
----
-
 ## Visitor Count
 <p align="center">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=WSmithDR.WSmithDR&left_color=blue&right_color=green&left_text=Visitors" />
+  <img src="https://komarev.com/ghpvc/?username=WSmithDR&color=00bfa5&style=flat-square&label=Total+Profile+Views" alt="Profile views" />
 </p>
