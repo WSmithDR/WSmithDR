@@ -79,7 +79,6 @@ async function getTopLanguages(repos) {
       "shell": "bash/bash-original.svg",
       "c++": "cplusplus/cplusplus-original.svg",
       "c#": "csharp/csharp-original.svg",
-      "php": "php/php-original.svg",
       "go": "go/go-original.svg",
       "ruby": "ruby/ruby-original.svg",
       "r": "r/r-original.svg"
@@ -95,18 +94,15 @@ async function getTopLanguages(repos) {
     
     html += `<details>\n`;
     html += `  <summary style="cursor: pointer;">\n`;
-    
     if (iconUrl) {
       html += `    <img src="${iconUrl}" width="24" title="${lang}" alt="${lang}" /> &nbsp; <b>${repoList.length} ${label}</b>\n`;
     } else {
       html += `    <b>${lang}</b> &nbsp; ${repoList.length} ${label}\n`;
     }
-    
     html += `  </summary>\n`;
     html += `  <div style="margin-left: 15px;">\n`;
     
     repoList.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
-    
     repoList.forEach(repo => {
       const desc = repo.description ? repo.description : "No description";
       html += `    <details>\n`;
@@ -120,6 +116,80 @@ async function getTopLanguages(repos) {
   });
   
   return { count: totalLanguages, html: html || "No languages detected yet" };
+}
+
+// LÓGICA NUEVA: Extrae los Topics de GitHub para crear la lista de frameworks y herramientas
+async function getTopFrameworks(repos) {
+  const topicMap = {};
+  
+  repos.forEach(repo => {
+    if (!repo.fork && repo.owner.login.toLowerCase() === GITHUB_USER.toLowerCase() && repo.topics && repo.topics.length > 0) {
+      repo.topics.forEach(topic => {
+        // Ignorar etiquetas genéricas que sean lenguajes base para no duplicar con la otra columna
+        const ignoredTopics = ['javascript', 'typescript', 'python', 'java', 'html', 'css'];
+        if (!ignoredTopics.includes(topic.toLowerCase())) {
+          if (!topicMap[topic]) topicMap[topic] = [];
+          topicMap[topic].push(repo);
+        }
+      });
+    }
+  });
+
+  const sorted = Object.entries(topicMap).sort((a, b) => b[1].length - a[1].length);
+  const totalFrameworks = sorted.length;
+  
+  const getFrameworkIconUrl = (topic) => {
+    const map = {
+      "react": "react/react-original.svg",
+      "nextjs": "nextjs/nextjs-original.svg",
+      "nodejs": "nodejs/nodejs-original.svg",
+      "express": "express/express-original.svg",
+      "flask": "flask/flask-original.svg",
+      "postgresql": "postgresql/postgresql-original.svg",
+      "mongodb": "mongodb/mongodb-original.svg",
+      "mysql": "mysql/mysql-original.svg",
+      "sqlite": "sqlite/sqlite-original.svg",
+      "ubuntu": "ubuntu/ubuntu-plain.svg",
+      "linux": "linux/linux-original.svg",
+      "tailwindcss": "tailwindcss/tailwindcss-original.svg",
+      "sass": "sass/sass-original.svg"
+    };
+    const path = map[topic.toLowerCase()];
+    return path ? `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${path}` : null;
+  };
+
+  let html = "";
+  sorted.forEach(([topic, repoList]) => {
+    const label = repoList.length === 1 ? 'Project' : 'Projects';
+    const iconUrl = getFrameworkIconUrl(topic);
+    
+    // Capitalizar la primera letra del topic para que se vea mejor
+    const formattedTopic = topic.charAt(0).toUpperCase() + topic.slice(1);
+
+    html += `<details>\n`;
+    html += `  <summary style="cursor: pointer;">\n`;
+    if (iconUrl) {
+      html += `    <img src="${iconUrl}" width="24" title="${formattedTopic}" alt="${formattedTopic}" /> &nbsp; <b>${repoList.length} ${label}</b>\n`;
+    } else {
+      html += `    <b>${formattedTopic}</b> &nbsp; ${repoList.length} ${label}\n`;
+    }
+    html += `  </summary>\n`;
+    html += `  <div style="margin-left: 15px;">\n`;
+    
+    repoList.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+    repoList.forEach(repo => {
+      const desc = repo.description ? repo.description : "No description";
+      html += `    <details>\n`;
+      html += `      <summary><a href="https://github.com/${repo.full_name}">${repo.name}</a></summary>\n`;
+      html += `      <p><i>${desc}</i></p>\n`;
+      html += `    </details>\n`;
+    });
+    
+    html += `  </div>\n`;
+    html += `</details>\n<br>\n`;
+  });
+  
+  return { count: totalFrameworks, html: html || "Add topics to your repos to see them here!" };
 }
 
 function getStarData(repos) {
@@ -167,12 +237,15 @@ async function generateReadme() {
     const repos = await getAllRepos();
     
     const langData = await getTopLanguages(repos);
+    const frameworkData = await getTopFrameworks(repos);
     const starData = getStarData(repos);
     const projectsData = await getAllUserProjects(repos);
 
     const output = template
       .replace(/{{TOTAL_LANGUAGES}}/g, langData.count)
       .replace(/{{PROGRAMMING_LANGUAGES}}/g, langData.html)
+      .replace(/{{TOTAL_FRAMEWORKS}}/g, frameworkData.count)
+      .replace(/{{FRAMEWORKS_AND_TOOLS}}/g, frameworkData.html)
       .replace(/{{TOTAL_STARS}}/g, starData.total)
       .replace(/{{STARRED_REPOS}}/g, starData.listHTML)
       .replace(/{{GITHUB_USER}}/g, GITHUB_USER)
