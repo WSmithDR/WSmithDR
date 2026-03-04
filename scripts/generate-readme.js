@@ -1,10 +1,10 @@
 const fs = require("fs");
 const fetch = require("node-fetch");
 
-// Configuración de variables de entorno
-const GITHUB_USER = process.env.GITHUB_REPOSITORY_OWNER;
+// Configuración de variables de entorno (Automáticas en GitHub Actions)
+const GITHUB_USER = process.env.GITHUB_REPOSITORY_OWNER || "WSmithDR";
 const GITHUB_TOKEN = process.env.GH_TOKEN;
-const HF_TOKEN = process.env.HF_TOKEN; // Token de Hugging Face en Secrets
+const HF_TOKEN = process.env.HF_TOKEN; 
 const README_PATH = "README.md";
 const TEMPLATE_PATH = "README_TEMPLATE.md";
 const CACHE_PATH = "icon_cache.json";
@@ -13,7 +13,7 @@ const fetchOptions = GITHUB_TOKEN
   ? { headers: { Authorization: `token ${GITHUB_TOKEN}` } }
   : {};
 
-// Cargar o inicializar el caché de iconos para persistencia
+// Cargar o inicializar el caché de iconos
 let iconCache = {};
 if (fs.existsSync(CACHE_PATH)) {
   try {
@@ -72,7 +72,7 @@ async function getValidatedSlug(name) {
   const slug = await fetchSlugFromAI(cleanName);
   iconCache[cleanName] = slug;
   
-  // Guardar caché actualizado localmente
+  // Guardar caché actualizado para persistencia en el repo
   fs.writeFileSync(CACHE_PATH, JSON.stringify(iconCache, null, 2));
   return slug;
 }
@@ -127,10 +127,11 @@ async function getTopLanguages(repos) {
     
     html += `<details>\n`;
     html += `  <summary style="cursor: pointer; margin-bottom: 5px;">\n`;
-    html += `    <img src="${iconUrl}" width="24" title="${lang}" onerror="this.style.display='none'" style="vertical-align: middle;"/> &nbsp; <b>${repoList.length} Projects (${lang})</b>\n`;
+    html += `    <img src="${iconUrl}" width="20" title="${lang}" onerror="this.style.display='none'" style="vertical-align: middle;"/> &nbsp; <b>${repoList.length} Proyectos (${lang})</b>\n`;
     html += `  </summary>\n`;
     html += `  <blockquote>\n`;
     
+    repoList.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
     repoList.forEach(repo => {
       html += `    <details>\n`;
       html += `      <summary style="cursor: pointer;"><a href="${repo.html_url}">${repo.name}</a></summary>\n`;
@@ -146,6 +147,7 @@ async function getTopLanguages(repos) {
 
 async function getTopFrameworks(repos) {
   const topicMap = {};
+  // Filtramos lenguajes base para que solo aparezcan frameworks y herramientas
   const ignored = ['javascript', 'typescript', 'python', 'java', 'html', 'css', 'jupyter-notebook'];
 
   repos.forEach(repo => {
@@ -169,7 +171,7 @@ async function getTopFrameworks(repos) {
 
     html += `<details>\n`;
     html += `  <summary style="cursor: pointer; margin-bottom: 5px;">\n`;
-    html += `    <img src="${iconUrl}" width="24" title="${name}" onerror="this.style.display='none'" style="vertical-align: middle;"/> &nbsp; <b>${repoList.length} Projects (${name})</b>\n`;
+    html += `    <img src="${iconUrl}" width="20" title="${name}" onerror="this.style.display='none'" style="vertical-align: middle;"/> &nbsp; <b>${repoList.length} Proyectos (${name})</b>\n`;
     html += `  </summary>\n`;
     html += `  <blockquote>\n`;
     
@@ -234,9 +236,9 @@ async function generateReadme() {
       .replace(/{{ALL_PROJECTS}}/g, projectsData.html);
 
     fs.writeFileSync(README_PATH, output);
-    console.log("README updated successfully!");
+    console.log("README generado con éxito.");
   } catch (err) {
-    console.error(err);
+    console.error("Error crítico:", err);
     process.exit(1);
   }
 }
