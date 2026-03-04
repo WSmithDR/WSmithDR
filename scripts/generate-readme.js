@@ -66,15 +66,44 @@ async function getTopLanguages(repos) {
 
   const sorted = Object.entries(langMap).sort((a, b) => b[1].length - a[1].length);
   
+  // Mapa para encontrar el logo correcto en devicon
+  const getIconUrl = (lang) => {
+    const map = {
+      "javascript": "javascript/javascript-original.svg",
+      "typescript": "typescript/typescript-original.svg",
+      "python": "python/python-original.svg",
+      "java": "java/java-original.svg",
+      "jupyter notebook": "jupyter/jupyter-original.svg",
+      "css": "css3/css3-original.svg",
+      "html": "html5/html5-original.svg",
+      "shell": "bash/bash-original.svg",
+      "c++": "cplusplus/cplusplus-original.svg",
+      "c#": "csharp/csharp-original.svg",
+      "php": "php/php-original.svg",
+      "go": "go/go-original.svg",
+      "ruby": "ruby/ruby-original.svg",
+      "r": "r/r-original.svg"
+    };
+    const path = map[lang.toLowerCase()];
+    return path ? `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${path}` : null;
+  };
+
   let html = "";
   sorted.forEach(([lang, repoList]) => {
-    const encodedLang = encodeURIComponent(lang);
-    const logoName = lang.toLowerCase().replace(/\+/g, "plus").replace(/#/g, "sharp").replace(/\s+/g, "");
     const label = repoList.length === 1 ? 'Project' : 'Projects';
+    const iconUrl = getIconUrl(lang);
     
     html += `<details>\n`;
-    html += `  <summary>\n`;
-    html += `    <img src="https://img.shields.io/badge/${encodedLang}-${repoList.length}_${label}-00bfa5?style=flat-square&logo=${logoName}&logoColor=white" style="cursor: pointer; margin-bottom: 5px;" />\n`;
+    html += `  <summary style="cursor: pointer;">\n`;
+    
+    if (iconUrl) {
+      // Muestra el icono aislado. "title" activa el hover text nativo.
+      html += `    <img src="${iconUrl}" width="24" title="${lang}" alt="${lang}" /> &nbsp; <b>${repoList.length} ${label}</b>\n`;
+    } else {
+      // Fallback por si hay un lenguaje extraño que no está en el mapa
+      html += `    <b>${lang}</b> &nbsp; ${repoList.length} ${label}\n`;
+    }
+    
     html += `  </summary>\n`;
     html += `  <ul>\n`;
     
@@ -92,7 +121,6 @@ async function getTopLanguages(repos) {
   return html || "No languages detected yet";
 }
 
-// LÓGICA NUEVA: Extrae el total y genera la lista HTML de repositorios con estrellas
 function getStarData(repos) {
   let total = 0;
   const starredRepos = [];
@@ -120,7 +148,6 @@ function getStarData(repos) {
   return { total, listHTML };
 }
 
-// LÓGICA NUEVA: Devuelve todos los proyectos del usuario en formato de lista para el menú desplegable
 async function getAllUserProjects(repos) {
   const sorted = repos.filter(r => !r.fork && !r.private && r.owner.login.toLowerCase() === GITHUB_USER.toLowerCase())
     .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
@@ -130,40 +157,23 @@ async function getAllUserProjects(repos) {
   ).join("\n");
 }
 
-function getSkillsProgress(repos) {
-  const langCount = {};
-  let total = 0;
-  repos.forEach(repo => {
-    if (repo.language && !repo.fork && !repo.private && repo.owner.login.toLowerCase() === GITHUB_USER.toLowerCase()) {
-      const lang = repo.language;
-      langCount[lang] = (langCount[lang] || 0) + 1;
-      total++;
-    }
-  });
-  const sorted = Object.entries(langCount).sort((a, b) => b[1] - a[1]);
-  return sorted.slice(0, 8).map(([lang, count]) => {
-    const percent = ((count / total) * 100).toFixed(1);
-    return `<b>${lang}</b> <progress value="${percent}" max="100"></progress> ${percent}%`;
-  }).join("<br>\n");
-}
-
 async function generateReadme() {
   try {
     const template = fs.readFileSync(TEMPLATE_PATH, "utf8");
     const repos = await getAllRepos();
     
-    const techIcons = await getTopLanguages(repos);
+    const programmingLanguages = await getTopLanguages(repos);
     const starData = getStarData(repos);
     const allProjects = await getAllUserProjects(repos);
-    const skillsProgress = getSkillsProgress(repos);
 
     const output = template
-      .replace(/{{TECH_STACK_ICONS}}/g, techIcons)
+      .replace(/{{PROGRAMMING_LANGUAGES}}/g, programmingLanguages)
       .replace(/{{TOTAL_STARS}}/g, starData.total)
       .replace(/{{STARRED_REPOS}}/g, starData.listHTML)
       .replace(/{{GITHUB_USER}}/g, GITHUB_USER)
       .replace(/{{ALL_PROJECTS}}/g, allProjects)
-      .replace(/{{SKILLS_PROGRESS}}/g, skillsProgress);
+      // Limpia la variable anterior en caso de que quede rastro
+      .replace(/{{SKILLS_PROGRESS}}/g, "");
 
     fs.writeFileSync(README_PATH, output);
     console.log("README.md updated successfully!");
