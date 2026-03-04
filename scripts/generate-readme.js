@@ -36,11 +36,13 @@ async function getValidIconUrl(slug) {
  * Tells the AI explicitly which slugs have already failed so it doesn't repeat them.
  */
 async function fetchSuggestionsFromGPTOSS(name, failedSlugs = []) {
-  if (!HF_TOKEN) return [];
+  if (!HF_TOKEN) {
+    console.log("   ⚠️ ERROR: No HF_TOKEN detectado en el entorno.");
+    return [];
+  }
 
-  // Injecting the "memory" of failed attempts into the prompt
   const avoidText = failedSlugs.length > 0 
-    ? ` IMPORTANT: The following slugs have already been tested and failed (404). DO NOT suggest them again under any circumstances: [${failedSlugs.join(", ")}].` 
+    ? ` DO NOT suggest these: [${failedSlugs.join(", ")}].` 
     : "";
 
   try {
@@ -55,25 +57,42 @@ async function fetchSuggestionsFromGPTOSS(name, failedSlugs = []) {
         messages: [
           {
             role: "system",
-            content: `You are a Devicon routing API. Map the given technology to 5 possible Devicon folder names (slugs). RULES: 1. HTML -> html5. 2. CSS -> css3. 3. Jupyter Notebook -> jupyter. 4. Shell -> bash. 5. C# -> csharp.${avoidText} Output ONLY a valid JSON array of 5 strings ordered by probability. Example format: ["html5", "html", "markup", "web", "xml"]`
+            content: `You are a Devicon routing API. Map the technology to 5 Devicon folder names (slugs). RULES: 1. HTML -> html5 2. CSS -> css3 3. Jupyter -> jupyter 4. Shell -> bash.${avoidText} Output ONLY a valid JSON array of strings.`
           }, 
           { role: "user", content: name }
         ],
         max_tokens: 60, 
-        temperature: 0.2 // Slightly higher temperature to force creative alternatives if the obvious ones failed
+        temperature: 0.2
       })
     });
     
+    // AQUÍ ESTÁ EL CAMBIO CLAVE: Capturamos el error real del servidor
+    if (!response.ok) {
+      const errStatus = response.status;
+      const errText = await response.text();
+      console.log(`   🚨 Hugging Face API Error (${errStatus}): ${errText}`);
+      if (errStatus === 503) {
+        console.log("   💡 TIP: El modelo 20B estaba dormido (Cold Start). Vuelve a ejecutar el Action en 1 minuto.");
+      }
+      return [];
+    }
+
     const data = await response.json();
     const content = data.choices[0].message.content;
+    
+    // Imprimimos la respuesta cruda de la IA para auditarla
+    console.log(`   🤖 Respuesta cruda de IA: ${content.replace(/\n/g, '')}`); 
     
     const match = content.match(/\[.*\]/s);
     if (match) {
       const parsed = JSON.parse(match[0]);
       return parsed.map(s => s.trim().toLowerCase().replace(/[^a-z0-9]/g, ''));
+    } else {
+      console.log(`   ⚠️ La IA no respetó el formato JSON.`);
+      return [];
     }
-    return [];
   } catch (err) { 
+    console.log(`   🚨 Excepción del servidor: ${err.message}`);
     return []; 
   }
 }
