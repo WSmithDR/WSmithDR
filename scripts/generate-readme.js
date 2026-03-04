@@ -103,22 +103,19 @@ async function getTopLanguages(repos) {
     }
     
     html += `  </summary>\n`;
-    html += `  <ul>\n`;
+    html += `  <div style="margin-left: 15px;">\n`;
     
     repoList.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
     
-    // LÓGICA NUEVA: Menú desplegable para la descripción de cada proyecto
     repoList.forEach(repo => {
       const desc = repo.description ? repo.description : "No description";
-      html += `    <li>\n`;
-      html += `      <details>\n`;
-      html += `        <summary><a href="https://github.com/${repo.full_name}">${repo.name}</a></summary>\n`;
-      html += `        <p><i>${desc}</i></p>\n`;
-      html += `      </details>\n`;
-      html += `    </li>\n`;
+      html += `    <details>\n`;
+      html += `      <summary><a href="https://github.com/${repo.full_name}">${repo.name}</a></summary>\n`;
+      html += `      <p><i>${desc}</i></p>\n`;
+      html += `    </details>\n`;
     });
     
-    html += `  </ul>\n`;
+    html += `  </div>\n`;
     html += `</details>\n<br>\n`;
   });
   
@@ -156,10 +153,9 @@ async function getAllUserProjects(repos) {
   const sorted = repos.filter(r => !r.fork && !r.private && r.owner.login.toLowerCase() === GITHUB_USER.toLowerCase())
     .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
     
-  // LÓGICA NUEVA: Mismo formato desplegable que los proyectos de lenguajes
   const listHTML = sorted.map(repo => {
     const desc = repo.description ? repo.description : "No description";
-    return `    <li>\n      <details>\n        <summary><a href="https://github.com/${repo.full_name}">${repo.name}</a></summary>\n        <p><i>${desc}</i></p>\n      </details>\n    </li>`;
+    return `    <details>\n      <summary><a href="https://github.com/${repo.full_name}">${repo.name}</a></summary>\n      <p><i>${desc}</i></p>\n    </details>`;
   }).join("\n");
 
   return { count: sorted.length, listHTML };
