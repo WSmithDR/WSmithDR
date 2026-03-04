@@ -14,11 +14,24 @@ const fetchOptions = GITHUB_TOKEN ? { headers: { Authorization: `token ${GITHUB_
 let iconCache = fs.existsSync(CACHE_PATH) ? JSON.parse(fs.readFileSync(CACHE_PATH, "utf8")) : {};
 
 /**
- * Normalizes technology names via Hugging Face (OpenAI Format)
- * This ensures dynamic icon matching without hardcoding.
+ * TOOL: Verifies if the Devicon URL actually exists on the CDN.
  */
-async function fetchSlugFromAI(name) {
-  if (!HF_TOKEN) return name.toLowerCase().trim().replace(/\s+/g, '');
+async function verifyIconUrl(slug) {
+  const url = `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${slug}/${slug}-original.svg`;
+  try {
+    const response = await fetch(url, { method: 'HEAD' });
+    return response.ok; 
+  } catch (err) {
+    return false;
+  }
+}
+
+/**
+ * Normalizes technology names via Hugging Face.
+ * It now returns a LIST of potential candidates.
+ */
+async function fetchSuggestionsFromAI(name) {
+  if (!HF_TOKEN) return [name.toLowerCase().trim().replace(/\s+/g, '')];
 
   try {
     const response = await fetch("https://api-inference.huggingface.co/v1/chat/completions", {
@@ -28,25 +41,52 @@ async function fetchSlugFromAI(name) {
         model: "mistralai/Mistral-7B-Instruct-v0.2", 
         messages: [{
           role: "system",
-          content: "You are a Devicon expert. Your task is to return the exact folder name (slug) for a technology in Devicon. IMPORTANT: Return ONLY the slug word. Use versioning if required (e.g., 'CSS' -> 'css3', 'HTML' -> 'html5', 'Shell' -> 'bash'). No prose."
+          content: "You are a Devicon expert. Your task is to provide the 3 most likely folder names (slugs) for a technology, ordered by probability. Examples: 'CSS' -> 'css3, css, postcss'. Return ONLY the slugs separated by commas, no prose."
         }, { role: "user", content: name }],
-        max_tokens: 10, temperature: 0
+        max_tokens: 20, temperature: 0
       })
     });
     const data = await response.json();
-    return data.choices ? data.choices[0].message.content.trim().toLowerCase().replace(/[^a-z0-9]/g, '') : name.toLowerCase().replace(/\s+/g, '');
-  } catch (err) { return name.toLowerCase().replace(/\s+/g, ''); }
+    if (!data.choices) return [name.toLowerCase().replace(/\s+/g, '')];
+    
+    // Split comma-separated string into an array of clean slugs
+    return data.choices[0].message.content.split(',').map(s => s.trim().toLowerCase().replace(/[^a-z0-9]/g, ''));
+  } catch (err) { 
+    return [name.toLowerCase().replace(/\s+/g, '')]; 
+  }
 }
 
+/**
+ * Iterates through AI suggestions until a valid URL is found.
+ */
 async function getValidatedSlug(name) {
   const cleanName = name.trim();
-  if (iconCache[cleanName]) return iconCache[cleanName];
-  const slug = await fetchSlugFromAI(cleanName);
-  iconCache[cleanName] = slug;
+  if (iconCache[cleanName] !== undefined) return iconCache[cleanName];
+
+  console.log(`🔍 Finding best match for: ${cleanName}...`);
+  const candidates = await fetchSuggestionsFromAI(cleanName);
+  
+  let finalSlug = null;
+
+  // THE ITERATIVE LOOP: We try each candidate until one works
+  for (const slug of candidates) {
+    console.log(`   - Testing candidate: ${slug}`);
+    const isValid = await verifyIconUrl(slug);
+    if (isValid) {
+      console.log(`   ✅ Match found: ${slug}`);
+      finalSlug = slug;
+      break; 
+    }
+  }
+
+  if (!finalSlug) console.warn(`   ❌ No valid icon found for: ${cleanName}`);
+
+  iconCache[cleanName] = finalSlug;
   fs.writeFileSync(CACHE_PATH, JSON.stringify(iconCache, null, 2));
-  return slug;
+  return finalSlug;
 }
 
+// Standard fetch and repo aggregation logic
 async function fetchAllPages(url) {
   let results = [];
   let page = 1;
@@ -90,8 +130,9 @@ async function getTopLanguages(repos) {
   let html = "";
   for (const [lang, repoList] of sorted) {
     const slug = await getValidatedSlug(lang);
-    const iconUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${slug}/${slug}-original.svg`;
-    html += `<details>\n<summary style="cursor: pointer;">\n<img src="${iconUrl}" width="20" onerror="this.style.display='none'" style="vertical-align: middle;"/> &nbsp; <b>${repoList.length} Projects (${lang})</b>\n</summary>\n<blockquote>\n`;
+    const iconUrl = slug ? `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${slug}/${slug}-original.svg` : "";
+    
+    html += `<details>\n<summary style="cursor: pointer;">\n${slug ? `<img src="${iconUrl}" width="20" style="vertical-align: middle;"/>` : "📁"} &nbsp; <b>${repoList.length} Projects (${lang})</b>\n</summary>\n<blockquote>\n`;
     repoList.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at)).forEach(repo => {
       html += `<details>\n<summary style="cursor: pointer;"><a href="${repo.html_url}">${repo.name}</a></summary>\n<blockquote><i>${repo.description || "No description"}</i></blockquote>\n</details>\n`;
     });
@@ -118,9 +159,10 @@ async function getTopFrameworks(repos) {
   let html = "";
   for (const [topic, repoList] of sorted) {
     const slug = await getValidatedSlug(topic);
-    const iconUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${slug}/${slug}-original.svg`;
+    const iconUrl = slug ? `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${slug}/${slug}-original.svg` : "";
     const label = topic.charAt(0).toUpperCase() + topic.slice(1);
-    html += `<details>\n<summary style="cursor: pointer;">\n<img src="${iconUrl}" width="20" onerror="this.style.display='none'" style="vertical-align: middle;"/> &nbsp; <b>${repoList.length} Projects (${label})</b>\n</summary>\n<blockquote>\n`;
+
+    html += `<details>\n<summary style="cursor: pointer;">\n${slug ? `<img src="${iconUrl}" width="20" style="vertical-align: middle;"/>` : "🛠️"} &nbsp; <b>${repoList.length} Projects (${label})</b>\n</summary>\n<blockquote>\n`;
     repoList.forEach(repo => {
       html += `<details>\n<summary style="cursor: pointer;"><a href="${repo.html_url}">${repo.name}</a></summary>\n<blockquote><i>${repo.description || "No description"}</i></blockquote>\n</details>\n`;
     });
@@ -165,7 +207,7 @@ async function generateReadme() {
       .replace(/{{ALL_PROJECTS}}/g, projectsData.html);
 
     fs.writeFileSync(README_PATH, output);
-    console.log("README updated successfully in English!");
+    console.log("README successfully generated in English with iterative validation.");
   } catch (err) { console.error(err); process.exit(1); }
 }
 generateReadme();
