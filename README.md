@@ -466,13 +466,3 @@
     </p>
   </blockquote>
 </details>
-
-<details>
-  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Visitor Count</h2></summary>
-
-  <blockquote>
-    <p align="center">
-      <img src="https://komarev.com/ghpvc/?username=WSmithDR&color=00bfa5&style=flat-square&label=Total+Profile+Views" alt="Profile views" />
-    </p>
-  </blockquote>
-</details>
