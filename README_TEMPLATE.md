@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to WSmithDR's World!</h1>
+<h1 align="center">Welcome to {{GITHUB_USER}}'s World!</h1>
 
 ---
 
@@ -16,20 +16,11 @@
 ---
 
 <details>
-  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects</h2></summary>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects ({{TOTAL_PROJECTS}})</h2></summary>
   <ul>
 {{ALL_PROJECTS}}
   </ul>
 </details>
-
----
-
-## Certifications
-<p align="center">
-  <a href="https://www.linkedin.com/in/wsmith123/details/certifications/" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" width="40" title="LinkedIn Certifications" alt="LinkedIn Certifications" />
-  </a>
-</p>
 
 ---
 
@@ -39,10 +30,10 @@
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" width="40" title="LinkedIn" alt="LinkedIn" />
   </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="mailto:wsmithdrdev@gmail.com" target="_blank">
-    <img src="https://cdn.simpleicons.org/gmail/EA4335" width="40" title="Email" alt="Email" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" width="40" title="Email" alt="Email" />
   </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://wa.me/593989785480" target="_blank">
-    <img src="https://cdn.simpleicons.org/whatsapp/25D366" width="40" title="WhatsApp" alt="WhatsApp" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="40" title="WhatsApp" alt="WhatsApp" />
   </a>
 </p>
 
