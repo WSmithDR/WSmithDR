@@ -53,7 +53,6 @@ async function getAllRepos() {
   return uniqueRepos;
 }
 
-// LÓGICA NUEVA: Agrupa repositorios por lenguaje y crea secciones desplegables
 async function getTopLanguages(repos) {
   const langMap = {};
   
@@ -70,7 +69,6 @@ async function getTopLanguages(repos) {
   let html = "";
   sorted.forEach(([lang, repoList]) => {
     const encodedLang = encodeURIComponent(lang);
-    // Adapta el nombre del lenguaje para buscar su logo en shields.io
     const logoName = lang.toLowerCase().replace(/\+/g, "plus").replace(/#/g, "sharp").replace(/\s+/g, "");
     const label = repoList.length === 1 ? 'Project' : 'Projects';
     
@@ -80,7 +78,6 @@ async function getTopLanguages(repos) {
     html += `  </summary>\n`;
     html += `  <ul>\n`;
     
-    // Ordena los proyectos del lenguaje por fecha de actualización
     repoList.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
     
     repoList.forEach(repo => {
@@ -95,20 +92,41 @@ async function getTopLanguages(repos) {
   return html || "No languages detected yet";
 }
 
-function getTotalStars(repos) {
-  return repos.reduce((sum, repo) => {
-    if (!repo.fork && repo.owner.login.toLowerCase() === GITHUB_USER.toLowerCase()) {
-      return sum + (repo.stargazers_count || 0);
+// LÓGICA NUEVA: Extrae el total y genera la lista HTML de repositorios con estrellas
+function getStarData(repos) {
+  let total = 0;
+  const starredRepos = [];
+
+  repos.forEach(repo => {
+    if (!repo.fork && repo.owner.login.toLowerCase() === GITHUB_USER.toLowerCase() && repo.stargazers_count > 0) {
+      total += repo.stargazers_count;
+      starredRepos.push(repo);
     }
-    return sum;
-  }, 0);
+  });
+
+  starredRepos.sort((a, b) => b.stargazers_count - a.stargazers_count);
+
+  let listHTML = "";
+  if (starredRepos.length > 0) {
+    listHTML += `<ul>\n`;
+    starredRepos.forEach(repo => {
+      listHTML += `  <li><a href="https://github.com/${repo.full_name}">${repo.name}</a> - ${repo.stargazers_count} ⭐</li>\n`;
+    });
+    listHTML += `</ul>`;
+  } else {
+    listHTML = "<p align=\"center\">No starred repositories yet.</p>";
+  }
+
+  return { total, listHTML };
 }
 
-async function getLatestProjects(repos, n = 5) {
+// LÓGICA NUEVA: Devuelve todos los proyectos del usuario en formato de lista para el menú desplegable
+async function getAllUserProjects(repos) {
   const sorted = repos.filter(r => !r.fork && !r.private && r.owner.login.toLowerCase() === GITHUB_USER.toLowerCase())
     .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
-  return sorted.slice(0, n).map(repo =>
-    `<li><a href="https://github.com/${repo.full_name}">${repo.name}</a> - ${repo.description || "No description"}</li>`
+    
+  return sorted.map(repo =>
+    `    <li><a href="https://github.com/${repo.full_name}">${repo.name}</a> - ${repo.description || "No description"}</li>`
   ).join("\n");
 }
 
@@ -135,18 +153,17 @@ async function generateReadme() {
     const repos = await getAllRepos();
     
     const techIcons = await getTopLanguages(repos);
-    const totalStars = getTotalStars(repos);
-    const latestProjects = await getLatestProjects(repos);
+    const starData = getStarData(repos);
+    const allProjects = await getAllUserProjects(repos);
     const skillsProgress = getSkillsProgress(repos);
 
     const output = template
       .replace(/{{TECH_STACK_ICONS}}/g, techIcons)
-      .replace(/{{TOTAL_STARS}}/g, totalStars)
+      .replace(/{{TOTAL_STARS}}/g, starData.total)
+      .replace(/{{STARRED_REPOS}}/g, starData.listHTML)
       .replace(/{{GITHUB_USER}}/g, GITHUB_USER)
-      .replace(/{{LATEST_PROJECTS}}/g, latestProjects)
-      .replace(/{{SKILLS_PROGRESS}}/g, skillsProgress)
-      // Limpieza de variables que ya no existen en el template por si acaso
-      .replace(/{{PINNED_PROJECTS}}/g, "");
+      .replace(/{{ALL_PROJECTS}}/g, allProjects)
+      .replace(/{{SKILLS_PROGRESS}}/g, skillsProgress);
 
     fs.writeFileSync(README_PATH, output);
     console.log("README.md updated successfully!");
