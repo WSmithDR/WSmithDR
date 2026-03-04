@@ -28,7 +28,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           HF_TOKEN: ${{ secrets.HF_TOKEN }} # <--- El nuevo secreto de Hugging Face
-          GITHUB_USER: ${{ github.repository_owner }}
+          #GITHUB_USER: ${{ github.repository_owner }}
 
       - name: Commit and Push
         run: |
