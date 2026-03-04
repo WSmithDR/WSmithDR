@@ -46,8 +46,8 @@ async function fetchSuggestionsFromGPTOSS(name, failedSlugs = []) {
     : "";
 
   try {
-    // URL limpia y modelo Mistral-7B súper estable
-    const response = await fetch("https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.3/v1/chat/completions", {
+    // LA URL ROUTER OFICIAL (Sin /models/ en la ruta, el modelo va en el body)
+    const response = await fetch("https://router.huggingface.co/hf-inference/v1/chat/completions", {
       method: "POST",
       headers: { 
         "Content-Type": "application/json", 
@@ -68,7 +68,7 @@ async function fetchSuggestionsFromGPTOSS(name, failedSlugs = []) {
     });
     
     if (!response.ok) {
-      console.log(`   🚨 API Error (${response.status})`);
+      console.log(`   🚨 API Error (${response.status}): Endpoint rechazado.`);
       return [];
     }
 
