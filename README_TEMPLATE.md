@@ -18,7 +18,6 @@
 
 <details>
   <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects ({{TOTAL_PROJECTS}})</h2></summary>
-
   <blockquote>
 {{ALL_PROJECTS}}
   </blockquote>
