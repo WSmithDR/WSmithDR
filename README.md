@@ -1,12 +1,9 @@
 <h1 align="center">Welcome to WSmithDR's World!</h1>
 
----
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start;">
-  <div>
-    <h2 style="margin: 0;">Programming Languages (8)</h2>
-    <br>
-    <details>
+<details>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Programming Languages (8)</h2></summary>
+  <div style="margin-left: 15px; margin-top: 10px;">
+<details>
   <summary style="cursor: pointer;">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="24" title="Python" alt="Python" /> &nbsp; <b>14 Projects</b>
   </summary>
@@ -260,19 +257,19 @@
 <br>
 
   </div>
-  <div>
-    <h2 style="margin: 0;">Frameworks & Tools (0)</h2>
-    <br>
-    Add topics to your repos to see them here!
-  </div>
-</div>
+</details>
 
----
+<details>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Frameworks & Tools (0)</h2></summary>
+  <div style="margin-left: 15px; margin-top: 10px;">
+Add topics to your repos to see them here!
+  </div>
+</details>
 
 <details>
   <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects (40)</h2></summary>
-  <div style="margin-left: 15px;">
-        <details>
+  <div style="margin-left: 15px; margin-top: 10px;">
+    <details>
       <summary><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></summary>
       <p><i>No description</i></p>
     </details>
@@ -435,31 +432,37 @@
   </div>
 </details>
 
----
-
-<h2>Total Stars (1)</h2>
+<details>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Total Stars (1)</h2></summary>
+  <div style="margin-left: 15px; margin-top: 10px;">
 <ul>
   <li><a href="https://github.com/WSmithDR/machine-learning-project">machine-learning-project</a> - 1 ⭐</li>
 </ul>
+  </div>
+</details>
 
----
+<details>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Connect with Me</h2></summary>
+  <div style="margin-top: 10px;">
+    <p align="center">
+      <a href="https://www.linkedin.com/in/wsmith123/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" width="40" title="LinkedIn" alt="LinkedIn" />
+      </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="mailto:wsmithdrdev@gmail.com" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" width="40" title="Email" alt="Email" />
+      </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://wa.me/593989785480" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="40" title="WhatsApp" alt="WhatsApp" />
+      </a>
+    </p>
+  </div>
+</details>
 
-<h2>Connect with Me</h2>
-<p align="center">
-  <a href="https://www.linkedin.com/in/wsmith123/" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" width="40" title="LinkedIn" alt="LinkedIn" />
-  </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="mailto:wsmithdrdev@gmail.com" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" width="40" title="Email" alt="Email" />
-  </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://wa.me/593989785480" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="40" title="WhatsApp" alt="WhatsApp" />
-  </a>
-</p>
-
----
-
-<h2>Visitor Count</h2>
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=WSmithDR&color=00bfa5&style=flat-square&label=Total+Profile+Views" alt="Profile views" />
-</p>
+<details>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Visitor Count</h2></summary>
+  <div style="margin-top: 10px;">
+    <p align="center">
+      <img src="https://komarev.com/ghpvc/?username=WSmithDR&color=00bfa5&style=flat-square&label=Total+Profile+Views" alt="Profile views" />
+    </p>
+  </div>
+</details>
