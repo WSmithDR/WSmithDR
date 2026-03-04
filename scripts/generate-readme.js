@@ -3,15 +3,24 @@ const fs = require("fs");
 // Environment configurations
 const GITHUB_USER = process.env.GITHUB_REPOSITORY_OWNER;
 const GITHUB_TOKEN = process.env.GH_TOKEN;
-const HF_TOKEN = process.env.HF_TOKEN; // Your Hugging Face Access Token
+const HF_TOKEN = process.env.HF_TOKEN; 
 const README_PATH = "README.md";
 const TEMPLATE_PATH = "README_TEMPLATE.md";
 const CACHE_PATH = "icon_cache.json";
 
 const fetchOptions = GITHUB_TOKEN ? { headers: { Authorization: `token ${GITHUB_TOKEN}` } } : {};
 
-// Load icon cache for persistence
-let iconCache = fs.existsSync(CACHE_PATH) ? JSON.parse(fs.readFileSync(CACHE_PATH, "utf8")) : {};
+// Robust JSON loader to prevent SyntaxErrors from crashing the build
+let iconCache = {};
+if (fs.existsSync(CACHE_PATH)) {
+  try {
+    const data = fs.readFileSync(CACHE_PATH, "utf8");
+    iconCache = data.trim() ? JSON.parse(data) : {};
+  } catch (e) {
+    console.error("⚠️ Cache file corrupted. Resetting to empty object.");
+    iconCache = {};
+  }
+}
 
 /**
  * TOOL: Verifies if the Devicon URL actually exists.
@@ -27,7 +36,7 @@ async function verifyIconUrl(slug) {
 }
 
 /**
- * Fetches potential slugs from OpenAI's GPT-OSS-20B via Hugging Face.
+ * Fetches potential slugs from GPT-OSS-20B via Hugging Face.
  */
 async function fetchSuggestionsFromGPTOSS(name) {
   if (!HF_TOKEN) return [name.toLowerCase().trim().replace(/\s+/g, '')];
@@ -40,7 +49,7 @@ async function fetchSuggestionsFromGPTOSS(name) {
         "Authorization": `Bearer ${HF_TOKEN}` 
       },
       body: JSON.stringify({
-        model: "openai/gpt-oss-20b", // Using the specific model you requested
+        model: "openai/gpt-oss-20b", 
         messages: [
           {
             role: "system",
@@ -61,14 +70,11 @@ async function fetchSuggestionsFromGPTOSS(name) {
   }
 }
 
-/**
- * Iterates through GPT-OSS suggestions until a valid URL is found.
- */
 async function getValidatedSlug(name) {
   const cleanName = name.trim();
   if (iconCache[cleanName] !== undefined) return iconCache[cleanName];
 
-  console.log(`🔍 GPT-OSS is finding a match for: ${cleanName}...`);
+  console.log(`🔍 GPT-OSS match for: ${cleanName}...`);
   const candidates = await fetchSuggestionsFromGPTOSS(cleanName);
   
   let finalSlug = null;
@@ -85,7 +91,7 @@ async function getValidatedSlug(name) {
   return finalSlug;
 }
 
-// GitHub API Fetching Logic
+// Data fetching logic
 async function fetchAllPages(url) {
   let results = [];
   let page = 1;
@@ -116,7 +122,7 @@ async function getAllRepos() {
   });
 }
 
-// Content Rendering (English)
+// CONTENT GENERATION - STRICT ENGLISH
 async function getTopLanguages(repos) {
   const langMap = {};
   repos.forEach(repo => {
@@ -205,7 +211,7 @@ async function generateReadme() {
       .replace(/{{ALL_PROJECTS}}/g, projectsData.html);
 
     fs.writeFileSync(README_PATH, output);
-    console.log("README updated in English using GPT-OSS-20B!");
+    console.log("Success: README updated in English.");
   } catch (err) { console.error(err); process.exit(1); }
 }
 generateReadme();
