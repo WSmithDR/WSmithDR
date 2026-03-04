@@ -6,40 +6,124 @@
 ---
 
 ## Dynamic Tech Stack
-<p align="center">
-<img src="https://img.shields.io/badge/Python-14_Projects-00bfa5?style=flat-square" /> <img src="https://img.shields.io/badge/JavaScript-11_Projects-00bfa5?style=flat-square" /> <img src="https://img.shields.io/badge/TypeScript-8_Projects-00bfa5?style=flat-square" /> <img src="https://img.shields.io/badge/Java-5_Projects-00bfa5?style=flat-square" /> <img src="https://img.shields.io/badge/Jupyter%20Notebook-3_Projects-00bfa5?style=flat-square" /> <img src="https://img.shields.io/badge/CSS-3_Projects-00bfa5?style=flat-square" /> <img src="https://img.shields.io/badge/HTML-2_Projects-00bfa5?style=flat-square" /> <img src="https://img.shields.io/badge/Shell-1_Project-00bfa5?style=flat-square" />
-</p>
+<details>
+  <summary>
+    <img src="https://img.shields.io/badge/Python-14_Projects-00bfa5?style=flat-square&logo=python&logoColor=white" style="cursor: pointer; margin-bottom: 5px;" />
+  </summary>
+  <ul>
+    <li><a href="https://github.com/WSmithDR/ankiaddon-timemanager">ankiaddon-timemanager</a></li>
+    <li><a href="https://github.com/WSmithDR/job_seeker_agent">job_seeker_agent</a></li>
+    <li><a href="https://github.com/WSmithDR/MultiCriteria-Filtered-Deck-Organizer">MultiCriteria-Filtered-Deck-Organizer</a></li>
+    <li><a href="https://github.com/WSmithDR/anki_control">anki_control</a></li>
+    <li><a href="https://github.com/WSmithDR/dynecron_prueba_backend">dynecron_prueba_backend</a></li>
+    <li><a href="https://github.com/WSmithDR/nave_deriva">nave_deriva</a></li>
+    <li><a href="https://github.com/WSmithDR/ankiaddon-automatedfiltering">ankiaddon-automatedfiltering</a></li>
+    <li><a href="https://github.com/WSmithDR/pptx-to-md">pptx-to-md</a></li>
+    <li><a href="https://github.com/WSmithDR/anki-data-insertion">anki-data-insertion</a></li>
+    <li><a href="https://github.com/WSmithDR/A-B-testing-project">A-B-testing-project</a></li>
+    <li><a href="https://github.com/WSmithDR/job-seeking">job-seeking</a></li>
+    <li><a href="https://github.com/WSmithDR/bootcamp_espol-python">bootcamp_espol-python</a></li>
+    <li><a href="https://github.com/WSmithDR/data-science">data-science</a></li>
+    <li><a href="https://github.com/WSmithDR/anki-addon-template">anki-addon-template</a> - This is a template of a basic anki addon</li>
+  </ul>
+</details>
+<br>
+<details>
+  <summary>
+    <img src="https://img.shields.io/badge/JavaScript-11_Projects-00bfa5?style=flat-square&logo=javascript&logoColor=white" style="cursor: pointer; margin-bottom: 5px;" />
+  </summary>
+  <ul>
+    <li><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></li>
+    <li><a href="https://github.com/WSmithDR/jelou-prueba_tecnica">jelou-prueba_tecnica</a> - Proyecto de prueba técnica para Jelou.</li>
+    <li><a href="https://github.com/WSmithDR/PI-Videogames">PI-Videogames</a></li>
+    <li><a href="https://github.com/WSmithDR/anki_hot_reload">anki_hot_reload</a></li>
+    <li><a href="https://github.com/WSmithDR/HENRY-FSD-Prepcourse-Homeworks">HENRY-FSD-Prepcourse-Homeworks</a></li>
+    <li><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></li>
+    <li><a href="https://github.com/WSmithDR/HardwareMarketApp-Front">HardwareMarketApp-Front</a> - Desarrollo de la página estática de la app HardwareMarketApp.</li>
+    <li><a href="https://github.com/WSmithDR/Videogames-Front">Videogames-Front</a></li>
+    <li><a href="https://github.com/WSmithDR/Videogames-Back">Videogames-Back</a></li>
+    <li><a href="https://github.com/WSmithDR/PF-Front">PF-Front</a></li>
+    <li><a href="https://github.com/WSmithDR/PF-Back">PF-Back</a></li>
+  </ul>
+</details>
+<br>
+<details>
+  <summary>
+    <img src="https://img.shields.io/badge/TypeScript-8_Projects-00bfa5?style=flat-square&logo=typescript&logoColor=white" style="cursor: pointer; margin-bottom: 5px;" />
+  </summary>
+  <ul>
+    <li><a href="https://github.com/WSmithDR/prueba_tecnica">prueba_tecnica</a></li>
+    <li><a href="https://github.com/WSmithDR/dynecron_prueba_frontend">dynecron_prueba_frontend</a></li>
+    <li><a href="https://github.com/WSmithDR/restAPI-ts-node-express-mongoose-mongo-practice1">restAPI-ts-node-express-mongoose-mongo-practice1</a></li>
+    <li><a href="https://github.com/WSmithDR/SmarttwigsApplicationExercise">SmarttwigsApplicationExercise</a></li>
+    <li><a href="https://github.com/WSmithDR/usersAPI">usersAPI</a></li>
+    <li><a href="https://github.com/WSmithDR/express-typescript">express-typescript</a></li>
+    <li><a href="https://github.com/WSmithDR/ngstore">ngstore</a> - Aprendiendo a manejarme en Angular.</li>
+    <li><a href="https://github.com/WSmithDR/userslist">userslist</a> - Mini web app que consume datos de un API para presentar usuarios en un panel.</li>
+  </ul>
+</details>
+<br>
+<details>
+  <summary>
+    <img src="https://img.shields.io/badge/Java-5_Projects-00bfa5?style=flat-square&logo=java&logoColor=white" style="cursor: pointer; margin-bottom: 5px;" />
+  </summary>
+  <ul>
+    <li><a href="https://github.com/WSmithDR/PAR5_PROY2P_Duenas_Romero_Ortega">PAR5_PROY2P_Duenas_Romero_Ortega</a></li>
+    <li><a href="https://github.com/WSmithDR/Unidad6Tarea1Duenas">Unidad6Tarea1Duenas</a></li>
+    <li><a href="https://github.com/WSmithDR/java_android_practice">java_android_practice</a></li>
+    <li><a href="https://github.com/WSmithDR/POO4_1P_DUENAS_ROMERO_ORTEGA">POO4_1P_DUENAS_ROMERO_ORTEGA</a></li>
+    <li><a href="https://github.com/WSmithDR/java_fundamentals">java_fundamentals</a></li>
+  </ul>
+</details>
+<br>
+<details>
+  <summary>
+    <img src="https://img.shields.io/badge/Jupyter%20Notebook-3_Projects-00bfa5?style=flat-square&logo=jupyternotebook&logoColor=white" style="cursor: pointer; margin-bottom: 5px;" />
+  </summary>
+  <ul>
+    <li><a href="https://github.com/WSmithDR/Market-Scraper">Market-Scraper</a></li>
+    <li><a href="https://github.com/WSmithDR/machine-learning-project">machine-learning-project</a></li>
+    <li><a href="https://github.com/WSmithDR/big-data-project-espol-bootcamp">big-data-project-espol-bootcamp</a></li>
+  </ul>
+</details>
+<br>
+<details>
+  <summary>
+    <img src="https://img.shields.io/badge/CSS-3_Projects-00bfa5?style=flat-square&logo=css&logoColor=white" style="cursor: pointer; margin-bottom: 5px;" />
+  </summary>
+  <ul>
+    <li><a href="https://github.com/WSmithDR/ngtodoapp">ngtodoapp</a></li>
+    <li><a href="https://github.com/WSmithDR/angularconsergiecode">angularconsergiecode</a> - Desarrollo de una web app con Angular siguiendo el tutorial de Sergie Code.</li>
+    <li><a href="https://github.com/WSmithDR/todoApp">todoApp</a></li>
+  </ul>
+</details>
+<br>
+<details>
+  <summary>
+    <img src="https://img.shields.io/badge/HTML-2_Projects-00bfa5?style=flat-square&logo=html&logoColor=white" style="cursor: pointer; margin-bottom: 5px;" />
+  </summary>
+  <ul>
+    <li><a href="https://github.com/WSmithDR/buscar_trabajo_con_ai">buscar_trabajo_con_ai</a></li>
+    <li><a href="https://github.com/WSmithDR/htmlconsergiecode">htmlconsergiecode</a> - Curso de HTML puro con SergieCode.</li>
+  </ul>
+</details>
+<br>
+<details>
+  <summary>
+    <img src="https://img.shields.io/badge/Shell-1_Project-00bfa5?style=flat-square&logo=shell&logoColor=white" style="cursor: pointer; margin-bottom: 5px;" />
+  </summary>
+  <ul>
+    <li><a href="https://github.com/WSmithDR/Focus-Blocker">Focus-Blocker</a></li>
+  </ul>
+</details>
+<br>
+
 
 ---
 
 ## Total Stars
 <p align="center">
 <b>1</b> across all public repositories
-</p>
-
----
-
-## GitHub Stats
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=WSmithDR&show_icons=true&theme=algolia&title_color=00bfa5&icon_color=00bfa5&text_color=ffffff&bg_color=0d1117" />
-</p>
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=WSmithDR&layout=compact&theme=algolia&title_color=00bfa5&text_color=ffffff&bg_color=0d1117" />
-</p>
-
----
-
-## Pinned Projects
-<p align="center">
-<a href="https://github.com/WSmithDR/machine-learning-project"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=machine-learning-project&theme=algolia&title_color=00bfa5" /></a> <a href="https://github.com/WSmithDR/WSmithDR"><img src="https://github-readme-stats.vercel.app/api/pin/?username=WSmithDR&repo=WSmithDR&theme=algolia&title_color=00bfa5" /></a>
-</p>
-
----
-
-## Badges
-<p align="center">
-  <img src="https://img.shields.io/github/followers/WSmithDR?label=Follow&style=social" />
-  <img src="https://img.shields.io/github/stars/WSmithDR?affiliations=OWNER&style=social" />
 </p>
 
 ---
