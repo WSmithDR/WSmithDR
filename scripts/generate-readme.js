@@ -92,40 +92,39 @@ async function getTopLanguages(repos) {
     const label = repoList.length === 1 ? 'Project' : 'Projects';
     const iconUrl = getIconUrl(lang);
     
-    html += `<details>\n`;
+    html += `<details style="margin-bottom: 8px;">\n`;
     html += `  <summary style="cursor: pointer;">\n`;
     if (iconUrl) {
-      html += `    <img src="${iconUrl}" width="24" title="${lang}" alt="${lang}" /> &nbsp; <b>${repoList.length} ${label}</b>\n`;
+      html += `    <img src="${iconUrl}" width="24" title="${lang}" alt="${lang}" style="vertical-align: middle;"/> &nbsp; <b>${repoList.length} ${label}</b>\n`;
     } else {
       html += `    <b>${lang}</b> &nbsp; ${repoList.length} ${label}\n`;
     }
     html += `  </summary>\n`;
-    html += `  <div style="margin-left: 15px;">\n`;
     
+    // Indentación Nivel 3 (Proyectos)
+    html += `  <div style="margin-left: 30px; margin-top: 8px;">\n`;
     repoList.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
     repoList.forEach(repo => {
       const desc = repo.description ? repo.description : "No description";
-      html += `    <details>\n`;
-      html += `      <summary><a href="https://github.com/${repo.full_name}">${repo.name}</a></summary>\n`;
-      html += `      <p><i>${desc}</i></p>\n`;
+      html += `    <details style="margin-bottom: 6px;">\n`;
+      html += `      <summary style="cursor: pointer;"><a href="https://github.com/${repo.full_name}">${repo.name}</a></summary>\n`;
+      // Indentación Nivel 4 (Descripción)
+      html += `      <div style="margin-left: 25px; margin-top: 4px; color: #8b949e;"><i>${desc}</i></div>\n`;
       html += `    </details>\n`;
     });
-    
     html += `  </div>\n`;
-    html += `</details>\n<br>\n`;
+    html += `</details>\n`;
   });
   
   return { count: totalLanguages, html: html || "No languages detected yet" };
 }
 
-// LÓGICA NUEVA: Extrae los Topics de GitHub para crear la lista de frameworks y herramientas
 async function getTopFrameworks(repos) {
   const topicMap = {};
   
   repos.forEach(repo => {
     if (!repo.fork && repo.owner.login.toLowerCase() === GITHUB_USER.toLowerCase() && repo.topics && repo.topics.length > 0) {
       repo.topics.forEach(topic => {
-        // Ignorar etiquetas genéricas que sean lenguajes base para no duplicar con la otra columna
         const ignoredTopics = ['javascript', 'typescript', 'python', 'java', 'html', 'css'];
         if (!ignoredTopics.includes(topic.toLowerCase())) {
           if (!topicMap[topic]) topicMap[topic] = [];
@@ -152,8 +151,12 @@ async function getTopFrameworks(repos) {
       "ubuntu": "ubuntu/ubuntu-plain.svg",
       "linux": "linux/linux-original.svg",
       "tailwindcss": "tailwindcss/tailwindcss-original.svg",
-      "sass": "sass/sass-original.svg"
+      "sass": "sass/sass-original.svg",
+      "qt": "qt/qt-original.svg"
     };
+    // Mapeo especial por si usas la etiqueta 'pyqt' para tus add-ons
+    if (topic.toLowerCase() === 'pyqt') return `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/qt/qt-original.svg`;
+    
     const path = map[topic.toLowerCase()];
     return path ? `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${path}` : null;
   };
@@ -162,31 +165,30 @@ async function getTopFrameworks(repos) {
   sorted.forEach(([topic, repoList]) => {
     const label = repoList.length === 1 ? 'Project' : 'Projects';
     const iconUrl = getFrameworkIconUrl(topic);
-    
-    // Capitalizar la primera letra del topic para que se vea mejor
     const formattedTopic = topic.charAt(0).toUpperCase() + topic.slice(1);
 
-    html += `<details>\n`;
+    html += `<details style="margin-bottom: 8px;">\n`;
     html += `  <summary style="cursor: pointer;">\n`;
     if (iconUrl) {
-      html += `    <img src="${iconUrl}" width="24" title="${formattedTopic}" alt="${formattedTopic}" /> &nbsp; <b>${repoList.length} ${label}</b>\n`;
+      html += `    <img src="${iconUrl}" width="24" title="${formattedTopic}" alt="${formattedTopic}" style="vertical-align: middle;"/> &nbsp; <b>${repoList.length} ${label}</b>\n`;
     } else {
       html += `    <b>${formattedTopic}</b> &nbsp; ${repoList.length} ${label}\n`;
     }
     html += `  </summary>\n`;
-    html += `  <div style="margin-left: 15px;">\n`;
     
+    // Indentación Nivel 3 (Proyectos)
+    html += `  <div style="margin-left: 30px; margin-top: 8px;">\n`;
     repoList.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
     repoList.forEach(repo => {
       const desc = repo.description ? repo.description : "No description";
-      html += `    <details>\n`;
-      html += `      <summary><a href="https://github.com/${repo.full_name}">${repo.name}</a></summary>\n`;
-      html += `      <p><i>${desc}</i></p>\n`;
+      html += `    <details style="margin-bottom: 6px;">\n`;
+      html += `      <summary style="cursor: pointer;"><a href="https://github.com/${repo.full_name}">${repo.name}</a></summary>\n`;
+      // Indentación Nivel 4 (Descripción)
+      html += `      <div style="margin-left: 25px; margin-top: 4px; color: #8b949e;"><i>${desc}</i></div>\n`;
       html += `    </details>\n`;
     });
-    
     html += `  </div>\n`;
-    html += `</details>\n<br>\n`;
+    html += `</details>\n`;
   });
   
   return { count: totalFrameworks, html: html || "Add topics to your repos to see them here!" };
@@ -207,13 +209,14 @@ function getStarData(repos) {
 
   let listHTML = "";
   if (starredRepos.length > 0) {
-    listHTML += `<ul>\n`;
+    // Reemplazo de <ul> por <div> para evitar el viñetado residual
+    listHTML += `<div style="margin-left: 5px;">\n`;
     starredRepos.forEach(repo => {
-      listHTML += `  <li><a href="https://github.com/${repo.full_name}">${repo.name}</a> - ${repo.stargazers_count} ⭐</li>\n`;
+      listHTML += `  <div style="margin-bottom: 8px; margin-left: 15px;">⭐ <a href="https://github.com/${repo.full_name}">${repo.name}</a> - ${repo.stargazers_count} stars</div>\n`;
     });
-    listHTML += `</ul>`;
+    listHTML += `</div>`;
   } else {
-    listHTML = "<p align=\"center\">No starred repositories yet.</p>";
+    listHTML = "<p>No starred repositories yet.</p>";
   }
 
   return { total, listHTML };
@@ -225,7 +228,7 @@ async function getAllUserProjects(repos) {
     
   const listHTML = sorted.map(repo => {
     const desc = repo.description ? repo.description : "No description";
-    return `    <details>\n      <summary><a href="https://github.com/${repo.full_name}">${repo.name}</a></summary>\n      <p><i>${desc}</i></p>\n    </details>`;
+    return `    <details style="margin-bottom: 6px;">\n      <summary style="cursor: pointer;"><a href="https://github.com/${repo.full_name}">${repo.name}</a></summary>\n      <div style="margin-left: 25px; margin-top: 4px; color: #8b949e;"><i>${desc}</i></div>\n    </details>`;
   }).join("\n");
 
   return { count: sorted.length, listHTML };
