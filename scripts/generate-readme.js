@@ -66,7 +66,6 @@ async function getTopLanguages(repos) {
 
   const sorted = Object.entries(langMap).sort((a, b) => b[1].length - a[1].length);
   
-  // Mapa para encontrar el logo correcto en devicon
   const getIconUrl = (lang) => {
     const map = {
       "javascript": "javascript/javascript-original.svg",
@@ -97,10 +96,8 @@ async function getTopLanguages(repos) {
     html += `  <summary style="cursor: pointer;">\n`;
     
     if (iconUrl) {
-      // Muestra el icono aislado. "title" activa el hover text nativo.
       html += `    <img src="${iconUrl}" width="24" title="${lang}" alt="${lang}" /> &nbsp; <b>${repoList.length} ${label}</b>\n`;
     } else {
-      // Fallback por si hay un lenguaje extraño que no está en el mapa
       html += `    <b>${lang}</b> &nbsp; ${repoList.length} ${label}\n`;
     }
     
@@ -148,38 +145,16 @@ function getStarData(repos) {
   return { total, listHTML };
 }
 
+// LÓGICA MODIFICADA: Ahora devuelve un objeto con el contador total de proyectos y la lista HTML
 async function getAllUserProjects(repos) {
   const sorted = repos.filter(r => !r.fork && !r.private && r.owner.login.toLowerCase() === GITHUB_USER.toLowerCase())
     .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
     
-  return sorted.map(repo =>
+  const listHTML = sorted.map(repo =>
     `    <li><a href="https://github.com/${repo.full_name}">${repo.name}</a> - ${repo.description || "No description"}</li>`
   ).join("\n");
+
+  return { count: sorted.length, listHTML };
 }
 
-async function generateReadme() {
-  try {
-    const template = fs.readFileSync(TEMPLATE_PATH, "utf8");
-    const repos = await getAllRepos();
-    
-    const programmingLanguages = await getTopLanguages(repos);
-    const starData = getStarData(repos);
-    const allProjects = await getAllUserProjects(repos);
-
-    const output = template
-      .replace(/{{PROGRAMMING_LANGUAGES}}/g, programmingLanguages)
-      .replace(/{{TOTAL_STARS}}/g, starData.total)
-      .replace(/{{STARRED_REPOS}}/g, starData.listHTML)
-      .replace(/{{GITHUB_USER}}/g, GITHUB_USER)
-      .replace(/{{ALL_PROJECTS}}/g, allProjects)
-      .replace(/{{SKILLS_PROGRESS}}/g, "");
-
-    fs.writeFileSync(README_PATH, output);
-    console.log("README.md updated successfully!");
-  } catch (err) {
-    console.error("Error generating README:", err);
-    process.exit(1);
-  }
-}
-
-generateReadme();
+async function generateReadme
