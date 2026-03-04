@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 // Environment configurations
-const GITHUB_USER = process.env.GITHUB_REPOSITORY_OWNER;
+const GITHUB_USER = process.env.GITHUB_REPOSITORY_OWNER || "WSmithDR";
 const GITHUB_TOKEN = process.env.GH_TOKEN;
 const HF_TOKEN = process.env.HF_TOKEN; 
 const README_PATH = "README.md";
@@ -10,21 +10,18 @@ const CACHE_PATH = "icon_cache.json";
 
 const fetchOptions = GITHUB_TOKEN ? { headers: { Authorization: `token ${GITHUB_TOKEN}` } } : {};
 
-// Load icon cache (now stores full URLs instead of just slugs)
+// Load icon cache
 let iconCache = fs.existsSync(CACHE_PATH) ? JSON.parse(fs.readFileSync(CACHE_PATH, "utf8")) : {};
 
 /**
- * DOUBLE VALIDATION TOOL: Checks both -original and -plain variants on Devicon.
- * Returns the full working URL, or null if it 404s.
+ * DOUBLE VALIDATION TOOL: Checks both -original and -plain variants.
  */
 async function getValidIconUrl(slug) {
   const baseUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${slug}/${slug}`;
   try {
-    // Check -original first
     let response = await fetch(`${baseUrl}-original.svg`, { method: 'HEAD' });
     if (response.ok) return `${baseUrl}-original.svg`;
     
-    // Fallback to -plain if original doesn't exist
     response = await fetch(`${baseUrl}-plain.svg`, { method: 'HEAD' });
     if (response.ok) return `${baseUrl}-plain.svg`;
 
@@ -35,11 +32,16 @@ async function getValidIconUrl(slug) {
 }
 
 /**
- * JSON FORCED AI PROMPT: Uses Few-Shot prompting to guide gpt-oss-20b.
- * Forces the output to be a parsable JSON array to avoid conversational text errors.
+ * AI PROMPT WITH NEGATIVE FEEDBACK: 
+ * Tells the AI explicitly which slugs have already failed so it doesn't repeat them.
  */
-async function fetchSuggestionsFromGPTOSS(name) {
+async function fetchSuggestionsFromGPTOSS(name, failedSlugs = []) {
   if (!HF_TOKEN) return [];
+
+  // Injecting the "memory" of failed attempts into the prompt
+  const avoidText = failedSlugs.length > 0 
+    ? ` IMPORTANT: The following slugs have already been tested and failed (404). DO NOT suggest them again under any circumstances: [${failedSlugs.join(", ")}].` 
+    : "";
 
   try {
     const response = await fetch("https://api-inference.huggingface.co/v1/chat/completions", {
@@ -53,19 +55,18 @@ async function fetchSuggestionsFromGPTOSS(name) {
         messages: [
           {
             role: "system",
-            content: "You are a Devicon routing API. Map the given technology to 5 possible Devicon folder names (slugs). RULES: 1. HTML -> html5. 2. CSS -> css3. 3. Jupyter Notebook -> jupyter. 4. Shell -> bash. 5. C# -> csharp. Output ONLY a valid JSON array of 5 strings ordered by probability. Example format: [\"html5\", \"html\", \"markup\", \"web\", \"xml\"]"
+            content: `You are a Devicon routing API. Map the given technology to 5 possible Devicon folder names (slugs). RULES: 1. HTML -> html5. 2. CSS -> css3. 3. Jupyter Notebook -> jupyter. 4. Shell -> bash. 5. C# -> csharp.${avoidText} Output ONLY a valid JSON array of 5 strings ordered by probability. Example format: ["html5", "html", "markup", "web", "xml"]`
           }, 
           { role: "user", content: name }
         ],
-        max_tokens: 50, 
-        temperature: 0.1
+        max_tokens: 60, 
+        temperature: 0.2 // Slightly higher temperature to force creative alternatives if the obvious ones failed
       })
     });
     
     const data = await response.json();
     const content = data.choices[0].message.content;
     
-    // Extract JSON array using regex in case the AI wraps it in markdown blocks
     const match = content.match(/\[.*\]/s);
     if (match) {
       const parsed = JSON.parse(match[0]);
@@ -78,37 +79,58 @@ async function fetchSuggestionsFromGPTOSS(name) {
 }
 
 /**
- * THE SMART ITERATOR: Combines exact matching with AI fallback.
+ * THE SMART ITERATOR WITH MEMORY
  */
 async function getValidatedIcon(name) {
   const cleanName = name.trim();
-  if (iconCache[cleanName] !== undefined) return iconCache[cleanName]; // Returns cached URL or null
+  
+  // 1. Auto-migrate old string-based cache to the new object-based structure
+  if (typeof iconCache[cleanName] === 'string' || !iconCache[cleanName]) {
+    iconCache[cleanName] = { 
+      valid: typeof iconCache[cleanName] === 'string' ? iconCache[cleanName] : null, 
+      failed: [] 
+    };
+  }
+
+  // 2. Return immediately if we already found a valid URL in a previous run
+  if (iconCache[cleanName].valid) {
+    return iconCache[cleanName].valid;
+  }
 
   console.log(`🔍 Resolving icon for: ${cleanName}...`);
   
-  // Create an array of candidates: First we try the exact literal name, THEN the AI's suggestions
   const rawSlug = cleanName.toLowerCase().replace(/\s+/g, '');
-  const aiSuggestions = await fetchSuggestionsFromGPTOSS(cleanName);
+  // Pass the failed list to the AI so it knows what to avoid
+  const aiSuggestions = await fetchSuggestionsFromGPTOSS(cleanName, iconCache[cleanName].failed);
   
-  // Remove duplicates to avoid wasting fetch requests
   const candidates = [...new Set([rawSlug, ...aiSuggestions])];
   
   let finalUrl = null;
   for (const slug of candidates) {
+    // Skip if we already know this slug fails
+    if (iconCache[cleanName].failed.includes(slug)) {
+      console.log(`   ⏭️ Skipping known failure: ${slug}`);
+      continue; 
+    }
+
     console.log(`   - Testing Devicon slug: ${slug}`);
     finalUrl = await getValidIconUrl(slug);
+    
     if (finalUrl) {
       console.log(`   ✅ Success! Found at: ${finalUrl}`);
+      iconCache[cleanName].valid = finalUrl; // Save the win
       break; 
+    } else {
+      console.log(`   ❌ Failed (404): ${slug}`);
+      iconCache[cleanName].failed.push(slug); // Save the failure to the blacklist
     }
   }
 
-  if (!finalUrl) console.warn(`   ❌ Exhausted all candidates. No icon found for: ${cleanName}`);
+  if (!finalUrl) console.warn(`   ⚠️ Exhausted candidates. Will try new ones next time for: ${cleanName}`);
 
-  // Cache the final working URL directly
-  iconCache[cleanName] = finalUrl;
+  // Save progress to the file (both successes and new failures)
   fs.writeFileSync(CACHE_PATH, JSON.stringify(iconCache, null, 2));
-  return finalUrl;
+  return iconCache[cleanName].valid;
 }
 
 // Data fetching logic
@@ -142,7 +164,7 @@ async function getAllRepos() {
   });
 }
 
-// Content Rendering
+// Content Rendering (English)
 async function getTopLanguages(repos) {
   const langMap = {};
   repos.forEach(repo => {
@@ -229,7 +251,7 @@ async function generateReadme() {
       .replace(/{{ALL_PROJECTS}}/g, projectsData.html);
 
     fs.writeFileSync(README_PATH, output);
-    console.log("Success: README updated in English with smart validation.");
+    console.log("Success: README updated with Stateful Cache.");
   } catch (err) { console.error(err); process.exit(1); }
 }
 generateReadme();
