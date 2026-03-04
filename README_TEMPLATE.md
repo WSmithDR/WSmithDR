@@ -20,10 +20,15 @@
 
 ## Projects
 <details>
-  <summary><b>Click to view all my projects</b></summary>
+  <summary><h2>Projects</h2></summary>
+  
+  <br>
   <ul>
-{{ALL_PROJECTS}}
+    <li><b>Benevv</b> - Optimización de gestión de campañas (React, Redux Toolkit)</li>
+    <li><b>Redeemer</b> - Extensión de navegador con scraping (React, Python, Flask)</li>
+    <li><b>Market Scraper</b> - ETL y automatización (Python, SQL)</li>
   </ul>
+
 </details>
 
 ---
@@ -38,10 +43,17 @@
 ---
 
 ## Connect with Me
-<p align="center">
-  <a href="https://www.linkedin.com/in/wsmith123/"><img src="https://img.shields.io/badge/LinkedIn-00bfa5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="mailto:wsmithdrdev@gmail.com"><img src="https://img.shields.io/badge/Email-00bfa5?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-  <a href="https://wa.me/593989785480"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
+
+<p align="left">
+  <a href="mailto:wsmithdrdev@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+  <a href="https://linkedin.com/in/wsmith123" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="https://calendly.com/wsmithdrdev/30min" target="_blank">
+    <img src="https://img.shields.io/badge/Calendly-006BFF?style=for-the-badge&logo=calendly&logoColor=white" alt="Calendly" />
+  </a>
 </p>
 
 ---
