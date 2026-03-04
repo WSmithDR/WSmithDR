@@ -37,7 +37,7 @@ async function getValidIconUrl(slug) {
  */
 async function fetchSuggestionsFromGPTOSS(name, failedSlugs = []) {
   if (!HF_TOKEN) {
-    console.log("   ⚠️ ERROR: No HF_TOKEN detectado en el entorno.");
+    console.log("   ⚠️ ERROR: No HF_TOKEN detectado.");
     return [];
   }
 
@@ -46,7 +46,8 @@ async function fetchSuggestionsFromGPTOSS(name, failedSlugs = []) {
     : "";
 
   try {
-    const response = await fetch("https://api-inference.huggingface.co/v1/chat/completions", {
+    // AQUÍ ESTÁ EL CAMBIO: Usamos el nuevo router oficial de Hugging Face
+    const response = await fetch("https://router.huggingface.co/hf-inference/v1/chat/completions", {
       method: "POST",
       headers: { 
         "Content-Type": "application/json", 
@@ -66,33 +67,27 @@ async function fetchSuggestionsFromGPTOSS(name, failedSlugs = []) {
       })
     });
     
-    // AQUÍ ESTÁ EL CAMBIO CLAVE: Capturamos el error real del servidor
     if (!response.ok) {
       const errStatus = response.status;
       const errText = await response.text();
-      console.log(`   🚨 Hugging Face API Error (${errStatus}): ${errText}`);
-      if (errStatus === 503) {
-        console.log("   💡 TIP: El modelo 20B estaba dormido (Cold Start). Vuelve a ejecutar el Action en 1 minuto.");
-      }
+      console.log(`   🚨 API Error (${errStatus}): ${errText}`);
       return [];
     }
 
     const data = await response.json();
     const content = data.choices[0].message.content;
     
-    // Imprimimos la respuesta cruda de la IA para auditarla
-    console.log(`   🤖 Respuesta cruda de IA: ${content.replace(/\n/g, '')}`); 
+    console.log(`   🤖 IA respondió: ${content.replace(/\n/g, '')}`); 
     
     const match = content.match(/\[.*\]/s);
     if (match) {
       const parsed = JSON.parse(match[0]);
       return parsed.map(s => s.trim().toLowerCase().replace(/[^a-z0-9]/g, ''));
     } else {
-      console.log(`   ⚠️ La IA no respetó el formato JSON.`);
       return [];
     }
   } catch (err) { 
-    console.log(`   🚨 Excepción del servidor: ${err.message}`);
+    console.log(`   🚨 Excepción: ${err.message}`);
     return []; 
   }
 }
