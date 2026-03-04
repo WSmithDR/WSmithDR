@@ -1,266 +1,55 @@
-const fs = require("fs");
-const fetch = require("node-fetch");
+<h1 align="center">Welcome to {{GITHUB_USER}}'s World!</h1>
 
-const GITHUB_USER = process.env.GITHUB_USER || "WSmithDR";
-const README_PATH = "README.md";
-const TEMPLATE_PATH = "README_TEMPLATE.md";
-const GITHUB_TOKEN = process.env.GH_TOKEN;
+<details>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Programming Languages ({{TOTAL_LANGUAGES}})</h2></summary>
+  <blockquote>
+{{PROGRAMMING_LANGUAGES}}
+  </blockquote>
+</details>
 
-const fetchOptions = GITHUB_TOKEN
-  ? { headers: { Authorization: `token ${GITHUB_TOKEN}` } }
-  : {};
+<details>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Frameworks & Tools ({{TOTAL_FRAMEWORKS}})</h2></summary>
+  <blockquote>
+{{FRAMEWORKS_AND_TOOLS}}
+  </blockquote>
+</details>
 
-async function fetchAllPages(url) {
-  let results = [];
-  let page = 1;
-  while (true) {
-    const res = await fetch(`${url}${url.includes('?') ? '&' : '?'}per_page=100&page=${page}` , fetchOptions);
-    if (!res.ok) throw new Error(`GitHub API error: ${res.status} (${url})`);
-    const data = await res.json();
-    if (data.length === 0) break;
-    results = results.concat(data);
-    page++;
-  }
-  return results;
-}
+<details>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects ({{TOTAL_PROJECTS}})</h2></summary>
+  <blockquote>
+{{ALL_PROJECTS}}
+  </blockquote>
+</details>
 
-async function getUserRepos() {
-  return await fetchAllPages(`https://api.github.com/user/repos?type=all&sort=updated`);
-}
+<details>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Total Stars ({{TOTAL_STARS}})</h2></summary>
+  <blockquote>
+{{STARRED_REPOS}}
+  </blockquote>
+</details>
 
-async function getOrgs() {
-  const orgs = await fetchAllPages(`https://api.github.com/user/orgs`);
-  return orgs.map(org => org.login);
-}
+<details>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Connect with Me</h2></summary>
+  <blockquote>
+    <p>
+      <a href="https://www.linkedin.com/in/wsmith123/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" width="40" title="LinkedIn" alt="LinkedIn" />
+      </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="mailto:wsmithdrdev@gmail.com" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" width="40" title="Email" alt="Email" />
+      </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://wa.me/593989785480" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="40" title="WhatsApp" alt="WhatsApp" />
+      </a>
+    </p>
+  </blockquote>
+</details>
 
-async function getOrgRepos(org) {
-  return await fetchAllPages(`https://api.github.com/orgs/${org}/repos?type=all&sort=updated`);
-}
-
-async function getAllRepos() {
-  let repos = await getUserRepos();
-  const orgs = await getOrgs();
-  for (const org of orgs) {
-    const orgRepos = await getOrgRepos(org);
-    repos = repos.concat(orgRepos);
-  }
-  const seen = new Set();
-  const uniqueRepos = repos.filter(repo => {
-    if (seen.has(repo.full_name)) return false;
-    seen.add(repo.full_name);
-    return true;
-  });
-  return uniqueRepos;
-}
-
-async function getTopLanguages(repos) {
-  const langMap = {};
-  
-  repos.forEach(repo => {
-    if (repo.language && !repo.fork && repo.owner.login.toLowerCase() === GITHUB_USER.toLowerCase()) {
-      const lang = repo.language;
-      if (!langMap[lang]) langMap[lang] = [];
-      langMap[lang].push(repo);
-    }
-  });
-
-  const sorted = Object.entries(langMap).sort((a, b) => b[1].length - a[1].length);
-  const totalLanguages = sorted.length;
-  
-  const getIconUrl = (lang) => {
-    const map = {
-      "javascript": "javascript/javascript-original.svg",
-      "typescript": "typescript/typescript-original.svg",
-      "python": "python/python-original.svg",
-      "java": "java/java-original.svg",
-      "jupyter notebook": "jupyter/jupyter-original.svg",
-      "css": "css3/css3-original.svg",
-      "html": "html5/html5-original.svg",
-      "shell": "bash/bash-original.svg",
-      "c++": "cplusplus/cplusplus-original.svg",
-      "c#": "csharp/csharp-original.svg",
-      "go": "go/go-original.svg",
-      "ruby": "ruby/ruby-original.svg",
-      "r": "r/r-original.svg"
-    };
-    const path = map[lang.toLowerCase()];
-    return path ? `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${path}` : null;
-  };
-
-  let html = "";
-  sorted.forEach(([lang, repoList]) => {
-    const label = repoList.length === 1 ? 'Project' : 'Projects';
-    const iconUrl = getIconUrl(lang);
-    
-    html += `<details style="margin-bottom: 8px;">\n`;
-    html += `  <summary style="cursor: pointer;">\n`;
-    if (iconUrl) {
-      html += `    <img src="${iconUrl}" width="24" title="${lang}" alt="${lang}" style="vertical-align: middle;"/> &nbsp; <b>${repoList.length} ${label}</b>\n`;
-    } else {
-      html += `    <b>${lang}</b> &nbsp; ${repoList.length} ${label}\n`;
-    }
-    html += `  </summary>\n`;
-    
-    // Indentación Nivel 3 (Proyectos)
-    html += `  <div style="margin-left: 30px; margin-top: 8px;">\n`;
-    repoList.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
-    repoList.forEach(repo => {
-      const desc = repo.description ? repo.description : "No description";
-      html += `    <details style="margin-bottom: 6px;">\n`;
-      html += `      <summary style="cursor: pointer;"><a href="https://github.com/${repo.full_name}">${repo.name}</a></summary>\n`;
-      // Indentación Nivel 4 (Descripción)
-      html += `      <div style="margin-left: 25px; margin-top: 4px; color: #8b949e;"><i>${desc}</i></div>\n`;
-      html += `    </details>\n`;
-    });
-    html += `  </div>\n`;
-    html += `</details>\n`;
-  });
-  
-  return { count: totalLanguages, html: html || "No languages detected yet" };
-}
-
-async function getTopFrameworks(repos) {
-  const topicMap = {};
-  
-  repos.forEach(repo => {
-    if (!repo.fork && repo.owner.login.toLowerCase() === GITHUB_USER.toLowerCase() && repo.topics && repo.topics.length > 0) {
-      repo.topics.forEach(topic => {
-        const ignoredTopics = ['javascript', 'typescript', 'python', 'java', 'html', 'css'];
-        if (!ignoredTopics.includes(topic.toLowerCase())) {
-          if (!topicMap[topic]) topicMap[topic] = [];
-          topicMap[topic].push(repo);
-        }
-      });
-    }
-  });
-
-  const sorted = Object.entries(topicMap).sort((a, b) => b[1].length - a[1].length);
-  const totalFrameworks = sorted.length;
-  
-  const getFrameworkIconUrl = (topic) => {
-    const map = {
-      "react": "react/react-original.svg",
-      "nextjs": "nextjs/nextjs-original.svg",
-      "nodejs": "nodejs/nodejs-original.svg",
-      "express": "express/express-original.svg",
-      "flask": "flask/flask-original.svg",
-      "postgresql": "postgresql/postgresql-original.svg",
-      "mongodb": "mongodb/mongodb-original.svg",
-      "mysql": "mysql/mysql-original.svg",
-      "sqlite": "sqlite/sqlite-original.svg",
-      "ubuntu": "ubuntu/ubuntu-plain.svg",
-      "linux": "linux/linux-original.svg",
-      "tailwindcss": "tailwindcss/tailwindcss-original.svg",
-      "sass": "sass/sass-original.svg",
-      "qt": "qt/qt-original.svg"
-    };
-    // Mapeo especial por si usas la etiqueta 'pyqt' para tus add-ons
-    if (topic.toLowerCase() === 'pyqt') return `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/qt/qt-original.svg`;
-    
-    const path = map[topic.toLowerCase()];
-    return path ? `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${path}` : null;
-  };
-
-  let html = "";
-  sorted.forEach(([topic, repoList]) => {
-    const label = repoList.length === 1 ? 'Project' : 'Projects';
-    const iconUrl = getFrameworkIconUrl(topic);
-    const formattedTopic = topic.charAt(0).toUpperCase() + topic.slice(1);
-
-    html += `<details style="margin-bottom: 8px;">\n`;
-    html += `  <summary style="cursor: pointer;">\n`;
-    if (iconUrl) {
-      html += `    <img src="${iconUrl}" width="24" title="${formattedTopic}" alt="${formattedTopic}" style="vertical-align: middle;"/> &nbsp; <b>${repoList.length} ${label}</b>\n`;
-    } else {
-      html += `    <b>${formattedTopic}</b> &nbsp; ${repoList.length} ${label}\n`;
-    }
-    html += `  </summary>\n`;
-    
-    // Indentación Nivel 3 (Proyectos)
-    html += `  <div style="margin-left: 30px; margin-top: 8px;">\n`;
-    repoList.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
-    repoList.forEach(repo => {
-      const desc = repo.description ? repo.description : "No description";
-      html += `    <details style="margin-bottom: 6px;">\n`;
-      html += `      <summary style="cursor: pointer;"><a href="https://github.com/${repo.full_name}">${repo.name}</a></summary>\n`;
-      // Indentación Nivel 4 (Descripción)
-      html += `      <div style="margin-left: 25px; margin-top: 4px; color: #8b949e;"><i>${desc}</i></div>\n`;
-      html += `    </details>\n`;
-    });
-    html += `  </div>\n`;
-    html += `</details>\n`;
-  });
-  
-  return { count: totalFrameworks, html: html || "Add topics to your repos to see them here!" };
-}
-
-function getStarData(repos) {
-  let total = 0;
-  const starredRepos = [];
-
-  repos.forEach(repo => {
-    if (!repo.fork && repo.owner.login.toLowerCase() === GITHUB_USER.toLowerCase() && repo.stargazers_count > 0) {
-      total += repo.stargazers_count;
-      starredRepos.push(repo);
-    }
-  });
-
-  starredRepos.sort((a, b) => b.stargazers_count - a.stargazers_count);
-
-  let listHTML = "";
-  if (starredRepos.length > 0) {
-    // Reemplazo de <ul> por <div> para evitar el viñetado residual
-    listHTML += `<div style="margin-left: 5px;">\n`;
-    starredRepos.forEach(repo => {
-      listHTML += `  <div style="margin-bottom: 8px; margin-left: 15px;">⭐ <a href="https://github.com/${repo.full_name}">${repo.name}</a> - ${repo.stargazers_count} stars</div>\n`;
-    });
-    listHTML += `</div>`;
-  } else {
-    listHTML = "<p>No starred repositories yet.</p>";
-  }
-
-  return { total, listHTML };
-}
-
-async function getAllUserProjects(repos) {
-  const sorted = repos.filter(r => !r.fork && !r.private && r.owner.login.toLowerCase() === GITHUB_USER.toLowerCase())
-    .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
-    
-  const listHTML = sorted.map(repo => {
-    const desc = repo.description ? repo.description : "No description";
-    return `    <details style="margin-bottom: 6px;">\n      <summary style="cursor: pointer;"><a href="https://github.com/${repo.full_name}">${repo.name}</a></summary>\n      <div style="margin-left: 25px; margin-top: 4px; color: #8b949e;"><i>${desc}</i></div>\n    </details>`;
-  }).join("\n");
-
-  return { count: sorted.length, listHTML };
-}
-
-async function generateReadme() {
-  try {
-    const template = fs.readFileSync(TEMPLATE_PATH, "utf8");
-    const repos = await getAllRepos();
-    
-    const langData = await getTopLanguages(repos);
-    const frameworkData = await getTopFrameworks(repos);
-    const starData = getStarData(repos);
-    const projectsData = await getAllUserProjects(repos);
-
-    const output = template
-      .replace(/{{TOTAL_LANGUAGES}}/g, langData.count)
-      .replace(/{{PROGRAMMING_LANGUAGES}}/g, langData.html)
-      .replace(/{{TOTAL_FRAMEWORKS}}/g, frameworkData.count)
-      .replace(/{{FRAMEWORKS_AND_TOOLS}}/g, frameworkData.html)
-      .replace(/{{TOTAL_STARS}}/g, starData.total)
-      .replace(/{{STARRED_REPOS}}/g, starData.listHTML)
-      .replace(/{{GITHUB_USER}}/g, GITHUB_USER)
-      .replace(/{{TOTAL_PROJECTS}}/g, projectsData.count)
-      .replace(/{{ALL_PROJECTS}}/g, projectsData.listHTML);
-
-    fs.writeFileSync(README_PATH, output);
-    console.log("README.md updated successfully!");
-  } catch (err) {
-    console.error("Error generating README:", err);
-    process.exit(1);
-  }
-}
-
-generateReadme();
+<details>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Visitor Count</h2></summary>
+  <blockquote>
+    <p>
+      <img src="https://komarev.com/ghpvc/?username={{GITHUB_USER}}&color=00bfa5&style=flat-square&label=Total+Profile+Views" alt="Profile views" />
+    </p>
+  </blockquote>
+</details>
