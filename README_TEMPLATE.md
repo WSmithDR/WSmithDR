@@ -1,5 +1,4 @@
 <h1 align="center">Welcome to WSmithDR's World!</h1>
----
 
 ## Programming Languages
 {{PROGRAMMING_LANGUAGES}}
