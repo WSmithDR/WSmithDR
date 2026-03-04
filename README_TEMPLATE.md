@@ -2,15 +2,12 @@
 
 ---
 
-## Programming Languages
+## Programming Languages ({{TOTAL_LANGUAGES}})
 {{PROGRAMMING_LANGUAGES}}
 
 ---
 
-## Total Stars
-<p align="center">
-<b>{{TOTAL_STARS}}</b> ⭐ across all public repositories
-</p>
+## Total Stars ({{TOTAL_STARS}})
 {{STARRED_REPOS}}
 
 ---
