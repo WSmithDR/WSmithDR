@@ -2,38 +2,36 @@
 
 ---
 
-<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border: none; border-collapse: collapse;">
-  <tr style="border: none;">
-    <td width="50%" valign="top" style="border: none;">
-      <h2 style="margin: 0;">Programming Languages ({{TOTAL_LANGUAGES}})</h2>
-      <br>
-{{PROGRAMMING_LANGUAGES}}
-    </td>
-    <td width="50%" valign="top" style="border: none;">
-      <h2 style="margin: 0;">Frameworks & Tools ({{TOTAL_FRAMEWORKS}})</h2>
-      <br>
-{{FRAMEWORKS_AND_TOOLS}}
-    </td>
-  </tr>
-</table>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start;">
+  <div>
+    <h2 style="margin: 0;">Programming Languages ({{TOTAL_LANGUAGES}})</h2>
+    <br>
+    {{PROGRAMMING_LANGUAGES}}
+  </div>
+  <div>
+    <h2 style="margin: 0;">Frameworks & Tools ({{TOTAL_FRAMEWORKS}})</h2>
+    <br>
+    {{FRAMEWORKS_AND_TOOLS}}
+  </div>
+</div>
 
 ---
 
 <details>
   <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects ({{TOTAL_PROJECTS}})</h2></summary>
   <div style="margin-left: 15px;">
-{{ALL_PROJECTS}}
+    {{ALL_PROJECTS}}
   </div>
 </details>
 
 ---
 
-## Total Stars ({{TOTAL_STARS}})
+<h2>Total Stars ({{TOTAL_STARS}})</h2>
 {{STARRED_REPOS}}
 
 ---
 
-## Connect with Me
+<h2>Connect with Me</h2>
 <p align="center">
   <a href="https://www.linkedin.com/in/wsmith123/" target="_blank">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" width="40" title="LinkedIn" alt="LinkedIn" />
@@ -48,7 +46,7 @@
 
 ---
 
-## Visitor Count
+<h2>Visitor Count</h2>
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username={{GITHUB_USER}}&color=00bfa5&style=flat-square&label=Total+Profile+Views" alt="Profile views" />
 </p>
