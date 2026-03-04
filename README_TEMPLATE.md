@@ -2,36 +2,36 @@
 
 <details>
   <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Programming Languages ({{TOTAL_LANGUAGES}})</h2></summary>
-  <div style="margin-left: 15px; margin-top: 10px;">
+  <blockquote>
 {{PROGRAMMING_LANGUAGES}}
-  </div>
+  </blockquote>
 </details>
 
 <details>
   <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Frameworks & Tools ({{TOTAL_FRAMEWORKS}})</h2></summary>
-  <div style="margin-left: 15px; margin-top: 10px;">
+  <blockquote>
 {{FRAMEWORKS_AND_TOOLS}}
-  </div>
+  </blockquote>
 </details>
 
 <details>
   <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects ({{TOTAL_PROJECTS}})</h2></summary>
-  <div style="margin-left: 15px; margin-top: 10px;">
+  <blockquote>
 {{ALL_PROJECTS}}
-  </div>
+  </blockquote>
 </details>
 
 <details>
   <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Total Stars ({{TOTAL_STARS}})</h2></summary>
-  <div style="margin-left: 15px; margin-top: 10px;">
+  <blockquote>
 {{STARRED_REPOS}}
-  </div>
+  </blockquote>
 </details>
 
 <details>
   <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Connect with Me</h2></summary>
-  <div style="margin-top: 10px;">
-    <p align="center">
+  <blockquote>
+    <p>
       <a href="https://www.linkedin.com/in/wsmith123/" target="_blank">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" width="40" title="LinkedIn" alt="LinkedIn" />
       </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -42,14 +42,14 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="40" title="WhatsApp" alt="WhatsApp" />
       </a>
     </p>
-  </div>
+  </blockquote>
 </details>
 
 <details>
   <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Visitor Count</h2></summary>
-  <div style="margin-top: 10px;">
-    <p align="center">
+  <blockquote>
+    <p>
       <img src="https://komarev.com/ghpvc/?username={{GITHUB_USER}}&color=00bfa5&style=flat-square&label=Total+Profile+Views" alt="Profile views" />
     </p>
-  </div>
+  </blockquote>
 </details>
