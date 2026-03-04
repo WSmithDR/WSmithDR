@@ -46,15 +46,15 @@ async function fetchSuggestionsFromGPTOSS(name, failedSlugs = []) {
     : "";
 
   try {
-// Apuntamos directamente al endpoint dedicado del modelo gpt-oss-20b
-    const response = await fetch("[https://api-inference.huggingface.co/models/openai/gpt-oss-20b/v1/chat/completions](https://api-inference.huggingface.co/models/openai/gpt-oss-20b/v1/chat/completions)", {
+    // URL limpia y modelo Mistral-7B súper estable
+    const response = await fetch("https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.3/v1/chat/completions", {
       method: "POST",
       headers: { 
         "Content-Type": "application/json", 
         "Authorization": `Bearer ${HF_TOKEN}` 
       },
       body: JSON.stringify({
-        model: "openai/gpt-oss-20b", 
+        model: "mistralai/Mistral-7B-Instruct-v0.3", 
         messages: [
           {
             role: "system",
@@ -68,9 +68,7 @@ async function fetchSuggestionsFromGPTOSS(name, failedSlugs = []) {
     });
     
     if (!response.ok) {
-      const errStatus = response.status;
-      const errText = await response.text();
-      console.log(`   🚨 API Error (${errStatus}): ${errText}`);
+      console.log(`   🚨 API Error (${response.status})`);
       return [];
     }
 
@@ -83,9 +81,8 @@ async function fetchSuggestionsFromGPTOSS(name, failedSlugs = []) {
     if (match) {
       const parsed = JSON.parse(match[0]);
       return parsed.map(s => s.trim().toLowerCase().replace(/[^a-z0-9]/g, ''));
-    } else {
-      return [];
     }
+    return [];
   } catch (err) { 
     console.log(`   🚨 Excepción: ${err.message}`);
     return []; 
