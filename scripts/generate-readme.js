@@ -46,8 +46,8 @@ async function fetchSuggestionsFromGPTOSS(name, failedSlugs = []) {
     : "";
 
   try {
-    // AQUÍ ESTÁ EL CAMBIO: Usamos el nuevo router oficial de Hugging Face
-    const response = await fetch("https://router.huggingface.co/hf-inference/v1/chat/completions", {
+// Apuntamos directamente al endpoint dedicado del modelo gpt-oss-20b
+    const response = await fetch("[https://api-inference.huggingface.co/models/openai/gpt-oss-20b/v1/chat/completions](https://api-inference.huggingface.co/models/openai/gpt-oss-20b/v1/chat/completions)", {
       method: "POST",
       headers: { 
         "Content-Type": "application/json", 
