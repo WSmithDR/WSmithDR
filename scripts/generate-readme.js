@@ -53,42 +53,48 @@ async function getAllRepos() {
   return uniqueRepos;
 }
 
-// NUEVA LÓGICA: Cuenta el número de proyectos por lenguaje
+// LÓGICA NUEVA: Agrupa repositorios por lenguaje y crea secciones desplegables
 async function getTopLanguages(repos) {
-  const langCount = {};
+  const langMap = {};
+  
   repos.forEach(repo => {
     if (repo.language && !repo.fork && repo.owner.login.toLowerCase() === GITHUB_USER.toLowerCase()) {
       const lang = repo.language;
-      langCount[lang] = (langCount[lang] || 0) + 1;
+      if (!langMap[lang]) langMap[lang] = [];
+      langMap[lang].push(repo);
     }
   });
 
-  const sorted = Object.entries(langCount).sort((a, b) => b[1] - a[1]);
+  const sorted = Object.entries(langMap).sort((a, b) => b[1].length - a[1].length);
   
-  // Genera badges de shields.io indicando "Lenguaje - N Proyectos"
-  const badges = sorted
-    .map(([lang, count]) => {
-      const encodedLang = encodeURIComponent(lang);
-      const label = count === 1 ? 'Project' : 'Projects';
-      return `<img src="https://img.shields.io/badge/${encodedLang}-${count}_${label}-00bfa5?style=flat-square" />`;
-    })
-    .join(" ");
+  let html = "";
+  sorted.forEach(([lang, repoList]) => {
+    const encodedLang = encodeURIComponent(lang);
+    // Adapta el nombre del lenguaje para buscar su logo en shields.io
+    const logoName = lang.toLowerCase().replace(/\+/g, "plus").replace(/#/g, "sharp").replace(/\s+/g, "");
+    const label = repoList.length === 1 ? 'Project' : 'Projects';
     
-  return badges || "No languages detected yet";
+    html += `<details>\n`;
+    html += `  <summary>\n`;
+    html += `    <img src="https://img.shields.io/badge/${encodedLang}-${repoList.length}_${label}-00bfa5?style=flat-square&logo=${logoName}&logoColor=white" style="cursor: pointer; margin-bottom: 5px;" />\n`;
+    html += `  </summary>\n`;
+    html += `  <ul>\n`;
+    
+    // Ordena los proyectos del lenguaje por fecha de actualización
+    repoList.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+    
+    repoList.forEach(repo => {
+      const desc = repo.description ? ` - ${repo.description}` : "";
+      html += `    <li><a href="https://github.com/${repo.full_name}">${repo.name}</a>${desc}</li>\n`;
+    });
+    
+    html += `  </ul>\n`;
+    html += `</details>\n<br>\n`;
+  });
+  
+  return html || "No languages detected yet";
 }
 
-function getPinnedProjects(repos) {
-  const sorted = repos.filter(
-    r => !r.fork && !r.private && r.owner.login.toLowerCase() === GITHUB_USER.toLowerCase()
-  ).sort((a, b) => b.stargazers_count - a.stargazers_count);
-  const top2 = sorted.slice(0, 2);
-  if (top2.length === 0) return "No pinned projects yet.";
-  return top2.map(repo =>
-    `<a href="https://github.com/${repo.full_name}"><img src="https://github-readme-stats.vercel.app/api/pin/?username=${repo.owner.login}&repo=${repo.name}&theme=algolia&title_color=00bfa5" /></a>`
-  ).join(" ");
-}
-
-// LÓGICA CORREGIDA: Solo suma estrellas de tus propios repositorios
 function getTotalStars(repos) {
   return repos.reduce((sum, repo) => {
     if (!repo.fork && repo.owner.login.toLowerCase() === GITHUB_USER.toLowerCase()) {
@@ -129,18 +135,18 @@ async function generateReadme() {
     const repos = await getAllRepos();
     
     const techIcons = await getTopLanguages(repos);
-    const pinned = getPinnedProjects(repos);
     const totalStars = getTotalStars(repos);
     const latestProjects = await getLatestProjects(repos);
     const skillsProgress = getSkillsProgress(repos);
 
     const output = template
       .replace(/{{TECH_STACK_ICONS}}/g, techIcons)
-      .replace(/{{PINNED_PROJECTS}}/g, pinned)
       .replace(/{{TOTAL_STARS}}/g, totalStars)
       .replace(/{{GITHUB_USER}}/g, GITHUB_USER)
       .replace(/{{LATEST_PROJECTS}}/g, latestProjects)
-      .replace(/{{SKILLS_PROGRESS}}/g, skillsProgress);
+      .replace(/{{SKILLS_PROGRESS}}/g, skillsProgress)
+      // Limpieza de variables que ya no existen en el template por si acaso
+      .replace(/{{PINNED_PROJECTS}}/g, "");
 
     fs.writeFileSync(README_PATH, output);
     console.log("README.md updated successfully!");
