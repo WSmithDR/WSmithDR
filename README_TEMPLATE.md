@@ -6,40 +6,13 @@
 ---
 
 ## Dynamic Tech Stack
-<p align="center">
 {{TECH_STACK_ICONS}}
-</p>
 
 ---
 
 ## Total Stars
 <p align="center">
 <b>{{TOTAL_STARS}}</b> across all public repositories
-</p>
-
----
-
-## GitHub Stats
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username={{GITHUB_USER}}&show_icons=true&theme=algolia&title_color=00bfa5&icon_color=00bfa5&text_color=ffffff&bg_color=0d1117" />
-</p>
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username={{GITHUB_USER}}&layout=compact&theme=algolia&title_color=00bfa5&text_color=ffffff&bg_color=0d1117" />
-</p>
-
----
-
-## Pinned Projects
-<p align="center">
-{{PINNED_PROJECTS}}
-</p>
-
----
-
-## Badges
-<p align="center">
-  <img src="https://img.shields.io/github/followers/{{GITHUB_USER}}?label=Follow&style=social" />
-  <img src="https://img.shields.io/github/stars/{{GITHUB_USER}}?affiliations=OWNER&style=social" />
 </p>
 
 ---
