@@ -1,10 +1,10 @@
 const fs = require("fs");
 const fetch = require("node-fetch");
 
-// Configuración de variables de entorno y rutas
+// Configuración de variables de entorno
 const GITHUB_USER = process.env.GITHUB_USER || "WSmithDR";
 const GITHUB_TOKEN = process.env.GH_TOKEN;
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY; // Debe estar en Secrets de GitHub
+const HF_TOKEN = process.env.HF_TOKEN; // Token de Hugging Face en Secrets
 const README_PATH = "README.md";
 const TEMPLATE_PATH = "README_TEMPLATE.md";
 const CACHE_PATH = "icon_cache.json";
@@ -24,41 +24,46 @@ if (fs.existsSync(CACHE_PATH)) {
 }
 
 /**
- * Normaliza nombres de tecnologías usando IA (OpenAI) con Prompt en Inglés
+ * Normaliza nombres de tecnologías usando Hugging Face (Formato OpenAI)
  */
 async function fetchSlugFromAI(name) {
-  if (!OPENAI_API_KEY) return name.toLowerCase().replace(/\s+/g, '');
+  if (!HF_TOKEN) return name.toLowerCase().replace(/\s+/g, '');
 
   try {
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    const response = await fetch("https://api-inference.huggingface.co/v1/chat/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${OPENAI_API_KEY}`
+        "Authorization": `Bearer ${HF_TOKEN}`
       },
       body: JSON.stringify({
-        model: "gpt-3.5-turbo",
+        model: "mistralai/Mistral-7B-Instruct-v0.2", 
         messages: [{
           role: "system",
-          content: "You are a Devicon expert. Your ONLY task is to return the exact 'slug' (folder name) for the provided technology to be used in a CDN URL. Examples: 'C++' -> 'cplusplus', 'Jupyter Notebook' -> 'jupyter', 'React' -> 'react', 'Node.js' -> 'nodejs'. If a direct match does not exist, return the name in lowercase without spaces or special characters. Do NOT respond with sentences, explanations, or quotes. Return ONLY the word."
+          content: "You are a Devicon expert. Your ONLY task is to return the exact 'slug' (folder name) for the provided technology to be used in a CDN URL. Examples: 'C++' -> 'cplusplus', 'Jupyter Notebook' -> 'jupyter', 'React' -> 'react'. If no match exists, return the name in lowercase without spaces. Return ONLY the word."
         }, {
           role: "user",
           content: name
         }],
+        max_tokens: 10,
         temperature: 0
       })
     });
 
     const data = await response.json();
-    return data.choices[0].message.content.trim().toLowerCase();
+    
+    if (data.error || !data.choices) {
+      return name.toLowerCase().replace(/\s+/g, '');
+    }
+
+    return data.choices[0].message.content.trim().toLowerCase().replace(/[^a-z0-9]/g, '');
   } catch (err) {
-    console.error(`Error fetching slug for ${name}:`, err);
     return name.toLowerCase().replace(/\s+/g, '');
   }
 }
 
 /**
- * Obtiene el slug validado buscando primero en el caché para ahorrar tokens
+ * Obtiene el slug validado buscando primero en el caché
  */
 async function getValidatedSlug(name) {
   const cleanName = name.trim();
@@ -67,7 +72,7 @@ async function getValidatedSlug(name) {
   const slug = await fetchSlugFromAI(cleanName);
   iconCache[cleanName] = slug;
   
-  // Guardar caché actualizado localmente para que el Action haga el commit
+  // Guardar caché actualizado localmente
   fs.writeFileSync(CACHE_PATH, JSON.stringify(iconCache, null, 2));
   return slug;
 }
@@ -77,7 +82,7 @@ async function fetchAllPages(url) {
   let page = 1;
   while (true) {
     const res = await fetch(`${url}${url.includes('?') ? '&' : '?'}per_page=100&page=${page}`, fetchOptions);
-    if (!res.ok) throw new Error(`GitHub API error: ${res.status} (${url})`);
+    if (!res.ok) throw new Error(`GitHub API error: ${res.status}`);
     const data = await res.json();
     if (data.length === 0) break;
     results = results.concat(data);
@@ -120,20 +125,19 @@ async function getTopLanguages(repos) {
     const slug = await getValidatedSlug(lang);
     const iconUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${slug}/${slug}-original.svg`;
     
-    html += `<details style="margin-bottom: 8px;">\n`;
-    html += `  <summary style="cursor: pointer;">\n`;
-    html += `    <img src="${iconUrl}" width="24" title="${lang}" onerror="this.style.display='none'" style="vertical-align: middle;"/> &nbsp; <b>${repoList.length} Proyectos (${lang})</b>\n`;
+    html += `<details>\n`;
+    html += `  <summary style="cursor: pointer; margin-bottom: 5px;">\n`;
+    html += `    <img src="${iconUrl}" width="24" title="${lang}" onerror="this.style.display='none'" style="vertical-align: middle;"/> &nbsp; <b>${repoList.length} Projects (${lang})</b>\n`;
     html += `  </summary>\n`;
     html += `  <blockquote>\n`;
     
-    repoList.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
     repoList.forEach(repo => {
-      const desc = repo.description || "No description";
-      html += `    <details style="margin-bottom: 5px;">\n`;
+      html += `    <details>\n`;
       html += `      <summary style="cursor: pointer;"><a href="${repo.html_url}">${repo.name}</a></summary>\n`;
-      html += `      <blockquote><i>${desc}</i></blockquote>\n`;
+      html += `      <blockquote><i>${repo.description || "No description"}</i></blockquote>\n`;
       html += `    </details>\n`;
     });
+    
     html += `  </blockquote>\n`;
     html += `</details>\n`;
   }
@@ -163,17 +167,16 @@ async function getTopFrameworks(repos) {
     const iconUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${slug}/${slug}-original.svg`;
     const name = topic.charAt(0).toUpperCase() + topic.slice(1);
 
-    html += `<details style="margin-bottom: 8px;">\n`;
-    html += `  <summary style="cursor: pointer;">\n`;
-    html += `    <img src="${iconUrl}" width="24" title="${name}" onerror="this.style.display='none'" style="vertical-align: middle;"/> &nbsp; <b>${repoList.length} Proyectos (${name})</b>\n`;
+    html += `<details>\n`;
+    html += `  <summary style="cursor: pointer; margin-bottom: 5px;">\n`;
+    html += `    <img src="${iconUrl}" width="24" title="${name}" onerror="this.style.display='none'" style="vertical-align: middle;"/> &nbsp; <b>${repoList.length} Projects (${name})</b>\n`;
     html += `  </summary>\n`;
     html += `  <blockquote>\n`;
     
     repoList.forEach(repo => {
-      const desc = repo.description || "No description";
-      html += `    <details style="margin-bottom: 5px;">\n`;
+      html += `    <details>\n`;
       html += `      <summary style="cursor: pointer;"><a href="${repo.html_url}">${repo.name}</a></summary>\n`;
-      html += `      <blockquote><i>${desc}</i></blockquote>\n`;
+      html += `      <blockquote><i>${repo.description || "No description"}</i></blockquote>\n`;
       html += `    </details>\n`;
     });
     html += `  </blockquote>\n`;
@@ -233,7 +236,7 @@ async function generateReadme() {
     fs.writeFileSync(README_PATH, output);
     console.log("README updated successfully!");
   } catch (err) {
-    console.error("Critical error generating README:", err);
+    console.error(err);
     process.exit(1);
   }
 }
