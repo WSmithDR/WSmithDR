@@ -12,15 +12,19 @@
 
 ## Total Stars
 <p align="center">
-<b>{{TOTAL_STARS}}</b> across all public repositories
+<b>{{TOTAL_STARS}}</b> ⭐ across all public repositories
 </p>
+{{STARRED_REPOS}}
 
 ---
 
-## Latest Projects
-<ul>
-{{LATEST_PROJECTS}}
-</ul>
+## Projects
+<details>
+  <summary><b>Click to view all my projects</b></summary>
+  <ul>
+{{ALL_PROJECTS}}
+  </ul>
+</details>
 
 ---
 
@@ -47,14 +51,7 @@
 
 ---
 
-## GitHub Trophies
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username={{GITHUB_USER}}&theme=algolia&no-frame=true&no-bg=true&margin-w=15" />
-</p>
-
----
-
 ## Visitor Count
 <p align="center">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id={{GITHUB_USER}}.{{GITHUB_USER}}&left_color=blue&right_color=green&left_text=Visitors" />
+  <img src="https://komarev.com/ghpvc/?username={{GITHUB_USER}}&color=00bfa5&style=flat-square&label=Total+Profile+Views" alt="Profile views" />
 </p>
