@@ -2,7 +2,7 @@ const fs = require("fs");
 const fetch = require("node-fetch");
 
 // Configuración de variables de entorno (Automáticas en GitHub Actions)
-const GITHUB_USER = process.env.GITHUB_REPOSITORY_OWNER || "WSmithDR";
+const GITHUB_USER = process.env.GITHUB_REPOSITORY_OWNER;
 const GITHUB_TOKEN = process.env.GH_TOKEN;
 const HF_TOKEN = process.env.HF_TOKEN; 
 const README_PATH = "README.md";
