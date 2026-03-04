@@ -192,11 +192,11 @@ function getStarData(repos) {
     .sort((a, b) => b.stargazers_count - a.stargazers_count);
   
   let total = starred.reduce((s, r) => s + r.stargazers_count, 0);
-  let html = starred.map(r => `
-    <details style="margin-bottom: 5px;">
-      <summary style="cursor: pointer;">⭐ <a href="${r.html_url}">${r.name}</a> - ${r.stargazers_count} stars</summary>
-      <blockquote><i>${r.description || "No description"}</i></blockquote>
-    </details>`).join("\n");
+  // Eliminamos los espacios al inicio de cada línea del string
+  let html = starred.map(r => `<details style="margin-bottom: 5px;">
+<summary style="cursor: pointer;">⭐ <a href="${r.html_url}">${r.name}</a> - ${r.stargazers_count} stars</summary>
+<blockquote><i>${r.description || "No description"}</i></blockquote>
+</details>`).join("\n");
 
   return { total, html };
 }
@@ -205,11 +205,10 @@ async function getAllUserProjects(repos) {
   const sorted = repos.filter(r => !r.fork && !r.private && r.owner.login.toLowerCase() === GITHUB_USER.toLowerCase())
     .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
     
-  const html = sorted.map(repo => `
-    <details style="margin-bottom: 5px;">
-      <summary style="cursor: pointer;"><a href="${repo.html_url}">${repo.name}</a></summary>
-      <blockquote><i>${repo.description || "No description"}</i></blockquote>
-    </details>`).join("\n");
+  const html = sorted.map(repo => `<details style="margin-bottom: 5px;">
+<summary style="cursor: pointer;"><a href="${repo.html_url}">${repo.name}</a></summary>
+<blockquote><i>${repo.description || "No description"}</i></blockquote>
+</details>`).join("\n");
 
   return { count: sorted.length, html };
 }
