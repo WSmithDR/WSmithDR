@@ -2,13 +2,20 @@
 
 ---
 
-## Programming Languages ({{TOTAL_LANGUAGES}})
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border: none; border-collapse: collapse;">
+  <tr style="border: none;">
+    <td width="50%" valign="top" style="border: none;">
+      <h2 style="margin: 0;">Programming Languages ({{TOTAL_LANGUAGES}})</h2>
+      <br>
 {{PROGRAMMING_LANGUAGES}}
-
----
-
-## Total Stars ({{TOTAL_STARS}})
-{{STARRED_REPOS}}
+    </td>
+    <td width="50%" valign="top" style="border: none;">
+      <h2 style="margin: 0;">Frameworks & Tools ({{TOTAL_FRAMEWORKS}})</h2>
+      <br>
+{{FRAMEWORKS_AND_TOOLS}}
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -18,6 +25,11 @@
 {{ALL_PROJECTS}}
   </div>
 </details>
+
+---
+
+## Total Stars ({{TOTAL_STARS}})
+{{STARRED_REPOS}}
 
 ---
 
