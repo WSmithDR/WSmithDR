@@ -73,6 +73,10 @@
   </summary>
   <div style="margin-left: 15px;">
     <details>
+      <summary><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
+      <p><i>No description</i></p>
+    </details>
+    <details>
       <summary><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></summary>
       <p><i>No description</i></p>
     </details>
@@ -90,10 +94,6 @@
     </details>
     <details>
       <summary><a href="https://github.com/WSmithDR/HENRY-FSD-Prepcourse-Homeworks">HENRY-FSD-Prepcourse-Homeworks</a></summary>
-      <p><i>No description</i></p>
-    </details>
-    <details>
-      <summary><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
       <p><i>No description</i></p>
     </details>
     <details>
@@ -260,15 +260,31 @@
 </details>
 
 <details>
-  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Frameworks & Tools (0)</h2></summary>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Frameworks & Tools (1)</h2></summary>
   <div style="margin-left: 15px; margin-top: 10px;">
-Add topics to your repos to see them here!
+<details>
+  <summary style="cursor: pointer;">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" width="24" title="React" alt="React" /> &nbsp; <b>1 Project</b>
+  </summary>
+  <div style="margin-left: 15px;">
+    <details>
+      <summary><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
+      <p><i>No description</i></p>
+    </details>
+  </div>
+</details>
+<br>
+
   </div>
 </details>
 
 <details>
   <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects (40)</h2></summary>
   <div style="margin-left: 15px; margin-top: 10px;">
+    <details>
+      <summary><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
+      <p><i>No description</i></p>
+    </details>
     <details>
       <summary><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></summary>
       <p><i>No description</i></p>
@@ -383,10 +399,6 @@ Add topics to your repos to see them here!
     </details>
     <details>
       <summary><a href="https://github.com/WSmithDR/SmarttwigsApplicationExercise">SmarttwigsApplicationExercise</a></summary>
-      <p><i>No description</i></p>
-    </details>
-    <details>
-      <summary><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
       <p><i>No description</i></p>
     </details>
     <details>
