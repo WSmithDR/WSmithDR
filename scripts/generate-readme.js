@@ -157,4 +157,29 @@ async function getAllUserProjects(repos) {
   return { count: sorted.length, listHTML };
 }
 
-async function generateReadme
+async function generateReadme() {
+  try {
+    const template = fs.readFileSync(TEMPLATE_PATH, "utf8");
+    const repos = await getAllRepos();
+    
+    const programmingLanguages = await getTopLanguages(repos);
+    const starData = getStarData(repos);
+    const projectsData = await getAllUserProjects(repos);
+
+    const output = template
+      .replace(/{{PROGRAMMING_LANGUAGES}}/g, programmingLanguages)
+      .replace(/{{TOTAL_STARS}}/g, starData.total)
+      .replace(/{{STARRED_REPOS}}/g, starData.listHTML)
+      .replace(/{{GITHUB_USER}}/g, GITHUB_USER)
+      .replace(/{{TOTAL_PROJECTS}}/g, projectsData.count) // Se inyecta el número
+      .replace(/{{ALL_PROJECTS}}/g, projectsData.listHTML); // Se inyecta la lista
+
+    fs.writeFileSync(README_PATH, output);
+    console.log("README.md updated successfully!");
+  } catch (err) {
+    console.error("Error generating README:", err);
+    process.exit(1);
+  }
+}
+
+generateReadme();
