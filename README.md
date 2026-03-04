@@ -2,7 +2,11 @@
 
 ---
 
-## Programming Languages (8)
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border: none; border-collapse: collapse;">
+  <tr style="border: none;">
+    <td width="50%" valign="top" style="border: none;">
+      <h2 style="margin: 0;">Programming Languages (8)</h2>
+      <br>
 <details>
   <summary style="cursor: pointer;">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="24" title="Python" alt="Python" /> &nbsp; <b>14 Projects</b>
@@ -256,13 +260,14 @@
 </details>
 <br>
 
-
----
-
-## Total Stars (1)
-<ul>
-  <li><a href="https://github.com/WSmithDR/machine-learning-project">machine-learning-project</a> - 1 ⭐</li>
-</ul>
+    </td>
+    <td width="50%" valign="top" style="border: none;">
+      <h2 style="margin: 0;">Frameworks & Tools (0)</h2>
+      <br>
+Add topics to your repos to see them here!
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -431,6 +436,13 @@
     </details>
   </div>
 </details>
+
+---
+
+## Total Stars (1)
+<ul>
+  <li><a href="https://github.com/WSmithDR/machine-learning-project">machine-learning-project</a> - 1 ⭐</li>
+</ul>
 
 ---
 
