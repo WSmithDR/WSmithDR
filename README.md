@@ -5,10 +5,10 @@
 
 ---
 
-## Dynamic Tech Stack
+## Programming Languages
 <details>
-  <summary>
-    <img src="https://img.shields.io/badge/Python-14_Projects-00bfa5?style=flat-square&logo=python&logoColor=white" style="cursor: pointer; margin-bottom: 5px;" />
+  <summary style="cursor: pointer;">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="24" title="Python" alt="Python" /> &nbsp; <b>14 Projects</b>
   </summary>
   <ul>
     <li><a href="https://github.com/WSmithDR/ankiaddon-timemanager">ankiaddon-timemanager</a></li>
@@ -29,8 +29,8 @@
 </details>
 <br>
 <details>
-  <summary>
-    <img src="https://img.shields.io/badge/JavaScript-11_Projects-00bfa5?style=flat-square&logo=javascript&logoColor=white" style="cursor: pointer; margin-bottom: 5px;" />
+  <summary style="cursor: pointer;">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="24" title="JavaScript" alt="JavaScript" /> &nbsp; <b>11 Projects</b>
   </summary>
   <ul>
     <li><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></li>
@@ -48,8 +48,8 @@
 </details>
 <br>
 <details>
-  <summary>
-    <img src="https://img.shields.io/badge/TypeScript-8_Projects-00bfa5?style=flat-square&logo=typescript&logoColor=white" style="cursor: pointer; margin-bottom: 5px;" />
+  <summary style="cursor: pointer;">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" width="24" title="TypeScript" alt="TypeScript" /> &nbsp; <b>8 Projects</b>
   </summary>
   <ul>
     <li><a href="https://github.com/WSmithDR/prueba_tecnica">prueba_tecnica</a></li>
@@ -64,8 +64,8 @@
 </details>
 <br>
 <details>
-  <summary>
-    <img src="https://img.shields.io/badge/Java-5_Projects-00bfa5?style=flat-square&logo=java&logoColor=white" style="cursor: pointer; margin-bottom: 5px;" />
+  <summary style="cursor: pointer;">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" width="24" title="Java" alt="Java" /> &nbsp; <b>5 Projects</b>
   </summary>
   <ul>
     <li><a href="https://github.com/WSmithDR/PAR5_PROY2P_Duenas_Romero_Ortega">PAR5_PROY2P_Duenas_Romero_Ortega</a></li>
@@ -77,8 +77,8 @@
 </details>
 <br>
 <details>
-  <summary>
-    <img src="https://img.shields.io/badge/Jupyter%20Notebook-3_Projects-00bfa5?style=flat-square&logo=jupyternotebook&logoColor=white" style="cursor: pointer; margin-bottom: 5px;" />
+  <summary style="cursor: pointer;">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg" width="24" title="Jupyter Notebook" alt="Jupyter Notebook" /> &nbsp; <b>3 Projects</b>
   </summary>
   <ul>
     <li><a href="https://github.com/WSmithDR/Market-Scraper">Market-Scraper</a></li>
@@ -88,8 +88,8 @@
 </details>
 <br>
 <details>
-  <summary>
-    <img src="https://img.shields.io/badge/CSS-3_Projects-00bfa5?style=flat-square&logo=css&logoColor=white" style="cursor: pointer; margin-bottom: 5px;" />
+  <summary style="cursor: pointer;">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" width="24" title="CSS" alt="CSS" /> &nbsp; <b>3 Projects</b>
   </summary>
   <ul>
     <li><a href="https://github.com/WSmithDR/ngtodoapp">ngtodoapp</a></li>
@@ -99,8 +99,8 @@
 </details>
 <br>
 <details>
-  <summary>
-    <img src="https://img.shields.io/badge/HTML-2_Projects-00bfa5?style=flat-square&logo=html&logoColor=white" style="cursor: pointer; margin-bottom: 5px;" />
+  <summary style="cursor: pointer;">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" width="24" title="HTML" alt="HTML" /> &nbsp; <b>2 Projects</b>
   </summary>
   <ul>
     <li><a href="https://github.com/WSmithDR/buscar_trabajo_con_ai">buscar_trabajo_con_ai</a></li>
@@ -109,8 +109,8 @@
 </details>
 <br>
 <details>
-  <summary>
-    <img src="https://img.shields.io/badge/Shell-1_Project-00bfa5?style=flat-square&logo=shell&logoColor=white" style="cursor: pointer; margin-bottom: 5px;" />
+  <summary style="cursor: pointer;">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" width="24" title="Shell" alt="Shell" /> &nbsp; <b>1 Project</b>
   </summary>
   <ul>
     <li><a href="https://github.com/WSmithDR/Focus-Blocker">Focus-Blocker</a></li>
@@ -195,17 +195,6 @@
   <a href="mailto:wsmithdrdev@gmail.com"><img src="https://img.shields.io/badge/Email-00bfa5?style=for-the-badge&logo=gmail&logoColor=white" /></a>
   <a href="https://wa.me/593989785480"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
 </p>
-
----
-
-## Skills
-<b>JavaScript</b> <progress value="30.0" max="100"></progress> 30.0%<br>
-<b>TypeScript</b> <progress value="20.0" max="100"></progress> 20.0%<br>
-<b>Python</b> <progress value="16.7" max="100"></progress> 16.7%<br>
-<b>Java</b> <progress value="13.3" max="100"></progress> 13.3%<br>
-<b>Jupyter Notebook</b> <progress value="10.0" max="100"></progress> 10.0%<br>
-<b>CSS</b> <progress value="6.7" max="100"></progress> 6.7%<br>
-<b>HTML</b> <progress value="3.3" max="100"></progress> 3.3%
 
 ---
 
