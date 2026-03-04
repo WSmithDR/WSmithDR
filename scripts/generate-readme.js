@@ -65,6 +65,7 @@ async function getTopLanguages(repos) {
   });
 
   const sorted = Object.entries(langMap).sort((a, b) => b[1].length - a[1].length);
+  const totalLanguages = sorted.length;
   
   const getIconUrl = (lang) => {
     const map = {
@@ -106,16 +107,22 @@ async function getTopLanguages(repos) {
     
     repoList.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
     
+    // LÓGICA NUEVA: Menú desplegable para la descripción de cada proyecto
     repoList.forEach(repo => {
-      const desc = repo.description ? ` - ${repo.description}` : "";
-      html += `    <li><a href="https://github.com/${repo.full_name}">${repo.name}</a>${desc}</li>\n`;
+      const desc = repo.description ? repo.description : "No description";
+      html += `    <li>\n`;
+      html += `      <details>\n`;
+      html += `        <summary><a href="https://github.com/${repo.full_name}">${repo.name}</a></summary>\n`;
+      html += `        <p><i>${desc}</i></p>\n`;
+      html += `      </details>\n`;
+      html += `    </li>\n`;
     });
     
     html += `  </ul>\n`;
     html += `</details>\n<br>\n`;
   });
   
-  return html || "No languages detected yet";
+  return { count: totalLanguages, html: html || "No languages detected yet" };
 }
 
 function getStarData(repos) {
@@ -145,14 +152,15 @@ function getStarData(repos) {
   return { total, listHTML };
 }
 
-// LÓGICA MODIFICADA: Ahora devuelve un objeto con el contador total de proyectos y la lista HTML
 async function getAllUserProjects(repos) {
   const sorted = repos.filter(r => !r.fork && !r.private && r.owner.login.toLowerCase() === GITHUB_USER.toLowerCase())
     .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
     
-  const listHTML = sorted.map(repo =>
-    `    <li><a href="https://github.com/${repo.full_name}">${repo.name}</a> - ${repo.description || "No description"}</li>`
-  ).join("\n");
+  // LÓGICA NUEVA: Mismo formato desplegable que los proyectos de lenguajes
+  const listHTML = sorted.map(repo => {
+    const desc = repo.description ? repo.description : "No description";
+    return `    <li>\n      <details>\n        <summary><a href="https://github.com/${repo.full_name}">${repo.name}</a></summary>\n        <p><i>${desc}</i></p>\n      </details>\n    </li>`;
+  }).join("\n");
 
   return { count: sorted.length, listHTML };
 }
@@ -162,17 +170,18 @@ async function generateReadme() {
     const template = fs.readFileSync(TEMPLATE_PATH, "utf8");
     const repos = await getAllRepos();
     
-    const programmingLanguages = await getTopLanguages(repos);
+    const langData = await getTopLanguages(repos);
     const starData = getStarData(repos);
     const projectsData = await getAllUserProjects(repos);
 
     const output = template
-      .replace(/{{PROGRAMMING_LANGUAGES}}/g, programmingLanguages)
+      .replace(/{{TOTAL_LANGUAGES}}/g, langData.count)
+      .replace(/{{PROGRAMMING_LANGUAGES}}/g, langData.html)
       .replace(/{{TOTAL_STARS}}/g, starData.total)
       .replace(/{{STARRED_REPOS}}/g, starData.listHTML)
       .replace(/{{GITHUB_USER}}/g, GITHUB_USER)
-      .replace(/{{TOTAL_PROJECTS}}/g, projectsData.count) // Se inyecta el número
-      .replace(/{{ALL_PROJECTS}}/g, projectsData.listHTML); // Se inyecta la lista
+      .replace(/{{TOTAL_PROJECTS}}/g, projectsData.count)
+      .replace(/{{ALL_PROJECTS}}/g, projectsData.listHTML);
 
     fs.writeFileSync(README_PATH, output);
     console.log("README.md updated successfully!");
