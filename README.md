@@ -1,9 +1,4 @@
 <h1 align="center">Welcome to WSmithDR's World!</h1>
-<p align="center">
-  <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" width="150"/>
-</p>
-
----
 
 ## Programming Languages
 <details>
