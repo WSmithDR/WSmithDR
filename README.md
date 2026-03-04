@@ -1,5 +1,7 @@
 <h1 align="center">Welcome to WSmithDR's World!</h1>
 
+---
+
 ## Programming Languages
 <details>
   <summary style="cursor: pointer;">
@@ -126,9 +128,8 @@
 
 ---
 
-## Projects
 <details>
-  <summary><b>Click to view all my projects</b></summary>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects (40)</h2></summary>
   <ul>
     <li><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a> - No description</li>
     <li><a href="https://github.com/WSmithDR/docker_course">docker_course</a> - Repository dedicated to active learning of Docker. I use each branch as an isolated test environment to solve practical exercises integrated with my spaced repetition system in Anki.</li>
@@ -175,20 +176,17 @@
 
 ---
 
-## Certifications
-<p align="center">
-  <a href="https://www.linkedin.com/in/wsmith123/details/certifications/">
-    <img src="https://img.shields.io/badge/LinkedIn%20Certifications-00bfa5?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-</p>
-
----
-
 ## Connect with Me
 <p align="center">
-  <a href="https://www.linkedin.com/in/wsmith123/"><img src="https://img.shields.io/badge/LinkedIn-00bfa5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="mailto:wsmithdrdev@gmail.com"><img src="https://img.shields.io/badge/Email-00bfa5?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-  <a href="https://wa.me/593989785480"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
+  <a href="https://www.linkedin.com/in/wsmith123/" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" width="40" title="LinkedIn" alt="LinkedIn" />
+  </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="mailto:wsmithdrdev@gmail.com" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" width="40" title="Email" alt="Email" />
+  </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://wa.me/593989785480" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="40" title="WhatsApp" alt="WhatsApp" />
+  </a>
 </p>
 
 ---
