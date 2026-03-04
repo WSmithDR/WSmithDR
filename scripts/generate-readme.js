@@ -172,7 +172,6 @@ async function generateReadme() {
       .replace(/{{STARRED_REPOS}}/g, starData.listHTML)
       .replace(/{{GITHUB_USER}}/g, GITHUB_USER)
       .replace(/{{ALL_PROJECTS}}/g, allProjects)
-      // Limpia la variable anterior en caso de que quede rastro
       .replace(/{{SKILLS_PROGRESS}}/g, "");
 
     fs.writeFileSync(README_PATH, output);
