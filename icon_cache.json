@@ -1,0 +1,11 @@
+{
+  "Python": "python",
+  "JavaScript": "javascript",
+  "TypeScript": "typescript",
+  "Java": "java",
+  "Jupyter Notebook": "jupyternotebook",
+  "CSS": "css",
+  "HTML": "html",
+  "Shell": "shell",
+  "react": "react"
+}
