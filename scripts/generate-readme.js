@@ -32,12 +32,8 @@ async function getValidIconUrl(slug) {
 }
 
 /**
- * AI PROMPT WITH NEGATIVE FEEDBACK (Powered by Gemini 3.1 Flash)
- * Tells the AI explicitly which slugs have already failed so it doesn't repeat them.
- */
-/**
  * AI PROMPT WITH NEGATIVE FEEDBACK (Powered by Gemini)
- * Forces strict JSON output and handles undefined errors gracefully.
+ * Uses strict XML delimiters to force a pure JSON array output.
  */
 async function fetchSuggestionsFromGemini(name, failedSlugs = []) {
   if (!GEMINI_API_KEY) {
@@ -46,26 +42,41 @@ async function fetchSuggestionsFromGemini(name, failedSlugs = []) {
   }
 
   const avoidText = failedSlugs.length > 0 
-    ? ` DO NOT suggest these: [${failedSlugs.join(", ")}].` 
+    ? `<avoid>\nDO NOT suggest these exactly: [${failedSlugs.join(", ")}]\n</avoid>` 
     : "";
 
-  const prompt = `Map the technology to 5 Devicon folder names (slugs). RULES: 1. HTML -> html5 2. CSS -> css3 3. Jupyter -> jupyter 4. Shell -> bash.${avoidText}\n\nTechnology: ${name}`;
+  // Prompt estructurado con XML
+  const promptText = `
+<instruction>
+You are a strict data-routing API. Map the given technology name to exactly 5 possible Devicon folder names (slugs). Output ONLY a raw JSON array of strings. NO markdown, NO backticks, NO conversational text.
+</instruction>
+
+<rules>
+1. HTML -> html5
+2. CSS -> css3
+3. Jupyter -> jupyter
+4. Jupyter Notebook -> jupyter
+5. Shell -> bash
+</rules>
+${avoidText}
+<input>
+Technology: ${name}
+</input>
+
+<expected_output_format>
+["slug1", "slug2", "slug3", "slug4", "slug5"]
+</expected_output_format>`;
 
   try {
     const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        // Pasamos la instrucción de sistema de forma separada
-        systemInstruction: {
-          parts: [{ text: "You are a Devicon routing API. Output ONLY a valid JSON array of strings. Do not use markdown formatting. Do not use backticks." }]
-        },
-        contents: [{ parts: [{ text: prompt }] }],
+        contents: [{ parts: [{ text: promptText }] }],
         generationConfig: {
-          temperature: 0.2,
+          temperature: 0.1, // Casi cero para máxima precisión y cero charla
           maxOutputTokens: 60,
-          // ¡MAGIA! Esto obliga a la API a devolver un JSON puro a nivel de servidor
-          responseMimeType: "application/json" 
+          responseMimeType: "application/json"
         }
       })
     });
@@ -77,30 +88,33 @@ async function fetchSuggestionsFromGemini(name, failedSlugs = []) {
 
     const data = await response.json();
     
-    // Validamos de forma segura usando Optional Chaining (?.)
-    // Si la IA filtra la respuesta o viene vacía, no explotará el código.
     const content = data.candidates?.[0]?.content?.parts?.[0]?.text;
     
     if (!content) {
-      console.log(`   🚨 API Error: Respuesta vacía o bloqueada por filtro de seguridad.`);
+      console.log(`   🚨 API Error: Respuesta vacía o bloqueada.`);
       return [];
     }
 
     console.log(`   🤖 Gemini responded: ${content.replace(/\n/g, '')}`); 
     
-    // Como forzamos application/json, parseamos directamente
-    try {
-      const parsed = JSON.parse(content);
-      if (Array.isArray(parsed)) {
-        return parsed.map(s => s.trim().toLowerCase().replace(/[^a-z0-9]/g, ''));
-      } else {
-        console.log(`   🚨 Error: Gemini no devolvió un Array. Devolvió:`, parsed);
-        return [];
+    // Extracción ultra robusta: busca el primer '[' y el último ']'
+    const startIndex = content.indexOf('[');
+    const endIndex = content.lastIndexOf(']');
+    
+    if (startIndex !== -1 && endIndex !== -1 && endIndex > startIndex) {
+      const jsonString = content.substring(startIndex, endIndex + 1);
+      try {
+        const parsed = JSON.parse(jsonString);
+        if (Array.isArray(parsed)) {
+          return parsed.map(s => s.trim().toLowerCase().replace(/[^a-z0-9]/g, ''));
+        }
+      } catch (parseError) {
+        console.log(`   🚨 Error parseando el bloque extraído: ${parseError.message}`);
       }
-    } catch (parseError) {
-      console.log(`   🚨 Error parseando JSON: ${parseError.message}`);
-      return [];
     }
+    
+    console.log(`   🚨 Fallo total: No se encontró un Array válido. Recibido: ${content}`);
+    return [];
     
   } catch (err) { 
     console.log(`   🚨 Exception with Gemini: ${err.message}`);
