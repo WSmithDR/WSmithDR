@@ -3,7 +3,7 @@ const fs = require("fs");
 // Environment configurations
 const GITHUB_USER = process.env.GITHUB_REPOSITORY_OWNER;
 const GITHUB_TOKEN = process.env.GH_TOKEN;
-const HF_TOKEN = process.env.HF_TOKEN; 
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY; 
 const README_PATH = "README.md";
 const TEMPLATE_PATH = "README_TEMPLATE.md";
 const CACHE_PATH = "icon_cache.json";
@@ -32,12 +32,12 @@ async function getValidIconUrl(slug) {
 }
 
 /**
- * AI PROMPT WITH NEGATIVE FEEDBACK: 
+ * AI PROMPT WITH NEGATIVE FEEDBACK (Powered by Gemini 3.1 Flash)
  * Tells the AI explicitly which slugs have already failed so it doesn't repeat them.
  */
-async function fetchSuggestionsFromGPTOSS(name, failedSlugs = []) {
-  if (!HF_TOKEN) {
-    console.log("   ⚠️ ERROR: No HF_TOKEN detectado.");
+async function fetchSuggestionsFromGemini(name, failedSlugs = []) {
+  if (!GEMINI_API_KEY) {
+    console.log("   ⚠️ ERROR: No GEMINI_API_KEY detected in the environment.");
     return [];
   }
 
@@ -45,47 +45,36 @@ async function fetchSuggestionsFromGPTOSS(name, failedSlugs = []) {
     ? ` DO NOT suggest these: [${failedSlugs.join(", ")}].` 
     : "";
 
+  const prompt = `You are a Devicon routing API. Map the technology to 5 Devicon folder names (slugs). RULES: 1. HTML -> html5 2. CSS -> css3 3. Jupyter -> jupyter 4. Shell -> bash.${avoidText} Output ONLY a valid JSON array of strings.\n\nTechnology: ${name}`;
+
   try {
-    // LA URL ROUTER OFICIAL (Sin /models/ en la ruta, el modelo va en el body)
-    const response = await fetch("https://router.huggingface.co/hf-inference/v1/chat/completions", {
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash:generateContent?key=${GEMINI_API_KEY}`, {
       method: "POST",
-      headers: { 
-        "Content-Type": "application/json", 
-        "Authorization": `Bearer ${HF_TOKEN}` 
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        // CAMBIO CLAVE: Usa un modelo soportado y gratuito actualmente
-        model: "Qwen/Qwen2.5-7B-Instruct", 
-        messages: [
-          {
-            role: "system",
-            content: `You are a Devicon routing API. Map the technology to 5 Devicon folder names (slugs). RULES: 1. HTML -> html5 2. CSS -> css3 3. Jupyter -> jupyter 4. Shell -> bash.${avoidText} Output ONLY a valid JSON array of strings.`
-          }, 
-          { role: "user", content: name }
-        ],
-        max_tokens: 60, 
-        temperature: 0.2
+        contents: [{ parts: [{ text: prompt }] }],
+        generationConfig: {
+          temperature: 0.2,
+          maxOutputTokens: 60,
+          responseMimeType: "application/json" // Forces a clean JSON array output
+        }
       })
     });
     
     if (!response.ok) {
-      console.log(`   🚨 API Error (${response.status}): Endpoint rechazado.`);
+      console.log(`   🚨 API Error (${response.status}): Request rejected by Gemini.`);
       return [];
     }
 
     const data = await response.json();
-    const content = data.choices[0].message.content;
+    const content = data.candidates[0].content.parts[0].text;
     
-    console.log(`   🤖 IA respondió: ${content.replace(/\n/g, '')}`); 
+    console.log(`   🤖 Gemini responded: ${content.replace(/\n/g, '')}`); 
     
-    const match = content.match(/\[.*\]/s);
-    if (match) {
-      const parsed = JSON.parse(match[0]);
-      return parsed.map(s => s.trim().toLowerCase().replace(/[^a-z0-9]/g, ''));
-    }
-    return [];
+    const parsed = JSON.parse(content);
+    return parsed.map(s => s.trim().toLowerCase().replace(/[^a-z0-9]/g, ''));
   } catch (err) { 
-    console.log(`   🚨 Excepción: ${err.message}`);
+    console.log(`   🚨 Exception with Gemini: ${err.message}`);
     return []; 
   }
 }
@@ -109,11 +98,12 @@ async function getValidatedIcon(name) {
     return iconCache[cleanName].valid;
   }
 
-  console.log(`🔍 Resolving icon for: ${cleanName}...`);
+  console.log(`\n🔍 Resolving icon for: ${cleanName}...`);
   
   const rawSlug = cleanName.toLowerCase().replace(/\s+/g, '');
+  
   // Pass the failed list to the AI so it knows what to avoid
-  const aiSuggestions = await fetchSuggestionsFromGPTOSS(cleanName, iconCache[cleanName].failed);
+  const aiSuggestions = await fetchSuggestionsFromGemini(cleanName, iconCache[cleanName].failed);
   
   const candidates = [...new Set([rawSlug, ...aiSuggestions])];
   
@@ -263,7 +253,7 @@ async function generateReadme() {
       .replace(/{{ALL_PROJECTS}}/g, projectsData.html);
 
     fs.writeFileSync(README_PATH, output);
-    console.log("Success: README updated with Stateful Cache.");
+    console.log("Success: README updated with Stateful Cache and Gemini 3.1 AI.");
   } catch (err) { console.error(err); process.exit(1); }
 }
 generateReadme();
