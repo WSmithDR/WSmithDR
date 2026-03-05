@@ -37,7 +37,7 @@ async function getValidIconUrl(slug) {
  */
 /**
  * AI PROMPT WITH NEGATIVE FEEDBACK (Powered by Gemini)
- * Robust extraction to ignore conversational text from the AI.
+ * Forces strict JSON output and handles undefined errors gracefully.
  */
 async function fetchSuggestionsFromGemini(name, failedSlugs = []) {
   if (!GEMINI_API_KEY) {
@@ -49,17 +49,23 @@ async function fetchSuggestionsFromGemini(name, failedSlugs = []) {
     ? ` DO NOT suggest these: [${failedSlugs.join(", ")}].` 
     : "";
 
-  const prompt = `You are a Devicon routing API. Map the technology to 5 Devicon folder names (slugs). RULES: 1. HTML -> html5 2. CSS -> css3 3. Jupyter -> jupyter 4. Shell -> bash.${avoidText} Output ONLY a valid JSON array of strings.\n\nTechnology: ${name}`;
+  const prompt = `Map the technology to 5 Devicon folder names (slugs). RULES: 1. HTML -> html5 2. CSS -> css3 3. Jupyter -> jupyter 4. Shell -> bash.${avoidText}\n\nTechnology: ${name}`;
 
   try {
     const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
+        // Pasamos la instrucción de sistema de forma separada
+        systemInstruction: {
+          parts: [{ text: "You are a Devicon routing API. Output ONLY a valid JSON array of strings. Do not use markdown formatting. Do not use backticks." }]
+        },
         contents: [{ parts: [{ text: prompt }] }],
         generationConfig: {
           temperature: 0.2,
-          maxOutputTokens: 60
+          maxOutputTokens: 60,
+          // ¡MAGIA! Esto obliga a la API a devolver un JSON puro a nivel de servidor
+          responseMimeType: "application/json" 
         }
       })
     });
@@ -71,22 +77,28 @@ async function fetchSuggestionsFromGemini(name, failedSlugs = []) {
 
     const data = await response.json();
     
-    // Validación de seguridad para evitar el error "Cannot read properties of undefined"
-    if (!data.candidates || data.candidates.length === 0 || !data.candidates[0].content) {
-      console.log(`   🚨 API Error: Gemini devolvió una respuesta vacía o filtrada.`);
+    // Validamos de forma segura usando Optional Chaining (?.)
+    // Si la IA filtra la respuesta o viene vacía, no explotará el código.
+    const content = data.candidates?.[0]?.content?.parts?.[0]?.text;
+    
+    if (!content) {
+      console.log(`   🚨 API Error: Respuesta vacía o bloqueada por filtro de seguridad.`);
       return [];
     }
 
-    const content = data.candidates[0].content.parts[0].text;
     console.log(`   🤖 Gemini responded: ${content.replace(/\n/g, '')}`); 
     
-    // Extracción robusta usando Regex (ignora el texto como "Here is...")
-    const match = content.match(/\[.*\]/s);
-    if (match) {
-      const parsed = JSON.parse(match[0]);
-      return parsed.map(s => s.trim().toLowerCase().replace(/[^a-z0-9]/g, ''));
-    } else {
-      console.log(`   🚨 No se encontró un arreglo JSON en la respuesta de la IA.`);
+    // Como forzamos application/json, parseamos directamente
+    try {
+      const parsed = JSON.parse(content);
+      if (Array.isArray(parsed)) {
+        return parsed.map(s => s.trim().toLowerCase().replace(/[^a-z0-9]/g, ''));
+      } else {
+        console.log(`   🚨 Error: Gemini no devolvió un Array. Devolvió:`, parsed);
+        return [];
+      }
+    } catch (parseError) {
+      console.log(`   🚨 Error parseando JSON: ${parseError.message}`);
       return [];
     }
     
