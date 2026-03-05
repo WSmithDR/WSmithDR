@@ -27,8 +27,7 @@ jobs:
         run: node scripts/generate-readme.js # Asegúrate de que el archivo se llame así
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          HF_TOKEN: ${{ secrets.HF_TOKEN }} # <--- El nuevo secreto de Hugging Face
-          #GITHUB_USER: ${{ github.repository_owner }}
+          HF_TOKEN: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Commit and Push
         run: |
