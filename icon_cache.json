@@ -1,0 +1,46 @@
+{
+  "Python": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+    "failed": []
+  },
+  "JavaScript": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+    "failed": []
+  },
+  "TypeScript": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+    "failed": []
+  },
+  "Java": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+    "failed": []
+  },
+  "Jupyter Notebook": {
+    "valid": null,
+    "failed": [
+      "jupyternotebook"
+    ]
+  },
+  "CSS": {
+    "valid": null,
+    "failed": [
+      "css"
+    ]
+  },
+  "HTML": {
+    "valid": null,
+    "failed": [
+      "html"
+    ]
+  },
+  "Shell": {
+    "valid": null,
+    "failed": [
+      "shell"
+    ]
+  },
+  "react": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+    "failed": []
+  }
+}
