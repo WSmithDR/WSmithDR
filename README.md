@@ -6,7 +6,7 @@
   <blockquote>
 <details>
 <summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>14 Projects (Python)</b>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>13 Projects (Python)</b>
 </summary>
 <blockquote>
 <details>
@@ -27,10 +27,6 @@
 </details>
 <details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/dynecron_prueba_backend">dynecron_prueba_backend</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/nave_deriva">nave_deriva</a></summary>
 <blockquote><i>No description</i></blockquote>
 </details>
 <details>
@@ -74,7 +70,7 @@
 <blockquote>
 <details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></summary>
-<blockquote><i>No description</i></blockquote>
+<blockquote><i>Automated Portfolio & Profile README. Powered by Node.js and Gemini 3.1 AI to keep my tech stack and projects updated in real-time.</i></blockquote>
 </details>
 <details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
@@ -290,14 +286,14 @@
 </details>
 
 <details>
-  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects (39)</h2></summary>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects (38)</h2></summary>
   <blockquote>
 <details style="margin-bottom: 5px;">
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/machine-learning-project">machine-learning-project</a></summary>
-<blockquote><i>No description</i></blockquote>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></summary>
+<blockquote><i>Automated Portfolio & Profile README. Powered by Node.js and Gemini 3.1 AI to keep my tech stack and projects updated in real-time.</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></summary>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/machine-learning-project">machine-learning-project</a></summary>
 <blockquote><i>No description</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
@@ -370,10 +366,6 @@
 </details>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/Uncovering-the-Cost-of-Living-in-the-Galactic-Empire">Uncovering-the-Cost-of-Living-in-the-Galactic-Empire</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details style="margin-bottom: 5px;">
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/nave_deriva">nave_deriva</a></summary>
 <blockquote><i>No description</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
