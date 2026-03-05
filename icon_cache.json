@@ -42,5 +42,17 @@
   "react": {
     "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
     "failed": []
+  },
+  "optuna": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+    "failed": [
+      "optuna"
+    ]
+  },
+  "scikit-learn": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg",
+    "failed": [
+      "scikit-learn"
+    ]
   }
 }

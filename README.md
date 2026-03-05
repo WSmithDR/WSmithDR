@@ -120,13 +120,9 @@
 </details>
 <details>
 <summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>8 Projects (TypeScript)</b>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>7 Projects (TypeScript)</b>
 </summary>
 <blockquote>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/prueba_tecnica">prueba_tecnica</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
 <details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/dynecron_prueba_frontend">dynecron_prueba_frontend</a></summary>
 <blockquote><i>No description</i></blockquote>
@@ -190,11 +186,11 @@
 </summary>
 <blockquote>
 <details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/Market-Scraper">Market-Scraper</a></summary>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/machine-learning-project">machine-learning-project</a></summary>
 <blockquote><i>No description</i></blockquote>
 </details>
 <details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/machine-learning-project">machine-learning-project</a></summary>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/Market-Scraper">Market-Scraper</a></summary>
 <blockquote><i>No description</i></blockquote>
 </details>
 <details>
@@ -253,9 +249,31 @@
 </details>
 
 <details>
-  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Frameworks & Tools (1)</h2></summary>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Frameworks & Tools (3)</h2></summary>
 
   <blockquote>
+<details>
+<summary style="cursor: pointer;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (Optuna)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/machine-learning-project">machine-learning-project</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (Scikit-learn)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/machine-learning-project">machine-learning-project</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+</blockquote>
+</details>
 <details>
 <summary style="cursor: pointer;">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (React)</b>
@@ -272,8 +290,12 @@
 </details>
 
 <details>
-  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects (40)</h2></summary>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects (39)</h2></summary>
   <blockquote>
+<details style="margin-bottom: 5px;">
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/machine-learning-project">machine-learning-project</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></summary>
 <blockquote><i>No description</i></blockquote>
@@ -285,10 +307,6 @@
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/docker_course">docker_course</a></summary>
 <blockquote><i>Repository dedicated to active learning of Docker. I use each branch as an isolated test environment to solve practical exercises integrated with my spaced repetition system in Anki.</i></blockquote>
-</details>
-<details style="margin-bottom: 5px;">
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/prueba_tecnica">prueba_tecnica</a></summary>
-<blockquote><i>No description</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/CSHARP_fundamentals">CSHARP_fundamentals</a></summary>
@@ -332,10 +350,6 @@
 </details>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/sbd_proj_2p">sbd_proj_2p</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details style="margin-bottom: 5px;">
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/machine-learning-project">machine-learning-project</a></summary>
 <blockquote><i>No description</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
