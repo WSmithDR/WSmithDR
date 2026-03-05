@@ -35,6 +35,10 @@ async function getValidIconUrl(slug) {
  * AI PROMPT WITH NEGATIVE FEEDBACK (Powered by Gemini 3.1 Flash)
  * Tells the AI explicitly which slugs have already failed so it doesn't repeat them.
  */
+/**
+ * AI PROMPT WITH NEGATIVE FEEDBACK (Powered by Gemini)
+ * Robust extraction to ignore conversational text from the AI.
+ */
 async function fetchSuggestionsFromGemini(name, failedSlugs = []) {
   if (!GEMINI_API_KEY) {
     console.log("   ⚠️ ERROR: No GEMINI_API_KEY detected in the environment.");
@@ -55,8 +59,7 @@ async function fetchSuggestionsFromGemini(name, failedSlugs = []) {
         contents: [{ parts: [{ text: prompt }] }],
         generationConfig: {
           temperature: 0.2,
-          maxOutputTokens: 60,
-          responseMimeType: "application/json" // Forces a clean JSON array output
+          maxOutputTokens: 60
         }
       })
     });
@@ -67,12 +70,26 @@ async function fetchSuggestionsFromGemini(name, failedSlugs = []) {
     }
 
     const data = await response.json();
-    const content = data.candidates[0].content.parts[0].text;
     
+    // Validación de seguridad para evitar el error "Cannot read properties of undefined"
+    if (!data.candidates || data.candidates.length === 0 || !data.candidates[0].content) {
+      console.log(`   🚨 API Error: Gemini devolvió una respuesta vacía o filtrada.`);
+      return [];
+    }
+
+    const content = data.candidates[0].content.parts[0].text;
     console.log(`   🤖 Gemini responded: ${content.replace(/\n/g, '')}`); 
     
-    const parsed = JSON.parse(content);
-    return parsed.map(s => s.trim().toLowerCase().replace(/[^a-z0-9]/g, ''));
+    // Extracción robusta usando Regex (ignora el texto como "Here is...")
+    const match = content.match(/\[.*\]/s);
+    if (match) {
+      const parsed = JSON.parse(match[0]);
+      return parsed.map(s => s.trim().toLowerCase().replace(/[^a-z0-9]/g, ''));
+    } else {
+      console.log(`   🚨 No se encontró un arreglo JSON en la respuesta de la IA.`);
+      return [];
+    }
+    
   } catch (err) { 
     console.log(`   🚨 Exception with Gemini: ${err.message}`);
     return []; 
