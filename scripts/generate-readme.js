@@ -47,14 +47,15 @@ async function fetchSuggestionsFromGPTOSS(name, failedSlugs = []) {
 
   try {
     // LA URL ROUTER OFICIAL (Sin /models/ en la ruta, el modelo va en el body)
-    const response = await fetch("https://api-inference.huggingface.co/v1/chat/completions", {
+    const response = await fetch("https://router.huggingface.co/hf-inference/v1/chat/completions", {
       method: "POST",
       headers: { 
         "Content-Type": "application/json", 
         "Authorization": `Bearer ${HF_TOKEN}` 
       },
       body: JSON.stringify({
-        model: "mistralai/Mistral-7B-Instruct-v0.3", 
+        // CAMBIO CLAVE: Usa un modelo soportado y gratuito actualmente
+        model: "Qwen/Qwen2.5-7B-Instruct", 
         messages: [
           {
             role: "system",
