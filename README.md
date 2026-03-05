@@ -1,7 +1,7 @@
 <h1 align="center">Welcome to WSmithDR's World!</h1>
 
 <details>
-  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Programming Languages (8)</h2></summary>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Programming Languages (7)</h2></summary>
 
   <blockquote>
 <details>
@@ -9,6 +9,10 @@
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>13 Projects (Python)</b>
 </summary>
 <blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/dynecron_prueba_backend">dynecron_prueba_backend</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
 <details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/ankiaddon-timemanager">ankiaddon-timemanager</a></summary>
 <blockquote><i>No description</i></blockquote>
@@ -23,10 +27,6 @@
 </details>
 <details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/anki_control">anki_control</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/dynecron_prueba_backend">dynecron_prueba_backend</a></summary>
 <blockquote><i>No description</i></blockquote>
 </details>
 <details>
@@ -229,17 +229,6 @@
 </details>
 </blockquote>
 </details>
-<details>
-<summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (Shell)</b>
-</summary>
-<blockquote>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/Focus-Blocker">Focus-Blocker</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-</blockquote>
-</details>
 
   </blockquote>
 </details>
@@ -286,7 +275,7 @@
 </details>
 
 <details>
-  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects (38)</h2></summary>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects (36)</h2></summary>
   <blockquote>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></summary>
@@ -330,14 +319,6 @@
 </details>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/espol-bootcamp-data_science">espol-bootcamp-data_science</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details style="margin-bottom: 5px;">
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/dynecron_prueba_backend">dynecron_prueba_backend</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details style="margin-bottom: 5px;">
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/dynecron_prueba_frontend">dynecron_prueba_frontend</a></summary>
 <blockquote><i>No description</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
