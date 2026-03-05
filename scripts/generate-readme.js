@@ -48,7 +48,7 @@ async function fetchSuggestionsFromGemini(name, failedSlugs = []) {
   const prompt = `You are a Devicon routing API. Map the technology to 5 Devicon folder names (slugs). RULES: 1. HTML -> html5 2. CSS -> css3 3. Jupyter -> jupyter 4. Shell -> bash.${avoidText} Output ONLY a valid JSON array of strings.\n\nTechnology: ${name}`;
 
   try {
-    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash:generateContent?key=${GEMINI_API_KEY}`, {
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
