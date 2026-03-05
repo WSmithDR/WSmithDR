@@ -42,41 +42,35 @@ async function fetchSuggestionsFromGemini(name, failedSlugs = []) {
   }
 
   const avoidText = failedSlugs.length > 0 
-    ? `<avoid>\nDO NOT suggest these exactly: [${failedSlugs.join(", ")}]\n</avoid>` 
+    ? ` DO NOT suggest these exactly: [${failedSlugs.join(", ")}]` 
     : "";
 
-  // Prompt estructurado con XML
-  const promptText = `
-<instruction>
-You are a strict data-routing API. Map the given technology name to exactly 5 possible Devicon folder names (slugs). Output ONLY a raw JSON array of strings. NO markdown, NO backticks, NO conversational text.
-</instruction>
-
-<rules>
-1. HTML -> html5
-2. CSS -> css3
-3. Jupyter -> jupyter
-4. Jupyter Notebook -> jupyter
-5. Shell -> bash
-</rules>
-${avoidText}
-<input>
-Technology: ${name}
-</input>
-
-<expected_output_format>
-["slug1", "slug2", "slug3", "slug4", "slug5"]
-</expected_output_format>`;
+  const promptText = `Map the technology to 5 Devicon folder names (slugs). RULES: 1. HTML -> html5 2. CSS -> css3 3. Jupyter -> jupyter 4. Shell -> bash.${avoidText} Technology: ${name}`;
 
   try {
     const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
+        systemInstruction: {
+          parts: [{ text: "You are a strict data-routing API. You only output valid JSON. No conversational text." }]
+        },
         contents: [{ parts: [{ text: promptText }] }],
         generationConfig: {
-          temperature: 0.1, // Casi cero para máxima precisión y cero charla
-          maxOutputTokens: 60,
-          responseMimeType: "application/json"
+          temperature: 0.1,
+          // Eliminamos el maxOutputTokens para no cortarle la frase
+          responseMimeType: "application/json",
+          // LA MAGIA: Forzamos la estructura exacta que queremos recibir
+          responseSchema: {
+            type: "OBJECT",
+            properties: {
+              slugs: {
+                type: "ARRAY",
+                items: { type: "STRING" }
+              }
+            },
+            required: ["slugs"]
+          }
         }
       })
     });
@@ -87,33 +81,25 @@ Technology: ${name}
     }
 
     const data = await response.json();
-    
     const content = data.candidates?.[0]?.content?.parts?.[0]?.text;
     
     if (!content) {
-      console.log(`   🚨 API Error: Respuesta vacía o bloqueada.`);
+      console.log(`   🚨 API Error: Respuesta vacía.`);
       return [];
     }
 
-    console.log(`   🤖 Gemini responded: ${content.replace(/\n/g, '')}`); 
-    
-    // Extracción ultra robusta: busca el primer '[' y el último ']'
-    const startIndex = content.indexOf('[');
-    const endIndex = content.lastIndexOf(']');
-    
-    if (startIndex !== -1 && endIndex !== -1 && endIndex > startIndex) {
-      const jsonString = content.substring(startIndex, endIndex + 1);
-      try {
-        const parsed = JSON.parse(jsonString);
-        if (Array.isArray(parsed)) {
-          return parsed.map(s => s.trim().toLowerCase().replace(/[^a-z0-9]/g, ''));
-        }
-      } catch (parseError) {
-        console.log(`   🚨 Error parseando el bloque extraído: ${parseError.message}`);
+    // Como forzamos el esquema, el parseo es directo y seguro
+    try {
+      const parsed = JSON.parse(content);
+      if (parsed.slugs && Array.isArray(parsed.slugs)) {
+        const finalSlugs = parsed.slugs.map(s => s.trim().toLowerCase().replace(/[^a-z0-9]/g, ''));
+        console.log(`   🤖 Gemini sugirió: [${finalSlugs.join(', ')}]`);
+        return finalSlugs;
       }
+    } catch (parseError) {
+      console.log(`   🚨 Error parseando JSON: ${parseError.message}. Recibido crudo: ${content}`);
     }
     
-    console.log(`   🚨 Fallo total: No se encontró un Array válido. Recibido: ${content}`);
     return [];
     
   } catch (err) { 
