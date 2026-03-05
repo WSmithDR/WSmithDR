@@ -186,7 +186,7 @@
 </details>
 <details>
 <summary style="cursor: pointer;">
-📁 &nbsp; <b>3 Projects (Jupyter Notebook)</b>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>3 Projects (Jupyter Notebook)</b>
 </summary>
 <blockquote>
 <details>
@@ -205,7 +205,7 @@
 </details>
 <details>
 <summary style="cursor: pointer;">
-📁 &nbsp; <b>3 Projects (CSS)</b>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>3 Projects (CSS)</b>
 </summary>
 <blockquote>
 <details>
@@ -224,7 +224,7 @@
 </details>
 <details>
 <summary style="cursor: pointer;">
-📁 &nbsp; <b>2 Projects (HTML)</b>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>2 Projects (HTML)</b>
 </summary>
 <blockquote>
 <details>
@@ -239,7 +239,7 @@
 </details>
 <details>
 <summary style="cursor: pointer;">
-📁 &nbsp; <b>1 Projects (Shell)</b>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (Shell)</b>
 </summary>
 <blockquote>
 <details>
