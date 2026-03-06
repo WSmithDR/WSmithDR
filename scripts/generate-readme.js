@@ -189,6 +189,7 @@ async function getAllRepos() {
   }
   const seen = new Set();
   return allRepos.filter(repo => {
+    if(repo.private) return false;
     if (seen.has(repo.full_name)) return false;
     seen.add(repo.full_name);
     return true;
