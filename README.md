@@ -1,71 +1,12 @@
 <h1 align="center">Welcome to WSmithDR's World!</h1>
 
 <details>
-  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Programming Languages (7)</h2></summary>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Programming Languages (4)</h2></summary>
 
   <blockquote>
 <details>
 <summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>13 Projects (Python)</b>
-</summary>
-<blockquote>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/dynecron_prueba_backend">dynecron_prueba_backend</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/ankiaddon-timemanager">ankiaddon-timemanager</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/job_seeker_agent">job_seeker_agent</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/MultiCriteria-Filtered-Deck-Organizer">MultiCriteria-Filtered-Deck-Organizer</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/anki_control">anki_control</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/ankiaddon-automatedfiltering">ankiaddon-automatedfiltering</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/pptx-to-md">pptx-to-md</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/anki-data-insertion">anki-data-insertion</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/A-B-testing-project">A-B-testing-project</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/job-seeking">job-seeking</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/bootcamp_espol-python">bootcamp_espol-python</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/data-science">data-science</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/anki-addon-template">anki-addon-template</a></summary>
-<blockquote><i>This is a template of a basic anki addon</i></blockquote>
-</details>
-</blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>11 Projects (JavaScript)</b>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>9 Projects (JavaScript)</b>
 </summary>
 <blockquote>
 <details>
@@ -82,14 +23,6 @@
 </details>
 <details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/PI-Videogames">PI-Videogames</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/anki_hot_reload">anki_hot_reload</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/HENRY-FSD-Prepcourse-Homeworks">HENRY-FSD-Prepcourse-Homeworks</a></summary>
 <blockquote><i>No description</i></blockquote>
 </details>
 <details>
@@ -116,42 +49,7 @@
 </details>
 <details>
 <summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>7 Projects (TypeScript)</b>
-</summary>
-<blockquote>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/dynecron_prueba_frontend">dynecron_prueba_frontend</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/restAPI-ts-node-express-mongoose-mongo-practice1">restAPI-ts-node-express-mongoose-mongo-practice1</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/SmarttwigsApplicationExercise">SmarttwigsApplicationExercise</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/usersAPI">usersAPI</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/express-typescript">express-typescript</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/ngstore">ngstore</a></summary>
-<blockquote><i>Aprendiendo a manejarme en Angular.</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/userslist">userslist</a></summary>
-<blockquote><i>Mini web app que consume datos de un API para presentar usuarios en un panel.</i></blockquote>
-</details>
-</blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>5 Projects (Java)</b>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>4 Projects (Java)</b>
 </summary>
 <blockquote>
 <details>
@@ -170,62 +68,47 @@
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/POO4_1P_DUENAS_ROMERO_ORTEGA">POO4_1P_DUENAS_ROMERO_ORTEGA</a></summary>
 <blockquote><i>No description</i></blockquote>
 </details>
+</blockquote>
+</details>
 <details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/java_fundamentals">java_fundamentals</a></summary>
+<summary style="cursor: pointer;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>4 Projects (TypeScript)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/restAPI-ts-node-express-mongoose-mongo-practice1">restAPI-ts-node-express-mongoose-mongo-practice1</a></summary>
 <blockquote><i>No description</i></blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/SmarttwigsApplicationExercise">SmarttwigsApplicationExercise</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/ngstore">ngstore</a></summary>
+<blockquote><i>Aprendiendo a manejarme en Angular.</i></blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/userslist">userslist</a></summary>
+<blockquote><i>Mini web app que consume datos de un API para presentar usuarios en un panel.</i></blockquote>
 </details>
 </blockquote>
 </details>
 <details>
 <summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>3 Projects (Jupyter Notebook)</b>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>3 Projects (Python)</b>
 </summary>
 <blockquote>
 <details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/machine-learning-project">machine-learning-project</a></summary>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/MultiCriteria-Filtered-Deck-Organizer">MultiCriteria-Filtered-Deck-Organizer</a></summary>
 <blockquote><i>No description</i></blockquote>
 </details>
 <details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/Market-Scraper">Market-Scraper</a></summary>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/A-B-testing-project">A-B-testing-project</a></summary>
 <blockquote><i>No description</i></blockquote>
 </details>
 <details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/big-data-project-espol-bootcamp">big-data-project-espol-bootcamp</a></summary>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/bootcamp_espol-python">bootcamp_espol-python</a></summary>
 <blockquote><i>No description</i></blockquote>
-</details>
-</blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>3 Projects (CSS)</b>
-</summary>
-<blockquote>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/ngtodoapp">ngtodoapp</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/angularconsergiecode">angularconsergiecode</a></summary>
-<blockquote><i>Desarrollo de una web app con Angular siguiendo el tutorial de Sergie Code.</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/todoApp">todoApp</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-</blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>2 Projects (HTML)</b>
-</summary>
-<blockquote>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/buscar_trabajo_con_ai">buscar_trabajo_con_ai</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/htmlconsergiecode">htmlconsergiecode</a></summary>
-<blockquote><i>Curso de HTML puro con SergieCode.</i></blockquote>
 </details>
 </blockquote>
 </details>
@@ -300,12 +183,12 @@
   <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects (36)</h2></summary>
   <blockquote>
 <details style="margin-bottom: 5px;">
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/machine-learning-project">machine-learning-project</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></summary>
 <blockquote><i>Automated Portfolio & Profile README. Powered by Node.js and Gemini 3.1 AI to keep my tech stack and projects updated in real-time.</i></blockquote>
+</details>
+<details style="margin-bottom: 5px;">
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/machine-learning-project">machine-learning-project</a></summary>
+<blockquote><i>No description</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
