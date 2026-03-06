@@ -199,8 +199,13 @@ async function getAllRepos() {
 // Content Rendering (English)
 async function getTopLanguages(repos) {
   const langMap = {};
+  const ignoredLanguages = ['html', 'css', 'jupyter notebook'];
   repos.forEach(repo => {
-    if (repo.language && !repo.fork && repo.owner.login.toLowerCase() === GITHUB_USER.toLowerCase()) {
+    if (repo.language 
+        && !repo.fork 
+        && repo.owner.login.toLowerCase() === GITHUB_USER.toLowerCase()
+        && !ignoredLanguages.includes(repo.language.toLowerCase()
+        ) {
       if (!langMap[repo.language]) langMap[repo.language] = [];
       langMap[repo.language].push(repo);
     }
