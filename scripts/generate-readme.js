@@ -205,7 +205,7 @@ async function getTopLanguages(repos) {
         && !repo.fork 
         && repo.owner.login.toLowerCase() === GITHUB_USER.toLowerCase()
         && !ignoredLanguages.includes(repo.language.toLowerCase()
-        ) {
+        ) ){
       if (!langMap[repo.language]) langMap[repo.language] = [];
       langMap[repo.language].push(repo);
     }
