@@ -10,12 +10,12 @@
 </summary>
 <blockquote>
 <details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></summary>
-<blockquote><i>Automated Portfolio & Profile README. Powered by Node.js and Gemini 3.1 AI to keep my tech stack and projects updated in real-time.</i></blockquote>
-</details>
-<details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
 <blockquote><i>No description</i></blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></summary>
+<blockquote><i>Automated Portfolio & Profile README. Powered by Node.js and Gemini 3.1 AI to keep my tech stack and projects updated in real-time.</i></blockquote>
 </details>
 <details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/jelou-prueba_tecnica">jelou-prueba_tecnica</a></summary>
@@ -117,9 +117,75 @@
 </details>
 
 <details>
-  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Frameworks & Tools (5)</h2></summary>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Frameworks & Tools (10)</h2></summary>
 
   <blockquote>
+<details>
+<summary style="cursor: pointer;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (Jest)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (Postgresql)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (React)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (Redux)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sequelize/sequelize-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (Sequelize)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (Supertest)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+</blockquote>
+</details>
 <details>
 <summary style="cursor: pointer;">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (Optuna)</b>
@@ -164,17 +230,6 @@
 </details>
 </blockquote>
 </details>
-<details>
-<summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (React)</b>
-</summary>
-<blockquote>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-</blockquote>
-</details>
 
   </blockquote>
 </details>
@@ -183,15 +238,15 @@
   <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects (36)</h2></summary>
   <blockquote>
 <details style="margin-bottom: 5px;">
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+<details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></summary>
 <blockquote><i>Automated Portfolio & Profile README. Powered by Node.js and Gemini 3.1 AI to keep my tech stack and projects updated in real-time.</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/machine-learning-project">machine-learning-project</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details style="margin-bottom: 5px;">
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
 <blockquote><i>No description</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">

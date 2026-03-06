@@ -64,5 +64,27 @@
     "failed": [
       "seaborn"
     ]
+  },
+  "jest": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg",
+    "failed": []
+  },
+  "postgresql": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+    "failed": []
+  },
+  "redux": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg",
+    "failed": []
+  },
+  "sequelize": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sequelize/sequelize-original.svg",
+    "failed": []
+  },
+  "supertest": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+    "failed": [
+      "supertest"
+    ]
   }
 }
