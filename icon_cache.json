@@ -54,5 +54,15 @@
     "failed": [
       "scikit-learn"
     ]
+  },
+  "pandas": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg",
+    "failed": []
+  },
+  "seaborn": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+    "failed": [
+      "seaborn"
+    ]
   }
 }
