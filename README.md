@@ -6,7 +6,7 @@
   <blockquote>
 <details>
 <summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>9 Projects (JavaScript)</b>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>8 Projects (JavaScript)</b>
 </summary>
 <blockquote>
 <details>
@@ -16,10 +16,6 @@
 <details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></summary>
 <blockquote><i>Automated Portfolio & Profile README. Powered by Node.js and Gemini 3.1 AI to keep my tech stack and projects updated in real-time.</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/jelou-prueba_tecnica">jelou-prueba_tecnica</a></summary>
-<blockquote><i>Proyecto de prueba técnica para Jelou.</i></blockquote>
 </details>
 <details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/PI-Videogames">PI-Videogames</a></summary>
@@ -53,6 +49,10 @@
 </summary>
 <blockquote>
 <details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/POO4_1P_DUENAS_ROMERO_ORTEGA">POO4_1P_DUENAS_ROMERO_ORTEGA</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+<details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/PAR5_PROY2P_Duenas_Romero_Ortega">PAR5_PROY2P_Duenas_Romero_Ortega</a></summary>
 <blockquote><i>No description</i></blockquote>
 </details>
@@ -63,33 +63,6 @@
 <details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/java_android_practice">java_android_practice</a></summary>
 <blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/POO4_1P_DUENAS_ROMERO_ORTEGA">POO4_1P_DUENAS_ROMERO_ORTEGA</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-</blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>4 Projects (TypeScript)</b>
-</summary>
-<blockquote>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/restAPI-ts-node-express-mongoose-mongo-practice1">restAPI-ts-node-express-mongoose-mongo-practice1</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/SmarttwigsApplicationExercise">SmarttwigsApplicationExercise</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/ngstore">ngstore</a></summary>
-<blockquote><i>Aprendiendo a manejarme en Angular.</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/userslist">userslist</a></summary>
-<blockquote><i>Mini web app que consume datos de un API para presentar usuarios en un panel.</i></blockquote>
 </details>
 </blockquote>
 </details>
@@ -112,14 +85,66 @@
 </details>
 </blockquote>
 </details>
+<details>
+<summary style="cursor: pointer;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>3 Projects (TypeScript)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/SmarttwigsApplicationExercise">SmarttwigsApplicationExercise</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/ngstore">ngstore</a></summary>
+<blockquote><i>Aprendiendo a manejarme en Angular.</i></blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/userslist">userslist</a></summary>
+<blockquote><i>Mini web app que consume datos de un API para presentar usuarios en un panel.</i></blockquote>
+</details>
+</blockquote>
+</details>
 
   </blockquote>
 </details>
 
 <details>
-  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Frameworks & Tools (10)</h2></summary>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Frameworks & Tools (16)</h2></summary>
 
   <blockquote>
+<details>
+<summary style="cursor: pointer;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (Bcryptjs)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (Express)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (Http-server)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+</blockquote>
+</details>
 <details>
 <summary style="cursor: pointer;">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (Jest)</b>
@@ -188,6 +213,39 @@
 </details>
 <details>
 <summary style="cursor: pointer;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (Javamail)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/POO4_1P_DUENAS_ROMERO_ORTEGA">POO4_1P_DUENAS_ROMERO_ORTEGA</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/maven/maven-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (Maven)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/POO4_1P_DUENAS_ROMERO_ORTEGA">POO4_1P_DUENAS_ROMERO_ORTEGA</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (Android-studio)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/PAR5_PROY2P_Duenas_Romero_Ortega">PAR5_PROY2P_Duenas_Romero_Ortega</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (Optuna)</b>
 </summary>
 <blockquote>
@@ -235,10 +293,18 @@
 </details>
 
 <details>
-  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects (36)</h2></summary>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects (32)</h2></summary>
   <blockquote>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+<details style="margin-bottom: 5px;">
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/POO4_1P_DUENAS_ROMERO_ORTEGA">POO4_1P_DUENAS_ROMERO_ORTEGA</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+<details style="margin-bottom: 5px;">
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/PAR5_PROY2P_Duenas_Romero_Ortega">PAR5_PROY2P_Duenas_Romero_Ortega</a></summary>
 <blockquote><i>No description</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
@@ -258,16 +324,8 @@
 <blockquote><i>Aprender a usar C#</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/anki_notebooks">anki_notebooks</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/Market-Scraper">Market-Scraper</a></summary>
 <blockquote><i>No description</i></blockquote>
-</details>
-<details style="margin-bottom: 5px;">
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/jelou-prueba_tecnica">jelou-prueba_tecnica</a></summary>
-<blockquote><i>Proyecto de prueba técnica para Jelou.</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/ESPOL-Fundamentos_de_Programacion">ESPOL-Fundamentos_de_Programacion</a></summary>
@@ -279,10 +337,6 @@
 </details>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/espol-bootcamp-data_science">espol-bootcamp-data_science</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details style="margin-bottom: 5px;">
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/PAR5_PROY2P_Duenas_Romero_Ortega">PAR5_PROY2P_Duenas_Romero_Ortega</a></summary>
 <blockquote><i>No description</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
@@ -302,10 +356,6 @@
 <blockquote><i>No description</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/POO4_1P_DUENAS_ROMERO_ORTEGA">POO4_1P_DUENAS_ROMERO_ORTEGA</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/Uncovering-the-Cost-of-Living-in-the-Galactic-Empire">Uncovering-the-Cost-of-Living-in-the-Galactic-Empire</a></summary>
 <blockquote><i>No description</i></blockquote>
 </details>
@@ -322,19 +372,11 @@
 <blockquote><i>No description</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/redux-toolkit">redux-toolkit</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/bootcamp_espol-python">bootcamp_espol-python</a></summary>
 <blockquote><i>No description</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/PI-Videogames">PI-Videogames</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details style="margin-bottom: 5px;">
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/restAPI-ts-node-express-mongoose-mongo-practice1">restAPI-ts-node-express-mongoose-mongo-practice1</a></summary>
 <blockquote><i>No description</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">

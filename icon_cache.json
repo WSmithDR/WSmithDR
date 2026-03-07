@@ -86,5 +86,37 @@
     "failed": [
       "supertest"
     ]
+  },
+  "bcryptjs": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+    "failed": [
+      "bcryptjs"
+    ]
+  },
+  "express": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
+    "failed": []
+  },
+  "http-server": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+    "failed": [
+      "http-server"
+    ]
+  },
+  "javamail": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+    "failed": [
+      "javamail"
+    ]
+  },
+  "maven": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/maven/maven-original.svg",
+    "failed": []
+  },
+  "android-studio": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg",
+    "failed": [
+      "android-studio"
+    ]
   }
 }
