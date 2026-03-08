@@ -6,7 +6,7 @@
   <blockquote>
 <details>
 <summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>8 Projects (JavaScript)</b>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>7 Projects (JavaScript)</b>
 </summary>
 <blockquote>
 <details>
@@ -20,10 +20,6 @@
 <details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/PI-Videogames">PI-Videogames</a></summary>
 <blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/HardwareMarketApp-Front">HardwareMarketApp-Front</a></summary>
-<blockquote><i>Desarrollo de la página estática de la app HardwareMarketApp.</i></blockquote>
 </details>
 <details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/Videogames-Front">Videogames-Front</a></summary>
@@ -87,16 +83,12 @@
 </details>
 <details>
 <summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>3 Projects (TypeScript)</b>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>2 Projects (TypeScript)</b>
 </summary>
 <blockquote>
 <details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/SmarttwigsApplicationExercise">SmarttwigsApplicationExercise</a></summary>
 <blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/ngstore">ngstore</a></summary>
-<blockquote><i>Aprendiendo a manejarme en Angular.</i></blockquote>
 </details>
 <details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/userslist">userslist</a></summary>
@@ -293,11 +285,15 @@
 </details>
 
 <details>
-  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects (32)</h2></summary>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects (29)</h2></summary>
   <blockquote>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
 <blockquote><i>No description</i></blockquote>
+</details>
+<details style="margin-bottom: 5px;">
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></summary>
+<blockquote><i>Automated Portfolio & Profile README. Powered by Node.js and Gemini 3.1 AI to keep my tech stack and projects updated in real-time.</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/POO4_1P_DUENAS_ROMERO_ORTEGA">POO4_1P_DUENAS_ROMERO_ORTEGA</a></summary>
@@ -306,10 +302,6 @@
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/PAR5_PROY2P_Duenas_Romero_Ortega">PAR5_PROY2P_Duenas_Romero_Ortega</a></summary>
 <blockquote><i>No description</i></blockquote>
-</details>
-<details style="margin-bottom: 5px;">
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></summary>
-<blockquote><i>Automated Portfolio & Profile README. Powered by Node.js and Gemini 3.1 AI to keep my tech stack and projects updated in real-time.</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/machine-learning-project">machine-learning-project</a></summary>
@@ -384,16 +376,8 @@
 <blockquote><i>No description</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/ngstore">ngstore</a></summary>
-<blockquote><i>Aprendiendo a manejarme en Angular.</i></blockquote>
-</details>
-<details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/htmlconsergiecode">htmlconsergiecode</a></summary>
 <blockquote><i>Curso de HTML puro con SergieCode.</i></blockquote>
-</details>
-<details style="margin-bottom: 5px;">
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/angularconsergiecode">angularconsergiecode</a></summary>
-<blockquote><i>Desarrollo de una web app con Angular siguiendo el tutorial de Sergie Code.</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/todoApp">todoApp</a></summary>
@@ -402,10 +386,6 @@
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/userslist">userslist</a></summary>
 <blockquote><i>Mini web app que consume datos de un API para presentar usuarios en un panel.</i></blockquote>
-</details>
-<details style="margin-bottom: 5px;">
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/HardwareMarketApp-Front">HardwareMarketApp-Front</a></summary>
-<blockquote><i>Desarrollo de la página estática de la app HardwareMarketApp.</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/Videogames-Front">Videogames-Front</a></summary>
