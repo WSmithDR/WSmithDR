@@ -118,5 +118,21 @@
     "failed": [
       "android-studio"
     ]
+  },
+  "docker": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+    "failed": []
+  },
+  "docker-compose": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+    "failed": [
+      "docker-compose"
+    ]
+  },
+  "docker-swarm": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+    "failed": [
+      "docker-swarm"
+    ]
   }
 }
