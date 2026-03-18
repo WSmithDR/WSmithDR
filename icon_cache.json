@@ -134,5 +134,11 @@
     "failed": [
       "docker-swarm"
     ]
+  },
+  "supertest-session": {
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+    "failed": [
+      "supertest-session"
+    ]
   }
 }
