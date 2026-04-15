@@ -10,12 +10,12 @@
 </summary>
 <blockquote>
 <details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/Node.js-samples-for-Google-Workspace-APIs-docs">Node.js-samples-for-Google-Workspace-APIs-docs</a></summary>
-<blockquote><i>Repository dedicated to active learning of Google Workspace APIs. I use each branch as an isolated test environment to solve practical exercises integrated with my spaced repetition system in Anki.</i></blockquote>
-</details>
-<details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></summary>
 <blockquote><i>Automated Portfolio & Profile README. Powered by Node.js and Gemini 3.1 AI to keep my tech stack and projects updated in real-time.</i></blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/Node.js-samples-for-Google-Workspace-APIs-docs">Node.js-samples-for-Google-Workspace-APIs-docs</a></summary>
+<blockquote><i>Repository dedicated to active learning of Google Workspace APIs. I use each branch as an isolated test environment to solve practical exercises integrated with my spaced repetition system in Anki.</i></blockquote>
 </details>
 <details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
@@ -336,12 +336,12 @@
   <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects (30)</h2></summary>
   <blockquote>
 <details style="margin-bottom: 5px;">
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/Node.js-samples-for-Google-Workspace-APIs-docs">Node.js-samples-for-Google-Workspace-APIs-docs</a></summary>
-<blockquote><i>Repository dedicated to active learning of Google Workspace APIs. I use each branch as an isolated test environment to solve practical exercises integrated with my spaced repetition system in Anki.</i></blockquote>
-</details>
-<details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></summary>
 <blockquote><i>Automated Portfolio & Profile README. Powered by Node.js and Gemini 3.1 AI to keep my tech stack and projects updated in real-time.</i></blockquote>
+</details>
+<details style="margin-bottom: 5px;">
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/Node.js-samples-for-Google-Workspace-APIs-docs">Node.js-samples-for-Google-Workspace-APIs-docs</a></summary>
+<blockquote><i>Repository dedicated to active learning of Google Workspace APIs. I use each branch as an isolated test environment to solve practical exercises integrated with my spaced repetition system in Anki.</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/HENRY-FSD-BootCamp-RickAndMorty">HENRY-FSD-BootCamp-RickAndMorty</a></summary>
