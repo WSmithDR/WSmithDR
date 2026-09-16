@@ -6,12 +6,16 @@
   <blockquote>
 <details>
 <summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>8 Projects (JavaScript)</b>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>9 Projects (JavaScript)</b>
 </summary>
 <blockquote>
 <details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></summary>
 <blockquote><i>Automated Portfolio & Profile README. Powered by Node.js and Gemini 3.1 AI to keep my tech stack and projects updated in real-time.</i></blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/nextjs-praxis-guard-plugin">nextjs-praxis-guard-plugin</a></summary>
+<blockquote><i>Plugin multi-CLI para agentes de código que vigila las buenas praxis en proyectos Next.js: detecta datos quemados, archivos que mezclan responsabilidades, imports prohibidos y secretos hardcodeados, y avisa en el flujo sin bloquear.</i></blockquote>
 </details>
 <details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/Node.js-samples-for-Google-Workspace-APIs-docs">Node.js-samples-for-Google-Workspace-APIs-docs</a></summary>
@@ -45,6 +49,33 @@
 </details>
 <details>
 <summary style="cursor: pointer;">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>5 Projects (Python)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cambrian-plugin">cambrian-plugin</a></summary>
+<blockquote><i>Plugin que aumenta la creatividad forzando divergencia multi-agente antes de converger. Domain-agnostic.</i></blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cli-plugin-template">cli-plugin-template</a></summary>
+<blockquote><i>Catálogo vivo de features reusables para plugins multi-CLI (Claude Code, OpenCode, Gemini CLI). Versionado automático, git   hooks, compatibilidad entre CLIs y convenciones de docs. Los plugins consultan e integran features, y promueven mejoras de vuelta.</i></blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/MultiCriteria-Filtered-Deck-Organizer">MultiCriteria-Filtered-Deck-Organizer</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/A-B-testing-project">A-B-testing-project</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/bootcamp_espol-python">bootcamp_espol-python</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>4 Projects (Java)</b>
 </summary>
 <blockquote>
@@ -68,28 +99,13 @@
 </details>
 <details>
 <summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>3 Projects (Python)</b>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>3 Projects (TypeScript)</b>
 </summary>
 <blockquote>
 <details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/MultiCriteria-Filtered-Deck-Organizer">MultiCriteria-Filtered-Deck-Organizer</a></summary>
-<blockquote><i>No description</i></blockquote>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/todo-plugin">todo-plugin</a></summary>
+<blockquote><i>Manages task lifecycle in .todo/ — add, triage, prioritize, audit, and track work across TODO.md, DOING.md, and   DONE.md. Includes subagents for isolated analysis and hooks for pre-commit enforcement.</i></blockquote>
 </details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/A-B-testing-project">A-B-testing-project</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/bootcamp_espol-python">bootcamp_espol-python</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-</blockquote>
-</details>
-<details>
-<summary style="cursor: pointer;">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>2 Projects (TypeScript)</b>
-</summary>
-<blockquote>
 <details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/SmarttwigsApplicationExercise">SmarttwigsApplicationExercise</a></summary>
 <blockquote><i>No description</i></blockquote>
@@ -105,9 +121,130 @@
 </details>
 
 <details>
-  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Frameworks & Tools (20)</h2></summary>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Frameworks & Tools (31)</h2></summary>
 
   <blockquote>
+<details>
+<summary style="cursor: pointer;">
+🛠️ &nbsp; <b>1 Projects (Ai-agents)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cli-plugin-template">cli-plugin-template</a></summary>
+<blockquote><i>Catálogo vivo de features reusables para plugins multi-CLI (Claude Code, OpenCode, Gemini CLI). Versionado automático, git   hooks, compatibilidad entre CLIs y convenciones de docs. Los plugins consultan e integran features, y promueven mejoras de vuelta.</i></blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;">
+🛠️ &nbsp; <b>1 Projects (Claude-code)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cli-plugin-template">cli-plugin-template</a></summary>
+<blockquote><i>Catálogo vivo de features reusables para plugins multi-CLI (Claude Code, OpenCode, Gemini CLI). Versionado automático, git   hooks, compatibilidad entre CLIs y convenciones de docs. Los plugins consultan e integran features, y promueven mejoras de vuelta.</i></blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;">
+🛠️ &nbsp; <b>1 Projects (Cli-plugin)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cli-plugin-template">cli-plugin-template</a></summary>
+<blockquote><i>Catálogo vivo de features reusables para plugins multi-CLI (Claude Code, OpenCode, Gemini CLI). Versionado automático, git   hooks, compatibilidad entre CLIs y convenciones de docs. Los plugins consultan e integran features, y promueven mejoras de vuelta.</i></blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;">
+🛠️ &nbsp; <b>1 Projects (Cli-plugin-ai-agents)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cli-plugin-template">cli-plugin-template</a></summary>
+<blockquote><i>Catálogo vivo de features reusables para plugins multi-CLI (Claude Code, OpenCode, Gemini CLI). Versionado automático, git   hooks, compatibilidad entre CLIs y convenciones de docs. Los plugins consultan e integran features, y promueven mejoras de vuelta.</i></blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;">
+🛠️ &nbsp; <b>1 Projects (Feature-catalog)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cli-plugin-template">cli-plugin-template</a></summary>
+<blockquote><i>Catálogo vivo de features reusables para plugins multi-CLI (Claude Code, OpenCode, Gemini CLI). Versionado automático, git   hooks, compatibilidad entre CLIs y convenciones de docs. Los plugins consultan e integran features, y promueven mejoras de vuelta.</i></blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;">
+🛠️ &nbsp; <b>1 Projects (Gemini-cli)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cli-plugin-template">cli-plugin-template</a></summary>
+<blockquote><i>Catálogo vivo de features reusables para plugins multi-CLI (Claude Code, OpenCode, Gemini CLI). Versionado automático, git   hooks, compatibilidad entre CLIs y convenciones de docs. Los plugins consultan e integran features, y promueven mejoras de vuelta.</i></blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;">
+🛠️ &nbsp; <b>1 Projects (Git-hooks)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cli-plugin-template">cli-plugin-template</a></summary>
+<blockquote><i>Catálogo vivo de features reusables para plugins multi-CLI (Claude Code, OpenCode, Gemini CLI). Versionado automático, git   hooks, compatibilidad entre CLIs y convenciones de docs. Los plugins consultan e integran features, y promueven mejoras de vuelta.</i></blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;">
+🛠️ &nbsp; <b>1 Projects (Multi-cli)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cli-plugin-template">cli-plugin-template</a></summary>
+<blockquote><i>Catálogo vivo de features reusables para plugins multi-CLI (Claude Code, OpenCode, Gemini CLI). Versionado automático, git   hooks, compatibilidad entre CLIs y convenciones de docs. Los plugins consultan e integran features, y promueven mejoras de vuelta.</i></blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;">
+🛠️ &nbsp; <b>1 Projects (Opencode)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cli-plugin-template">cli-plugin-template</a></summary>
+<blockquote><i>Catálogo vivo de features reusables para plugins multi-CLI (Claude Code, OpenCode, Gemini CLI). Versionado automático, git   hooks, compatibilidad entre CLIs y convenciones de docs. Los plugins consultan e integran features, y promueven mejoras de vuelta.</i></blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;">
+🛠️ &nbsp; <b>1 Projects (Plugin-development)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cli-plugin-template">cli-plugin-template</a></summary>
+<blockquote><i>Catálogo vivo de features reusables para plugins multi-CLI (Claude Code, OpenCode, Gemini CLI). Versionado automático, git   hooks, compatibilidad entre CLIs y convenciones de docs. Los plugins consultan e integran features, y promueven mejoras de vuelta.</i></blockquote>
+</details>
+</blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;">
+🛠️ &nbsp; <b>1 Projects (Semantic-versioning)</b>
+</summary>
+<blockquote>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cli-plugin-template">cli-plugin-template</a></summary>
+<blockquote><i>Catálogo vivo de features reusables para plugins multi-CLI (Claude Code, OpenCode, Gemini CLI). Versionado automático, git   hooks, compatibilidad entre CLIs y convenciones de docs. Los plugins consultan e integran features, y promueven mejoras de vuelta.</i></blockquote>
+</details>
+</blockquote>
+</details>
 <details>
 <summary style="cursor: pointer;">
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (Bcryptjs)</b>
@@ -333,11 +470,43 @@
 </details>
 
 <details>
-  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects (30)</h2></summary>
+  <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects (38)</h2></summary>
   <blockquote>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></summary>
 <blockquote><i>Automated Portfolio & Profile README. Powered by Node.js and Gemini 3.1 AI to keep my tech stack and projects updated in real-time.</i></blockquote>
+</details>
+<details style="margin-bottom: 5px;">
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cambrian-plugin">cambrian-plugin</a></summary>
+<blockquote><i>Plugin que aumenta la creatividad forzando divergencia multi-agente antes de converger. Domain-agnostic.</i></blockquote>
+</details>
+<details style="margin-bottom: 5px;">
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cli-plugin-template">cli-plugin-template</a></summary>
+<blockquote><i>Catálogo vivo de features reusables para plugins multi-CLI (Claude Code, OpenCode, Gemini CLI). Versionado automático, git   hooks, compatibilidad entre CLIs y convenciones de docs. Los plugins consultan e integran features, y promueven mejoras de vuelta.</i></blockquote>
+</details>
+<details style="margin-bottom: 5px;">
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/todo-plugin">todo-plugin</a></summary>
+<blockquote><i>Manages task lifecycle in .todo/ — add, triage, prioritize, audit, and track work across TODO.md, DOING.md, and   DONE.md. Includes subagents for isolated analysis and hooks for pre-commit enforcement.</i></blockquote>
+</details>
+<details style="margin-bottom: 5px;">
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/nextjs-praxis-guard-plugin">nextjs-praxis-guard-plugin</a></summary>
+<blockquote><i>Plugin multi-CLI para agentes de código que vigila las buenas praxis en proyectos Next.js: detecta datos quemados, archivos que mezclan responsabilidades, imports prohibidos y secretos hardcodeados, y avisa en el flujo sin bloquear.</i></blockquote>
+</details>
+<details style="margin-bottom: 5px;">
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/nextjs-14-plus-playground">nextjs-14-plus-playground</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+<details style="margin-bottom: 5px;">
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/learn-fastapi">learn-fastapi</a></summary>
+<blockquote><i>Proyecto de aprendizaje incremental de FastAPI — generado con anki-curriculum</i></blockquote>
+</details>
+<details style="margin-bottom: 5px;">
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cli-tools-learning">cli-tools-learning</a></summary>
+<blockquote><i>No description</i></blockquote>
+</details>
+<details style="margin-bottom: 5px;">
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/personal-ai-tools">personal-ai-tools</a></summary>
+<blockquote><i>No description</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/Node.js-samples-for-Google-Workspace-APIs-docs">Node.js-samples-for-Google-Workspace-APIs-docs</a></summary>

@@ -140,5 +140,76 @@
     "failed": [
       "supertest-session"
     ]
+  },
+  "ai-agents": {
+    "valid": null,
+    "failed": [
+      "ai-agents",
+      "ai",
+      "artificialintelligence",
+      "machinelearning",
+      "deeplearning",
+      "neuralnetwork"
+    ]
+  },
+  "claude-code": {
+    "valid": null,
+    "failed": [
+      "claude-code"
+    ]
+  },
+  "cli-plugin": {
+    "valid": null,
+    "failed": [
+      "cli-plugin"
+    ]
+  },
+  "cli-plugin-ai-agents": {
+    "valid": null,
+    "failed": [
+      "cli-plugin-ai-agents"
+    ]
+  },
+  "feature-catalog": {
+    "valid": null,
+    "failed": [
+      "feature-catalog"
+    ]
+  },
+  "gemini-cli": {
+    "valid": null,
+    "failed": [
+      "gemini-cli"
+    ]
+  },
+  "git-hooks": {
+    "valid": null,
+    "failed": [
+      "git-hooks"
+    ]
+  },
+  "multi-cli": {
+    "valid": null,
+    "failed": [
+      "multi-cli"
+    ]
+  },
+  "opencode": {
+    "valid": null,
+    "failed": [
+      "opencode"
+    ]
+  },
+  "plugin-development": {
+    "valid": null,
+    "failed": [
+      "plugin-development"
+    ]
+  },
+  "semantic-versioning": {
+    "valid": null,
+    "failed": [
+      "semantic-versioning"
+    ]
   }
 }
