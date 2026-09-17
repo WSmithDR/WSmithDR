@@ -149,7 +149,9 @@
       "artificialintelligence",
       "machinelearning",
       "deeplearning",
-      "neuralnetwork"
+      "neuralnetwork",
+      "aiagents",
+      "neuralnetworks"
     ]
   },
   "claude-code": {
@@ -159,7 +161,7 @@
     ]
   },
   "cli-plugin": {
-    "valid": null,
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg",
     "failed": [
       "cli-plugin"
     ]
