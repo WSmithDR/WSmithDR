@@ -155,7 +155,7 @@
     ]
   },
   "claude-code": {
-    "valid": null,
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
     "failed": [
       "claude-code"
     ]
