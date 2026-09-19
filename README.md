@@ -170,7 +170,7 @@
 </details>
 <details>
 <summary style="cursor: pointer;">
-🛠️ &nbsp; <b>1 Projects (Feature-catalog)</b>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (Feature-catalog)</b>
 </summary>
 <blockquote>
 <details>
@@ -473,12 +473,12 @@
   <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects (38)</h2></summary>
   <blockquote>
 <details style="margin-bottom: 5px;">
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/todo-plugin">todo-plugin</a></summary>
-<blockquote><i>Manages task lifecycle in .todo/ — add, triage, prioritize, audit, and track work across TODO.md, DOING.md, and   DONE.md. Includes subagents for isolated analysis and hooks for pre-commit enforcement.</i></blockquote>
-</details>
-<details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></summary>
 <blockquote><i>Automated Portfolio & Profile README. Powered by Node.js and Gemini 3.1 AI to keep my tech stack and projects updated in real-time.</i></blockquote>
+</details>
+<details style="margin-bottom: 5px;">
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/todo-plugin">todo-plugin</a></summary>
+<blockquote><i>Manages task lifecycle in .todo/ — add, triage, prioritize, audit, and track work across TODO.md, DOING.md, and   DONE.md. Includes subagents for isolated analysis and hooks for pre-commit enforcement.</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cambrian-plugin">cambrian-plugin</a></summary>
