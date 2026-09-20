@@ -181,7 +181,8 @@
   "gemini-cli": {
     "valid": null,
     "failed": [
-      "gemini-cli"
+      "gemini-cli",
+      "geminicli"
     ]
   },
   "git-hooks": {
