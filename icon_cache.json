@@ -182,7 +182,11 @@
     "valid": null,
     "failed": [
       "gemini-cli",
-      "geminicli"
+      "geminicli",
+      "cli",
+      "terminal",
+      "commandline",
+      "developertools"
     ]
   },
   "git-hooks": {
