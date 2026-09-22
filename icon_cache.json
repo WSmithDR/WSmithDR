@@ -179,7 +179,7 @@
     ]
   },
   "gemini-cli": {
-    "valid": null,
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg",
     "failed": [
       "gemini-cli",
       "geminicli",

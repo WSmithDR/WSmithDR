@@ -181,7 +181,7 @@
 </details>
 <details>
 <summary style="cursor: pointer;">
-🛠️ &nbsp; <b>1 Projects (Gemini-cli)</b>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (Gemini-cli)</b>
 </summary>
 <blockquote>
 <details>
