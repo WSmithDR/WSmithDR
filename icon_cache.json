@@ -190,7 +190,7 @@
     ]
   },
   "git-hooks": {
-    "valid": null,
+    "valid": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
     "failed": [
       "git-hooks"
     ]
