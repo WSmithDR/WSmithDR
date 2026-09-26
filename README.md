@@ -214,7 +214,7 @@
 </details>
 <details>
 <summary style="cursor: pointer;">
-🛠️ &nbsp; <b>1 Projects (Opencode)</b>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" width="20" style="vertical-align: middle;"/> &nbsp; <b>1 Projects (Opencode)</b>
 </summary>
 <blockquote>
 <details>
