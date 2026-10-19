@@ -53,12 +53,12 @@
 </summary>
 <blockquote>
 <details>
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cambrian-plugin">cambrian-plugin</a></summary>
-<blockquote><i>Plugin que aumenta la creatividad forzando divergencia multi-agente antes de converger. Domain-agnostic.</i></blockquote>
-</details>
-<details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cli-plugin-template">cli-plugin-template</a></summary>
 <blockquote><i>Catálogo vivo de features reusables para plugins multi-CLI (Claude Code, OpenCode, Gemini CLI). Versionado automático, git   hooks, compatibilidad entre CLIs y convenciones de docs. Los plugins consultan e integran features, y promueven mejoras de vuelta.</i></blockquote>
+</details>
+<details>
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cambrian-plugin">cambrian-plugin</a></summary>
+<blockquote><i>Plugin que aumenta la creatividad forzando divergencia multi-agente antes de converger. Domain-agnostic.</i></blockquote>
 </details>
 <details>
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/MultiCriteria-Filtered-Deck-Organizer">MultiCriteria-Filtered-Deck-Organizer</a></summary>
@@ -473,6 +473,10 @@
   <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects (38)</h2></summary>
   <blockquote>
 <details style="margin-bottom: 5px;">
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cli-plugin-template">cli-plugin-template</a></summary>
+<blockquote><i>Catálogo vivo de features reusables para plugins multi-CLI (Claude Code, OpenCode, Gemini CLI). Versionado automático, git   hooks, compatibilidad entre CLIs y convenciones de docs. Los plugins consultan e integran features, y promueven mejoras de vuelta.</i></blockquote>
+</details>
+<details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/todo-plugin">todo-plugin</a></summary>
 <blockquote><i>Manages task lifecycle in .todo/ — add, triage, prioritize, audit, and track work across TODO.md, DOING.md, and   DONE.md. Includes subagents for isolated analysis and hooks for pre-commit enforcement.</i></blockquote>
 </details>
@@ -483,10 +487,6 @@
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cambrian-plugin">cambrian-plugin</a></summary>
 <blockquote><i>Plugin que aumenta la creatividad forzando divergencia multi-agente antes de converger. Domain-agnostic.</i></blockquote>
-</details>
-<details style="margin-bottom: 5px;">
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cli-plugin-template">cli-plugin-template</a></summary>
-<blockquote><i>Catálogo vivo de features reusables para plugins multi-CLI (Claude Code, OpenCode, Gemini CLI). Versionado automático, git   hooks, compatibilidad entre CLIs y convenciones de docs. Los plugins consultan e integran features, y promueven mejoras de vuelta.</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/nextjs-praxis-guard-plugin">nextjs-praxis-guard-plugin</a></summary>
