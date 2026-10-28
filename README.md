@@ -477,12 +477,12 @@
   <summary><h2 style="display: inline-block; cursor: pointer; margin: 0;">Projects (39)</h2></summary>
   <blockquote>
 <details style="margin-bottom: 5px;">
-<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/Taller01-Ramas">Taller01-Ramas</a></summary>
-<blockquote><i>No description</i></blockquote>
-</details>
-<details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/WSmithDR">WSmithDR</a></summary>
 <blockquote><i>Automated Portfolio & Profile README. Powered by Node.js and Gemini 3.1 AI to keep my tech stack and projects updated in real-time.</i></blockquote>
+</details>
+<details style="margin-bottom: 5px;">
+<summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/Taller01-Ramas">Taller01-Ramas</a></summary>
+<blockquote><i>No description</i></blockquote>
 </details>
 <details style="margin-bottom: 5px;">
 <summary style="cursor: pointer;"><a href="https://github.com/WSmithDR/cli-plugin-template">cli-plugin-template</a></summary>
